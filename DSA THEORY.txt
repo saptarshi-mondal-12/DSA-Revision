@@ -1,0 +1,123 @@
+Q. What are Data Structures?
+Q. What are some applications of Data structures?
+Q. Describe the types of Data Structures?
+
+-----------------LINEAR DSA----------------
+
+Q1. What is an array?
+Q2. What is a linked list?
+Q3. What is a stack?
+Q. What are the operations performed on a stack?
+Q. How is a stack implemented in an array?
+Q.What is the time complexity of stack operations?
+Q. What are the applications of a stack?
+Q. What is a stack overflow?
+Q. What is a stack underflow?
+
+Q4. What is a queue?
+Q What are the different types of Queues?
+Q. How is a Queue implemented in an array?
+Q. What is the time complexity of enqueue and dequeue operations in a Queue?
+Q. What is the difference between a Queue and a Stack?
+Q. What are the applications of Queues?
+Q.  How do you handle overflow and underflow conditions in a Queue?
+Q. What are the advantages of using a Queue?
+Q. What are the disadvantages of using a Queue?
+Q5. What is a deque?
+Q6. What is a circular queue?
+Q7. What is a Priority Queue
+
+
+-----------------NON-LINEAR DSA----------------
+Q7. What is a tree?
+Q. Describe the use of trees in real-world scenarios.
+Q. What are the advantages and disadvantages of using trees?
+Q. hen would you choose a tree over other data structures like arrays or linked lists?
+Q. Explain different types of trees.
+Q. Describe the different tree traversal methods (preorder, inorder, postorder).
+Q. What are the different ways to represent a tree in memory?
+Q8. What is a binary tree?
+Q.  What are the basic operations performed on a tree?
+Q9. What is a binary search tree (BST)?
+Q10. What is a heap?
+Q. What is the time complexity of inserting an element into a heap?
+Q. What are the two types of heaps?
+Q. What are the applications of heaps?
+Q. What is the time complexity of finding the minimum or maximum element in a heap?
+Q. What is the time complexity of deleting an element from a heap?
+Q. What is the difference between a heap and a priority queue?
+Q. What are the advantages of using a heap?
+Q11. What is a priority queue?
+Q12. What is a graph?
+Q13. What is a weighted graph?
+Q14. What is a directed acyclic graph (DAG)?
+Q. What is the difference between a heap and a binary search tree (BST)?
+
+
+--------------------BASIC-----------------------
+Q1. What is hashing?
+Q2. What is a hash table?
+Q. What is a hash function?
+Q. Explain how a hash function works.
+Q. What is a collision?
+Q3. What is recursion?
+Q4. What is dynamic programming?
+Q5. What is memoization?
+Q6. What is a trie?
+Q7. What is a segment tree?
+Q8. What is a Fenwick Tree (Binary Indexed Tree)?
+Q9. What is a disjoint set (Union-Find)?
+
+----------------------------------------------------------------------------
+Q1. Can an array be resized at runtime?
+Q2. What is the time complexity for accessing an element in an array?
+Q3. What is the difference between an array and a linked list?
+Q4. How would you find the smallest and largest element in an array?
+Q5. Explain the concept of a multi-dimensional array.
+Q6. What is an array index out of bounds exception?
+Q7. How would you reverse an array in-place in linear time and constant space?
+Q8.  How can you find duplicate elements in an array?
+Q9. Discuss the advantages and disadvantages of using arrays.
+Q10. What is the difference between an array and a list?
+Q11. What are the different types of linked lists?
+Q12. What are the advantage of Linked List?
+Q13. What are the disadvantage of Linked List?
+Q14. What is time complexity of Linked List operations?
+Q15. How would you compare Dynamic Arrays Vs Linked Lists?
+Q16. What are different types of searching , sorting techniques
+
+oops - very much important with code example
+Various Questions on real life senarios and data structure used on them.
+Undo operations
+String searching
+Contacts app design
+HashTables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

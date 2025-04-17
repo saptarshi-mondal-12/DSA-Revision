@@ -1,0 +1,84 @@
+Introduction to dynamic programming 
+
+Dynamic Programming can be described as storing answers to various sub-problems to be used later whenever required to solve the main problem.
+
+The two common dynamic programming approaches are:
+
+1. Memoization: Known as the “top-down” dynamic programming, usually the problem is solved in the direction of the main problem to the base cases. (tends to store the value of sub problems in some map or table so that we dont have to compute again)
+declaration : dp=[-1]*n 
+
+2. Tabulation: Known as the “bottom-up" dynamic programming, usually the problem is solved in the direction of solving the base cases to the main problem
+Tabulation is a ‘bottom-up’ approach where we start from the base case and reach the final answer that we want.
+
+
+Q. how to understand this is a DP question?
+Ans: Whenever question says 
+    1. count total no of ways.
+    2. Multiple ways to do this what is minimum or maximum or count total ways or best way
+NOTE: Whenever concept of try all possible ways comes in use recursion
+
+
+Q. How to solve a problem? - shortcut trick
+Ans: 
+Step 1: Try to solve the problem in term if index.
+Step 2: Do all possible stuffs on that index according to problem statement.
+Step 3: if question says count all the ways sum up all stuffs or if question says find minimum take minimum of all stuffs.
+
+
+Recursion
+    |
+    v 
+Memoization (using DP) Top-down (n to 0)
+    |
+    v 
+Tabulation (Bottom up) (0 to n) 
+    |
+    v 
+Space optimization
+
+
+Q. How we convert a recursion solution to Memoization.
+Ans: Dynamic programming
+
+RULE 1: -----------------------------------------------------
+Space optimization: 
+NOTE: Whenever there is index-1 or index-2 kind of stuffs there can always be an space optimization
+we can treated as prev1 and prev2 
+
+
+
+RULE 2: ------------------------------------------------------
+whatevere we write for recursion, the opposite is the tabulation.
+
+
+
+Rule 3: -----------------------------------------------------------
+fixed starting point (0,0) or (0,c-1)
+variable ending point - we can end at any column in last row  (r-1,0) or (r-1,1) or (r-1,2)......... (r-1,c-1)
+
+If there is a fixed starting point and variable ending point we generally write recursion from starting point.
+
+
+Rule 4: -----------------------------------------------------------
+Base case are of 2 types: 
+    1. Destination base case (we reach our destination)
+    2. Out Of Bound base case (boundaries)
+
+So. Always write (Out Of Bound) base case FIRST.
+
+
+------------------------------------------------------------------
+NOTE: INT_MIN + any (-ve)integer =  go beyond the limits os integer. It will give you wrong answer. So always write -1e8
+
+
+-------------------------------------------------------------------------
+Space optimization - 
+in space optimization we convert 
+    1D dp -> two variable 
+    2D dp -> 1D dp
+    3D dp -> 2D dp
+
+
+
+---------------------------------------------------------------------------
+RULE : Whenever their is infinite supplies in the question (take) remain in same index 
