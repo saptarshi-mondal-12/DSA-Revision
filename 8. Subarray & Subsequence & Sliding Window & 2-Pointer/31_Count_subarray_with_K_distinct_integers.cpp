@@ -17,6 +17,52 @@ Explanation: Subarrays formed with exactly 2 different integers: [1,2], [2,1], [
 Input: nums = [1,2,1,3,4], k = 3
 Output: 3
 Explanation: Subarrays formed with exactly 3 different integers: [1,2,1,3], [2,1,3], [1,3,4].
+
+
+
+
+Intuition:  Given nums=[1,2,3,3] k=3 
+
+----------Solving f(nums, <=k) less than equal to k
+[1]=1
+[1,2]=2
+[1,2,3]=3
+[1,2,3,3]=3
+
+[2]=1
+[2,3]=2
+[2,3,3]=2
+
+[3]=1
+[3,3]=1
+
+[3]=1
+
+So total 10 subarray are there where distinct element is <= 3  is [1,2,3,3,1,2,2,1,1,1]
+
+
+----------Solving f(nums, <= k-1) less than equal to k-1 i.e k=3 , k-1=2 therefore k=2
+[1]=1
+[1,2]=2
+
+
+[2]=1
+[2,3]=2
+[2,3,3]=2
+
+[3]=1
+[3,3]=1
+
+[3]=1
+
+So total 8 subarray are there where distinct element is <= 2  is [1,2,1,2,2,1,1,1]
+
+Our answer = k - (k-1) => 10 - 8 = 2
+
+[1,2,3]=3
+[1,2,3,3]=3
+
+total 2 subarray are there where k (K=3) distinct element is present other get cance out .
 */
 
 int brute_countDistinctSubarray(int n, int arr[], int k){
@@ -72,8 +118,8 @@ int better_countDistinctSubarray(int n, int arr[], int k){
 }
 
 int main(){
-    int n=5;
-    int arr[n]={1,2,1,3,4};
+    int n=4;
+    int arr[n]={1,2,3,3};
     int k=3;
 
     // brute
