@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Contiguous Array
+/* Q. Contiguous Array || Walmart -> Largest Subarray with Equal Number of 0s and 1s
 
 Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
 
