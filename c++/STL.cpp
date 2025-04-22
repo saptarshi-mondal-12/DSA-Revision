@@ -1,4 +1,4 @@
-Time complexity - increasing time - O(log n) < O(n) < O(2n) < O(3n) < O(n log n) < O(n^2) < O(n^3)
+// Time complexity - increasing time - O(log n) < O(n) < O(2n) < O(3n) < O(n log n) < O(n^2) < O(n^3)
 
 #include<iostream>
 #include<bits/stdc++.h>
@@ -199,6 +199,7 @@ void explainUnordered_set(){
 }
 
 void explainMulti_Set(){
+    // Time - O(log n) 
 
     // sorted but store multiple occurrence 
     // eg - {1,2,2,3,4,4,4,6}
@@ -227,6 +228,18 @@ void explainMulti_Set(){
         cout << *it << " ";
     }
     cout<<endl; //{1,1,2,3,3}
+
+
+    // ✅ Access First Element:
+    std::multiset<int> ms = {10, 20, 30, 40};
+    int first = *ms.begin();
+    std::cout << "First element: " << first << std::endl; // 10
+
+    // ✅ Access Last Element:
+    int last = *std::prev(ms.end());
+    std::cout << "Last element: " << last << std::endl; // 40
+
+
 }
 
 void explainUnorderedMultiSet(){
