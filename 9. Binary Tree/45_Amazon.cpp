@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-Q. Given a binary tree, you need to find a pair of two nodes such that their sum of values is equal to target.
+Q. Given a binary tree, you need to find a pair of two nodes such that their sum of values is equal to target. - Amazon 
 
 Constraints:
 1: distance between two nodes should be equal to d
