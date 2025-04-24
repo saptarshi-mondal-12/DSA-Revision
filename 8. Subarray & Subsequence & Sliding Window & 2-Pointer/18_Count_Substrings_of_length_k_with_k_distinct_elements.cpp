@@ -2,15 +2,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*Substrings of length k with k-1 distinct elements
+/*Q. Substrings of length k with exactly k-1 distinct elements
 
 Given a String S consisting only lowercase alphabets and an integer K. Find the count of all substrings of length K which have exactly K-1 distinct characters.
 
 Input: S = "abcc", K = 2
 Output: 1
 Explanation: Possible substrings of length K = 2 are
-ab : 2 distinct characters
-bc : 2 distinct characters
 cc : 1 distinct character
 Only one valid substring exists {"cc"}. 
 
@@ -46,6 +44,7 @@ int brute_countOfSubstrings(string s, int k){
 int optimal_countOfSubstrings(string s, int k){
     // Time Complexity: O(N)
     // Auxiliary Space: O(K)
+
     int n=s.size();
     int result=0;
     unordered_map<char,int>mp;
