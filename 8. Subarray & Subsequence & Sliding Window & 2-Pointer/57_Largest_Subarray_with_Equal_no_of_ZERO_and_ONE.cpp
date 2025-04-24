@@ -68,4 +68,7 @@ int findMaxLength(vector<int>& nums) {
 int main(){
     vector<int>nums={0,1,1,1,1,1,0,0,0};
     cout<<findMaxLength(nums)<<endl;
+
+
+    // Follow up ques -> count it
 }
