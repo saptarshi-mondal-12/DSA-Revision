@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-Q. Maximum Sum Path in Two Arrays
+Q. Maximum Sum Path in Two Arrays - Amazon 3rd round 
 
 Given two sorted arrays having some elements in common. Find the sum of the maximum sum path to reach from the beginning of any array to the end of any of the two arrays. We can switch from one array to another array only at common elements. 
 
@@ -75,6 +75,9 @@ int maxPathSum(vector<int>nums1, vector<int>&nums2){
 
 int main(){
     vector<int>nums1={10,20,21,40,50,60};
-    vector<int>nums2={1,5,20,30,40,60,100};
+    vector<int>nums2={1,5,20,30,40, 60, 100};
     cout<<maxPathSum(nums1, nums2)<<endl;
+
+
+    // follow up ques -> What if we have k sorted list -> Write solution -> Ans: priority queue
 }

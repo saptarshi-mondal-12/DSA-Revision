@@ -4,6 +4,8 @@ using namespace std;
 
 /* Q. Maximum length of consecutive 1s or 0s after flipping at most K characters
 
+NOTE : Is question me length pucha hai
+
 Given a binary string S of size N and an integer K, the task is to find the maximum length of consecutive 1s or 0s after flipping at most K characters of the given binary string S.
 
 Input: S = “1001”, K = 1
@@ -59,11 +61,15 @@ int maxConsecutiveSegment(string s, int k){
     int n = s.length();
  
     // Print the maximum of the maximum length of 0s or 1s
+
     return max(maxLength(s, '0', k), maxLength(s, '1', k));
 }
 
 int main(){
-    string s="11011011";
-    int k=3;
+    string s="10011010111";
+    int k=2;
     cout<<maxConsecutiveSegment(s,k)<<endl;
+
+
+    // Variation -> OA Q.1
 }

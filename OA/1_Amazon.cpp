@@ -5,6 +5,8 @@ using namespace std;
 /*
 Given a binary array and an integer k, find the position of zeroes flipping which creates maximum number of consecutive 1s in array.
 
+NOTE : Is question me zero ka pucha hai
+
 Input: arr = [1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1], m = 2
 Output: [5, 7]
 Explanation: We are allowed to flip maximum 2 zeroes. If we flip arr[5] and arr[7], we get 8 consecutive 1's which is maximum possible under given constraints 
@@ -57,6 +59,8 @@ int main(){
     for(int i=0;i<result.size();i++){
         cout<<result[i]<<" ";
     }
+
+    // Variation -> Sliding window Q.69
 
 }
 

@@ -83,6 +83,22 @@ Total = 2 + 1 = 3
 Final Output: 3
 */
 
+int brute_countInversion(vector<int>arr){
+    // Time complexity - O(n^2)
+    // Space complexity - O(1)
+
+    int n=arr.size();
+    int count=0;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i] > arr[j]){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
 int mergeAndCount(vector<int>& arr, vector<int>& temp, int left, int mid, int right) {
     int i = left;     // start of left subarray
     int j = mid + 1;  // start of right subarray
@@ -144,7 +160,12 @@ int inversionCount(vector<int> &arr) {
 }
 
 int main(){
-    vector<int>arr={2, 4, 1, 3, 5};
+    vector<int>arr={5,3,2,1,4};
 
+    // brute
+    cout<<brute_countInversion(arr)<<endl;
+
+
+    // Optimal
     cout<<inversionCount(arr)<<endl;
 }
