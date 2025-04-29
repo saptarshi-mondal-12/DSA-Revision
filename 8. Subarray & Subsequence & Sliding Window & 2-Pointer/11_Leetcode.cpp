@@ -1,7 +1,7 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
- 
+
 /* Count Subarrays Where Max Element Appears at Least K Times
 
 You are given an integer array nums and a positive integer k.
@@ -18,63 +18,57 @@ Explanation: No subarray contains the element 4 at least 3 times.
 */
 
 void brute_countSubarrays(int n, int arr[], int k){
-    int count=0;
-    int maxi=*max_element(arr,arr+n);
+    int count = 0;
+    int maxi = *max_element(arr, arr + n);
 
-    for(int i=0;i<n;i++){
-        int max_count=0;
-        for(int j=i;j<n;j++){
-            if (arr[j]==maxi){
-                max_count+=1;
+    for (int i = 0; i < n; i++){
+        int max_count = 0;
+        for (int j = i; j < n; j++){
+            if (arr[j] == maxi){
+                max_count += 1;
             }
-
-            if (max_count>=k){
+            if (max_count >= k){
                 count++;
             }
         }
     }
-    cout<<count<<endl;
+    cout << count << endl;
 }
 
-
-void optimal_countSubarrays(int n, int arr[], int k){
-    int result=0;
-    int maxi=*max_element(arr,arr+n);
-    
-    int low=0;
-    int maxi_count=0;
-
-    for(int high=0;high<n;high++){
-        if(arr[high]==maxi){
-            maxi_count++;
+void optimal_countSubarrays(int n, int nums[], int k){
+    long long result = 0;
+    int maxElement = *max_element(nums, nums+n);
+    int freq = 0;
+    int left = 0, right = 0;
+    while (right < n){
+        int curr = nums[right];
+        if (curr == maxElement){
+            freq++;
         }
-
-        while(maxi_count >= k){
-            result+=n-high;
-            
-            if (arr[low]==maxi){
-                maxi_count-=1;
+        while (freq >= k){
+            result += (n - right);
+            if (nums[left] == maxElement){
+                freq--;
             }
-            low++;
+            left++;
         }
+        right++;
     }
-    cout<<result;
+    cout<< result;
 }
-
 
 int main(){
-    int n=5;
-    int arr[n]={1,3,2,3,3};
-    int k=2;
+    int n = 5;
+    int arr[n] = {1, 3, 2, 3, 3};
+    int k = 2;
 
     // int n=4;
     // int arr[n]={1,4,2,1};
     // int k=3;
 
-    //brute
-    brute_countSubarrays(n,arr,k);
+    // brute
+    brute_countSubarrays(n, arr, k);
 
     // optimal
-    optimal_countSubarrays(n,arr,k);
-
+    optimal_countSubarrays(n, arr, k);
 }

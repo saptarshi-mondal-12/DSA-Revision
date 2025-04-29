@@ -1,5 +1,5 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 /* Count Subarrays With Score Less Than K
@@ -17,7 +17,7 @@ The 6 subarrays having scores less than 10 are:
 - [2] with score 2 * 1 = 2.
 - [1] with score 1 * 1 = 1.
 - [4] with score 4 * 1 = 4.
-- [3] with score 3 * 1 = 3. 
+- [3] with score 3 * 1 = 3.
 - [5] with score 5 * 1 = 5.
 - [2,1] with score (2 + 1) * 2 = 6.
 
@@ -32,63 +32,56 @@ Every subarray except [1,1,1] has a score less than 5.
 Thus, there are 5 subarrays having scores less than 5.
 */
 
-void brute_countSubarrays(vector<int>v, int k){
+int brute_countSubarrays(vector<int> nums, int k){
     // Time complexity - O(n^2)
     // space complexity - O(1)
 
-    int n=v.size();
-    int count=0;
-
+    int n=nums.size();
+    long long result=0;
     for(int i=0;i<n;i++){
-        int total_sum=0;
-        for (int j=i;j<n;j++){
-            total_sum+=v[j];
-            int length=(j-i+1);
-
-            if(total_sum*length < k){
-                count+=1;
+        long long currSum=0;
+        for(int j=i;j<n;j++){
+            currSum+=nums[j];
+            long long currLen=j-i+1;
+            if(currSum*currLen < k){
+                result++;
             }
         }
     }
-    cout<<count<<endl;
+    return result;
 }
 
-void optimal_countSubarrays(vector<int>v, int k){
-    // Time complexity - 
-    // space complexity - O(1)
-
-    int n=v.size();
-    int count=0;
-
-    int left=0;
-    int right=0;
-
-    int total_sum=0;
-
-    while(right<n){
-        total_sum+=v[right];
-
-        while (total_sum*(right-left+1) >= k){
-            total_sum-=v[left];
+int optimal_countSubarrays(vector<int> nums, int k){
+    // Time complexity : O(n)
+    // space complexity: O(1)
+    int n = nums.size();
+    long long result = 0;
+    long long left = 0, right = 0, currSum = 0, currLen = 0;
+    while (right < n){
+        currSum += nums[right];
+        currLen = right - left + 1;
+        while (currSum * currLen >= k){
+            currSum -= nums[left];
             left++;
+            currLen = right - left + 1;
         }
-        count+=(right-left+1);
+
+        if (currSum * currLen < k){
+            result += currLen;
+        }
         right++;
     }
-    cout<<count<<endl;
+    return result;
 }
 
-int main(){
-    vector<int>v={2,1,4,3,5};
-    int k=10;
+int main()
+{
+    vector<int> nums = {2, 1, 4, 3, 5};
+    int k = 10;
 
     // 1. brute
-    brute_countSubarrays(v,k);
+    cout << brute_countSubarrays(nums, k) << endl;
 
     // 2. optimal
-    optimal_countSubarrays(v,k);
-
-
-
-
+    cout << optimal_countSubarrays(nums, k) << endl;
 }
