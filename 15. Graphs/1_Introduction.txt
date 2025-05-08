@@ -1,0 +1,157 @@
+Q. What is a graph data structure?
+
+A graph is a non-linear data structure consisting of nodes that have data and are connected to other nodes through edges.
+
+Nodes are circles represented by numbers. Nodes are also referred to as vertices. They store the data. The numbering of the nodes can be done in any order, no specific order needs to be followed.
+
+   (1)─────(4)
+    |       | <------------- Edge
+    |       |
+   (2)─────(5) <------------ Nodes
+    \       /
+     \     /
+       (3)
+
+Two nodes are connected by a horizontal line called Edge. Edge can be directed or undirected. Basically, pairs of vertices are called edges.
+
+In the above example, the edge can go from 1 to 4 or from 4 to 1, i.e. a bidirectional edge can be in both directions, hence called an undirected edge. Thus, the pairs (1,4) and (4,1) represent the same edge.
+
+✅ Types of Graphs:
+
+1. Directed vs Undirected
+   • Directed: Edges have a direction (e.g., A → B).
+   • Undirected: Edges have no direction (e.g., A — B).
+
+ 
+2. Weighted vs Unweighted:
+   • Weighted Graph: Edges carry weights or costs.
+   • Unweighted Graph: Edges do not have weights.
+
+
+3. Cyclic vs Acyclic:
+   • Cyclic Graph: Contains at least one cycle.
+   • Acyclic Graph: No cycles.
+
+
+4. Connected vs Disconnected:
+   • Connected Graph: Every node is reachable from any other node.
+   • Disconnected Graph: Some nodes are not connected.
+
+
+a. Undirected Edge: (u)─────(v)
+b. Directed Edge:   (u)─────>(v) or (u)<─────>(v)
+
+
+c. Undirected Cyclic Graph: If there is at least one cycle present in the graph then it is called an Undirected Cyclic Graph.
+   ( )─────( )
+    |       | 
+    |       |
+   ( )─────( ) 
+    \       /
+     \     /
+       ( )
+
+
+d. Directed Acyclic Graph: A Directed Acyclic Graph (DAG) is a graph with directed edges where no cycles exist — meaning you can’t start at a node and follow a path that loops back to it.
+
+    (A)─────>(B)
+    |         |
+    |         |
+    v         v
+    (C)─────>(D)
+     \       /
+      \     /
+       v   v
+        (E)
+
+
+e. Directed Cyclic Graph:A Directed Cyclic Graph is a graph with directed edges that contains at least one cycle, meaning you can start at a node and follow a path that eventually loops back to the same node.
+
+   (A)◄━━━━━━►(B)
+    ┃          ▲
+    ┃          ┃
+    ▼          ┃
+   (C)━━━━━━►(D)
+
+
+✅ Applications of graphs are :
+
+1. Analysis of electrical circuits.
+2. Finding the shortest path between two locations.
+3. Building navigation systems (e.g. Google Maps).
+4. Representing social media networks, where each user and their connections are stored as graph data.
+5. Airline route maps: Airports are nodes, flights are edges; helps in route optimization.
+
+
+
+✅ Path in a Graph ➖ 
+   (1)━━━━━━(2)
+    ┃        ┃
+    ┃        ┃
+   (4)━━━━━━(3)
+            /
+           /
+          /
+        (5)
+
+1 2 3 5 is a path.
+1 2 3 2 1 is not a path, because a node can’t appear twice in a path.
+1 3 5 is not a path, as adjacent nodes must have an edge and there is no edge between 1 and 3.
+
+
+✅ Degree of Graph ➖ 
+It is the number of edges that go inside or outside that node.
+or 
+no of edges attach to a node
+
+Example:
+   (1)━━━━━━(2)
+    ┃        ┃
+    ┃        ┃
+   (5)━━━━━━(3)
+    \        /
+     \      /
+      \    /
+        (4)
+D(3) = 3
+D(4) = 2
+
+
+Property: It states that the total degree of a graph is equal to twice the number of edges. This is because every edge is associated/ connected to two nodes.
+    2        2
+   (1)━━━━━━(2)
+    ┃        ┃
+    ┃        ┃
+ 3 (5)━━━━━━(3) 3
+    \        /
+     \      /
+      \    /
+        (4) 2
+
+Total Degree of a graph = 2 x no Of Edges
+Example, (2+2+3+2+3) = 2 x 6 => 12 = 12 
+
+
+
+For directed graphs, we’ve Indegree (no of incomming edges) and Outdegree (no of outgoing edges). The indegree of a node is the number of incoming edges. The outdegree of a node is the number of outgoing edges.
+
+   ( )━━━━━━►( )
+    ┃         ▲
+    ┃         ┃
+    ▼         ┃
+   ( )━━━━━━►(3)  indegree(3) = 1, Outfegree(3) = 2
+    \        /
+     \      /
+      ↘️ ↙️
+        () 
+
+
+✅ Edge Weight ➖
+A graph may have weights assigned on its edges. It is often referred to as the cost of the edge.
+        5        7
+   ( )━━━━━━( )━━━━━━( )
+    ┃        ┃        ┃  
+  6 ┃        ┃ 3      ┃ 5
+   ( )━━━━━━( )━━━━━━( )
+        4        6
+If weights are not assigned then we assume the unit weight, i.e, 1. In applications, weight may be a measure of the cost of a route. For example, if vertices A and B represent towns in a road network, then weight on edge AB may represent the cost of moving from A to B, or vice versa.

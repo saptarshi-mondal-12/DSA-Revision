@@ -1,9 +1,8 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-/*
-Given a string s, find the first non-repeating character in it and return its index. 
-If it does not exist, return -1.
+/* Q. Given a string s, find the first non-repeating character in it and return its index. 
+If it does not exist, return -1.  AMAZON
 
 Input: s = "leetcode"
 Output: 0
