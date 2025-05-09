@@ -9,14 +9,18 @@ Problem Statement: Given a grid of size NxM (N is the number of rows and M is th
 Note: An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically or diagonally i.e., in all 8 directions.
 
 Input: 
-grid = {'0', '1', '1', '0'},
+grid = {{'0', '1', '1', '0'},
         {'0', '1', '1', '0'},
         {'0', '0', '1', '0'},
         {'0', '0', '0', '0'},
-        {'1', '1', '0', '1'}
+        {'1', '1', '0', '1'}}
 
 Output: 3
 Explanation: There are 3 islands as the different components are surrounded by water (i.e. 0), and there is no land connectivity in either of the 8 directions hence separating them into 3 islands.
+
+Intuition: 
+We runs a loop for each and every coordinates(i,j) and check if it is a land i.e 1. 
+if it is a land we do a bfs/dfs traversal.
 */
 
 
@@ -92,9 +96,9 @@ void bfs(int row, int col, vector<vector<int>>&visited, vector<vector<char>>&gri
     }
 }
 int numIslands(vector<vector<char>>&grid){
-    // Time Complexity: O(N² + NxMx9), N² for the nested loops, and NxMx9 for the overall DFS of the matrix, that will happen throughout if all the cells are filled with 1.
+    // Time Complexity: O(NxM + NxMx9), N² for the nested loops, and NxMx9 for the overall DFS of the matrix, that will happen throughout if all the cells are filled with 1.
 
-    // Space Complexity: O(N²) for visited array max queue space O(N²), If all are marked as 1 then the maximum queue space will be N².
+    // Space Complexity: O(NxM) for visited array max queue space O(N²), If all are marked as 1 then the maximum queue space will be N².
 
     int n=grid.size();
     int m=grid[0].size();

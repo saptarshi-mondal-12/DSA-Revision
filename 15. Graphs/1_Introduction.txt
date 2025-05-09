@@ -154,4 +154,5 @@ A graph may have weights assigned on its edges. It is often referred to as the c
   6 ┃        ┃ 3      ┃ 5
    ( )━━━━━━( )━━━━━━( )
         4        6
+        
 If weights are not assigned then we assume the unit weight, i.e, 1. In applications, weight may be a measure of the cost of a route. For example, if vertices A and B represent towns in a road network, then weight on edge AB may represent the cost of moving from A to B, or vice versa.

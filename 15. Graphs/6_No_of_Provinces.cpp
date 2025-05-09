@@ -19,7 +19,6 @@ void dfs(int node, vector<vector<int>>adjacencyList, int visited[]){
     // 1. Mark node as visited 
     visited[node]=1;
 
-
     // Traverse all its neighbours
     for(auto it: adjacencyList[node]){
         // if the neighbour is not visited
@@ -30,7 +29,7 @@ void dfs(int node, vector<vector<int>>adjacencyList, int visited[]){
 }
 
 int numProvinces(vector<vector<int>> adj){
-   // Time Complexity: O(N) + O(V+2E), Where O(N) is for outer loop and inner loop runs in total a single DFS over entire graph, and we know DFS takes a time of O(V+2E). 
+   // Time Complexity: O(N) + O(N+2E), Where O(N) is for outer loop and inner loop runs in total a single DFS over entire graph, and we know DFS takes a time of O(N+2E). 
 
     // Space Complexity: O(N) + O(N),Space for recursion stack space and visited array.
 
@@ -48,7 +47,6 @@ int numProvinces(vector<vector<int>> adj){
             }
         }
     }
-    
 
     int visited[n] = {0};
     int count=0;
@@ -57,6 +55,8 @@ int numProvinces(vector<vector<int>> adj){
         if(!visited[i]) {
             // counter to count the number of provinces 
             count++;
+
+            // dfs traversal will go and mark all its adjacent connected nodes and return.
            dfs(i, adjacencyList, visited); 
         }
     }

@@ -18,6 +18,9 @@ Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
 Output: [[2,2,2],[2,2,0],[2,0,1]]
 Explanation: From the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.
 Note the bottom corner is not colored 2, because it is not horizontally or vertically connected to the starting pixel.
+[1,1,1]              [2,2,2]
+[1,1,0]   -------->  [2,2,0]
+[1,0,1]              [2,0,1]
 
 
 */

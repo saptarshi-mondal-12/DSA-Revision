@@ -50,6 +50,7 @@ void dfs(int node, vector<vector<int>>adjacency_List, int visited[], vector<int>
 
 vector<int> dfsOfGraph(int n, vector<vector<int>>adjacency_List) {
     // Time Complexity: For an undirected graph, O(N) + O(2E), For a directed graph, O(N) + O(E), Because for every node we are calling the recursive function once, the time taken is O(N) and 2E is for total degrees as we traverse for all adjacent nodes.
+    
     // Space Complexity: O(3N) ~ O(N), Space for dfs stack space, visited array and an adjacency list.
 
 
