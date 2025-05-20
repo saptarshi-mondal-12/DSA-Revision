@@ -4,6 +4,12 @@ using namespace std;
 
 /* Q. Bellman Ford Algorithm
 
+Bellman Ford definition: 
+
+
+
+
+
 Given an weighted graph with V vertices numbered from 0 to V-1 and E edges, represented by a 2d array edges[][], where edges[i] = [u, v, w] represents a direct edge from node u to v having w edge weight. You are also given a source vertex src.
 
 Your task is to compute the shortest distances from the source to all other vertices. If a vertex is unreachable from the source, its distance should be marked as 108. Additionally, if the graph contains a negative weight cycle, return [-1] to indicate that shortest paths cannot be reliably computed.
@@ -76,6 +82,8 @@ Q2. How to detect a negative cycle in the graph?
 
     ➖ In order to check the existence of a negative cycle, we will relax the edges one more time after the completion of N-1 iterations. And if in that Nth iteration, it is found that further relaxation of any edge is possible, we can conclude that the graph has a negative cycle. Thus, the Bellman-Ford algorithm detects negative cycles.
 
+
+
 */
 
 vector<int> bellmanFord(int n, vector<vector<int>> &edges, int src){
@@ -97,7 +105,7 @@ vector<int> bellmanFord(int n, vector<vector<int>> &edges, int src){
         }
     }
 
-    // Nth relaxation to check negative cycle (if it contains cycle means it still reducing)
+    // Nth relaxation to check negative cycle (if it contains cycle means it still reducing) if a graph has any path weight which is lesser than 0 then i can say that graph has negetive cycle
     for (int i = 0; i < edges.size(); i++){
         int u = edges[i][0];
         int v = edges[i][1];

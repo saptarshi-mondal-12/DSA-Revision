@@ -1,0 +1,87 @@
+✅ Minimum Spanning Tree - MST 
+
+🔶 Definition Spanning Tree: 
+
+A spanning tree is a tree in which we have N nodes(i.e. All the nodes present in the original graph) and N-1 edges and all nodes are reachable from each other.
+
+Note: Point to remember is that a graph may have more than one spanning trees.
+
+
+       2       3
+   (0)━━━━(1)━━━━(2)
+    ┃     /┃     /    
+ 6  ┃    / ┃5   / 7    
+    ┃  8/  ┃   /
+    ┃  /   ┃  /
+    ┃ /    ┃ /    
+   (3)    (4)
+
+
+One of the  spanning tree from the given graph is because it have n=5 nodes and n-1=4 edges and all nodes are reachable from each other. 
+
+(0)━━━━(1)━━━━━━━━(2)
+       /┃
+      / ┃
+     /  ┃
+    /   ┃
+   /    ┃
+(3)    (4)
+
+
+
+
+Another spannig tree is n=5 nodes and n-1=4 edges. 
+
+(0)    (1)━━━━(2)
+ ┃     /      /    
+ ┃    /      /     
+ ┃   /      /
+ ┃  /      /
+ ┃ /      /    
+(3)     (4)
+
+
+
+
+🔶 Minimum Spanning Tree: 
+Among all possible spanning trees of a graph, Any tree which has the minimum sum will be the minimum spanning tree.
+
+
+
+    2        3
+(0)━━━━(1)━━━━━━━━(2)
+       /┃
+    8 / ┃
+     /  ┃5
+    /   ┃
+   /    ┃
+(3)    (4)
+
+Total Sum = 2+3+8+5=18
+
+
+           3
+(0)    (1)━━━━(2)
+ ┃     /      /    
+6┃   8/      /     
+ ┃   /      /7
+ ┃  /      /
+ ┃ /      /    
+(3)     (4)
+
+Total Sum = 6+8+3+7=24
+
+
+    2       3
+(0)━━━━(1)━━━━(2)
+ ┃      ┃  
+6┃      ┃    
+ ┃      ┃ 5
+ ┃      ┃ 
+ ┃      ┃    
+(3)     (4)
+
+Total Sum = 6+2+3+5=16
+
+Q. How to find MST of a given graph?
+Ans: Prim’s algorithm or Kruskal’s algorithm. 
