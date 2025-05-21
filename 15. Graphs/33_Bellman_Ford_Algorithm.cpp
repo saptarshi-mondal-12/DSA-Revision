@@ -5,8 +5,15 @@ using namespace std;
 /* Q. Bellman Ford Algorithm
 
 Bellman Ford definition: 
+Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted graph, even if the graph has negative weight edges (but no negative weight cycles).
 
 
+Intuition:
+It relaxes edges repeatedly — meaning it updates the shortest distance to each vertex by checking all edges multiple times.
+
+Because shortest paths can have up to (V-1) edges, it does this process (V-1) times to ensure all shortest paths are found.
+
+If after these (V-1) iterations, you can still relax an edge, it means there’s a negative weight cycle in the graph.
 
 
 

@@ -233,7 +233,7 @@ Space complexity: O(1)
    For example, shortest path from node 0 to node 2 is now 6, found by going 0 → 3 → 2.
 
 
-
+------------------------------------------------------------------------------------------------
 To find shortest path 
 
 Single Source 
@@ -242,6 +242,13 @@ Single Source
 
 Multiple Sources (All-Pairs):
    Both positive & negative edge weights → Implement Floyd-Warshall Algorithm
+
+
+
+--------------------------------------------------------------------------------------------------
+To find Minimum Spanning Tree:
+   1. Prim's Algorithm
+   2. Kruskal's Algorithm
 
 
 
