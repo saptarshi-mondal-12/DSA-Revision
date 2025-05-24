@@ -125,6 +125,7 @@ void dfs3(int node, vector<int>&visited, vector<vector<int>> &reverseAdj, vector
         }
     }
 }
+
 int kosaraju(vector<vector<int>> &adj) {
 
     /* Time Complexity: O(V+E) + O(V+E) + O(V+E) ~ O(V+E) , where V = no. of vertices, E = no. of edges. The first step is a simple DFS, so the first term is O(V+E). The second step of reversing the graph and the third step, containing DFS again, will take O(V+E) each.
