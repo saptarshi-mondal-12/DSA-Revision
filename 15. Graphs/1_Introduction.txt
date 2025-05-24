@@ -251,6 +251,10 @@ To find Minimum Spanning Tree:
    2. Kruskal's Algorithm
 
 
+--------------------------------------------------------------------------------------------------
+To find Strongly connected components SCC we use 
+   1. Kosaraju’s Algorithm.
+
 
       
 
