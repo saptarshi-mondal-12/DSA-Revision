@@ -67,12 +67,18 @@ Intuition:
 The intuition is to find if it is possible to perform all the tasks (i.e. The graph contains a cycle or not).
 If does not contain cycle means we can complete all tasks.
 
+
+Follow up Question - Ask to print linear ordering. Try below ques
+Q. https://www.geeksforgeeks.org/problems/course-schedule/1
+
 */
 
 bool canFinish(int numCourses, vector<vector<int>> &prerequisites){
     // Time Complexity: O(V+E), where V = no. of nodes and E = no. of edges. This is a simple BFS algorithm.
 
     // Space Complexity: O(N) + O(N) ~ O(2N), O(N) for the indegree array, and O(N) for the queue data structure used in BFS(where N = no.of nodes). Extra O(N) for storing the topological sorting. Total ~ O(3N).
+    
+    
     int n = numCourses;
 
     // creating adjacency list
@@ -99,10 +105,13 @@ bool canFinish(int numCourses, vector<vector<int>> &prerequisites){
             q.push(i);
         }
     }
+
+    vector<int> order;
     int count = 0;
     while (!q.empty()){
         int node = q.front();
         q.pop();
+        order.push_back(node);
         count++;
         // node is in your topo sort
         // so please remove it from the indegree
