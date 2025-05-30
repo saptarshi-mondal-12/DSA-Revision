@@ -34,6 +34,10 @@ Approach: ----------------------------------------------------------------------
 
 We will calculate the shortest path in a directed acyclic graph by using topological sort. Topological sort can be implemented in two ways- BFS and DFS. Here, we will be implementing using the DFS technique. Depth First Search, DFS is a traversal technique where we visit a node and then continue visiting its adjacent nodes until we reach the end point, i.e., it keeps on moving in the depth of a particular node and then backtracks when no further adjacent nodes are available. 
 
+
+Q. Why we use topological sort?
+Ans: Something i know for sure is there is no one before 1st element (in linear ordereing of toposort).
+
 Initial configuration:
     
 1. Adjacency List: Create an adjacency list of the formed vector of pairs of size ‘N’, where each index denotes a node ‘u’ and contains a vector that consists of pairs denoting the adjacent nodes ‘v’ and the distance to that adjacent node from initial node ‘u’.
@@ -56,6 +60,13 @@ The shortest path in a directed acyclic graph can be calculated by the following
 5. If (dist[node] + wt < dist[adjNode]), then we will go ahead and update the distance of the dist[adjNode] to the new found better path. 
 
 6. Once all the nodes have been iterated, the dist[] array will store the shortest paths and we can then return it.
+
+
+------------------------------------------------------------------------------------------------
+
+Q. Variation Question Practice below link
+https://www.geeksforgeeks.org/problems/longest-path-in-a-directed-acyclic-graph/1
+Soln: Q.57
 */
 
 void dfs(int node, vector<int>&visited, vector<vector<pair<int,int>>>&adjacencyList, stack<int> &st){

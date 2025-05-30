@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Number of Provinces
+/* Q. Number of Provinces or Number of Connected Components in an Undirected Graph
 
 Problem Statement: Given an undirected graph with V vertices. We say two vertices u and v belong to a single province if there is a path from u to v or v to u. Your task is to find the number of provinces.
 
@@ -14,6 +14,17 @@ Input:
           
 
 Output: 2
+
+
+--------------------------------------------------------------------------------------------
+
+Follow up question - Soln Q.62
+
+Your task is to return a list of all connected components. Each connected component should be represented as a list of its vertices, with all components returned in a collection where each component is listed separately.
+
+https://www.geeksforgeeks.org/problems/connected-components-in-an-undirected-graph/1
+
+
 */ 
 void dfs(int node, vector<vector<int>>adjacencyList, int visited[]){
     // 1. Mark node as visited 

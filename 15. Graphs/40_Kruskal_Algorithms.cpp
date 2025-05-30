@@ -5,6 +5,9 @@ using namespace std;
 /* Kruskal's Algorithms
 
 Definition: 
+Kruskal's Algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a connected, undirected, and weighted graph.
+
+Kruskal's Algorithm selects edges in increasing order of weight and adds them to the MST if they do not form a cycle, until the MST includes all vertices.
 
 
 

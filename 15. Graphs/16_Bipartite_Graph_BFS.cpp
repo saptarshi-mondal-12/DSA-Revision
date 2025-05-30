@@ -57,6 +57,11 @@ A bipartite graph is a graph which can be coloured using 2 colours such that no 
 
 The intuition is the brute force of filling colours using any traversal technique, just make sure no two adjacent nodes have the same colour. If at any moment of traversal, we find the adjacent nodes to have the same colour, it means that there is an odd cycle, or it cannot be a bipartite graph.
 
+Example Where Bipartite Fails
+
+V = 3, edges = [[0,1], [1,2], [2,0]], m = 3
+This graph is a triangle (3-cycle), which is not bipartite.But it can be 3-colored easily. So, the graph is not bipartite, but the answer to the M-coloring problem with m=3 is true.
+
 */
 
 bool check(int start, vector<vector<int>> adjacencyList, vector<int> &color){

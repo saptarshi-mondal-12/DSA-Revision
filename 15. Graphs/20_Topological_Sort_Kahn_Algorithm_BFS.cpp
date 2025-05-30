@@ -8,6 +8,8 @@ Definition : Topological Sort Algorithm / Kahn's Algorithm
 
 Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u -> v, vertex u comes before v in the ordering.
 
+If there is an edge between u and v (u--->v), u appears before v in the linear ordering.
+
 Linear ordering of vertices such that if there is a edge between u and v (u-->v) u appear before v in the ordering
 
 NOTE: It is only applicable to DAG (Directed Acyclic Graph) (does'nt have a cycle)
@@ -58,6 +60,9 @@ Queue: As we will use BFS, a queue is required. Initially, the node with indegre
 
 Answer array: Initially empty and is used to store the linear ordering.
 
+
+Q. Practice Question: Q.52
+https://www.geeksforgeeks.org/problems/minimum-time-taken-by-each-job-to-be-completed-given-by-a-directed-acyclic-graph/1
 */
 
 vector<int> topoSort(int n, vector<vector<int>>&edges){
@@ -72,6 +77,7 @@ vector<int> topoSort(int n, vector<vector<int>>&edges){
         adjacency_List[u].push_back(v);
     }
 
+    // indegree - np of incomming edges
     vector<int> indegree(n, 0);
     for (int i = 0; i < n; i++){
         for (auto it : adjacency_List[i]){
@@ -79,7 +85,7 @@ vector<int> topoSort(int n, vector<vector<int>>&edges){
         }
     }
 
-    // Pushing all 0 indegree to queue
+    // Insert all node with indegree 0 
     queue<int> q;
     for (int i = 0; i < n; i++){
         if (indegree[i] == 0){
