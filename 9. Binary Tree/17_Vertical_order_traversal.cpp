@@ -11,7 +11,23 @@ Level -2: [4]
 Level -1: [2]
 Level 0: [1, 10, 9, 6] (Overlapping nodes are added in their level order sequence)
 Level 1: [3]
-Level 2: [11
+Level 2: [11]
+
+
+---------------------------Follow up -----------------------------------------------------------
+
+Vertical Order Traversal ----> (right to left)
+
+In Vertical Order Traversal (left to right) current implementation, map<int, ...> iterates keys (i.e., vertical columns) in increasing order (-2, -1, 0, 1, 2), which results in left-to-right vertical order traversal.
+
+To get right-to-left, you simply need to traverse the map in reverse order (2, 1, 0, -1, -2).
+
+Just 1 change: 
+
+for(auto p: nodes)
+    To:
+for(auto it = nodes.rbegin(); it != nodes.rend(); ++it)
+
 
 */
 
@@ -34,20 +50,19 @@ class Node{
 
 vector<vector<int>> findVertical(Node* root){
 
-    /*Time Complexity: O(N * log2N * log2N * log2N) where N represents the number of nodes in the Binary Tree.
-
-            Postorder Traversal performed using BFS as a time complexity of O(N) as we are visiting each and every node once.
+    /*Time Complexity: O(N * log N) 
+            Each node is visited once, and each enqueue/dequeue operation is O(1). So this part is O(N).
             Multiset Operations to insert overlapping nodes at a specific vertical and horizontal level also takes O(log2N) complexity.
             Map operations involve insertion and retrieval of nodes with their vertical and level as their keys. Since there are two nested maps, the total time complexity becomes O(log2N)*O(log2N).
 
-    Space Complexity: O(N + N/2) where N represents the number of nodes in the Binary Tree.
-
-            The map for storing nodes based on their vertical and level information occupies an additional space complexity of O(N) as it stores all N nodes of the Binary Tree.
-            The queue for breadth first traversal occupies a space proportional to the maximum level of the tree which can be O(N/2) in the worst case of a balanced tree.
+    Space Complexity: O(N) where N represents the number of nodes in the Binary Tree.
+            Each of the N nodes is stored exactly once in the map<int, map<int, multiset<int>>>. Total space for storing all nodes: O(N)
+            At most, the queue stores nodes level by level (BFS), which can be O(N) in the worst case.
     */
 
 
-    // map to store nodes based on vertical and level information {-1:{0:{1},1:{2,3,3}}}
+    // map to store nodes based on vertical and level 
+    // {vertical:{level:{level may have multiple nodes}}}
     map<int,map<int,multiset<int>>>nodes;
 
     // queue for traversal, each element is in pair containing node, and its vertical and level information
@@ -82,7 +97,8 @@ vector<vector<int>> findVertical(Node* root){
             q.push({temp->right,{x+1,y+1}});
         }    
     }
-    // prepare final result - vertical,level,data - {-2:{2:{4}} -1:{1:{2},3:{5}}}
+
+    // prepare final result - vertical,level,data - {-2:{2:{4}}, -1:{1:{2},3:{5}}, 0:{0:{1},2:{9},4:{6}}, 1:{1:{3},3:{10}}, 2:{2:{11}}}
     vector<vector<int>>ans;
 
     for(auto p: nodes){

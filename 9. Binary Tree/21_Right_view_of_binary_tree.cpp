@@ -35,11 +35,11 @@ vector<int> RightViewOfBinaryTree(Node* root){
     // Time Complexity: O(N)
     // Space Complexity:O(H)
 
-    // if i travel from left to tight then last node of every level will my right view of binary tree 
+    // if i travel from left to right then last node of every level will my right view of binary tree 
 
     // or if i travel from right to left (<--) the 1st node at every level is my right view of binary tree
 
-    // Why i use level order traversal ? 
+    // Why i dont use level order traversal ? 
     // because in level order traversal i have to store all node which takes more space like in worst case - TC-O(n), SC-O(n) for full binary tree
 
     // But in recurive way TC=O(n) and SC-O(H) height of tree

@@ -1,6 +1,10 @@
 /* 
 Diameter Binary Tree
 The Diameter of a Binary Tree is the longest distance between any two nodes of that tree. This path may or may not pass through the root.
+
+Intuition:
+
+For any given node if i can figure out whats the left height and whats the right height and if i add them up get (lh+ rh) thats is the length of the lobgest path passing via the given node and if we are given n nodes . so if we can find lh + rh across every given node can i say the maximum of lh + rh is my diameter of tree.
 */
 
 #include<iostream>

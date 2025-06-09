@@ -21,16 +21,19 @@ class Node{
 };
 
 vector<int> BottomViewOfBinaryTree(Node* root){
-
     // Time Complexity: O(N)
     // Space Complexity:O(N)
 
-    // using level order traversal 
     vector<int>result;
+
     if(root==NULL) return result;
+
+    // using level order traversal 
     map<int,int>mp;
+
     queue<pair<Node*,int>>q;
     q.push({root,0});
+    
     while(!q.empty()){
         auto it=q.front();
         q.pop();

@@ -1,5 +1,5 @@
-/* 
-Check if 2 tree are identical or not 
+/* Q. Check if 2 tree are identical or not | Same Tree
+
 Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 */
 

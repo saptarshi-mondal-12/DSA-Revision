@@ -7,6 +7,12 @@ Iterative postorder Traversal (left->right->root)
 
 arr=[4,5,2,6,7,3,1]
 
+
+Intuition:
+
+left left left right left left left left left right left left left...... so on 
+
+
 */
 
 #include<iostream>
@@ -27,7 +33,7 @@ class Node{
 };
 
 void postorder_iterative_traversal(Node* root){
-    // Time complexity - O(2n)
+    // Time complexity - O(2n) - insert takes O(n) times and inner while loop takes another O(n) time 
     // space complexity - O(n)
     
     vector<int>postorder;
@@ -36,6 +42,14 @@ void postorder_iterative_traversal(Node* root){
     }
 
     // think in term of skew tree: root->right-> right right right right
+    /*
+    1
+      2
+        3
+          4
+            5
+              6
+    */
 
     stack<Node*>st;
     Node* curr=root;

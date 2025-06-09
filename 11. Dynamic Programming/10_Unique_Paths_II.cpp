@@ -41,6 +41,16 @@ Base Case: There will be three base cases:
     2. When i=0 and j=0, that is we have reached the destination so we can count the current path that is going on, hence we return 1.
     
     3. When i<0 and j<0, it means that we have crossed the boundary of the matrix and we couldn’t find a right path, hence we return 0.
+
+
+
+---------------------------Follow up question---------------------
+Now, each cell in the n × n grid either contains:
+A trap, denoted by -1 — you cannot step into these cells. or
+A non-negative reward, denoted by any >= 0 integer — this is the reward collected when you step on the cell.
+You still start from the top-left cell (0, 0) and aim to reach the bottom-right cell (n - 1, n - 1) by only moving right or down, and never stepping into trap cells (-1).
+Write a function to compute the maximum total reward you can collect along a valid path from (0, 0) to (n - 1, n - 1).
+If there is no valid path, return 0.
 */
 
 // Recursion----------------------------------------------------------------------

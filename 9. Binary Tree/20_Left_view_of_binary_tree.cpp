@@ -1,6 +1,8 @@
 /* 
 Left View of binary tree
 
+The Left View of a Binary Tree is a list of nodes that can be seen when the tree is viewed from the left side.
+
 */
 
 #include<iostream>
@@ -30,8 +32,6 @@ void recursion(Node* root, int level, vector<int>&result){
 }
 
 vector<int> LeftViewOfBinaryTree(Node* root){
-
-
     // But in recurive way TC=O(n) and SC-O(H) height of tree
     // which recursion - pre order - root left right
     vector<int>result;

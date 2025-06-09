@@ -1,7 +1,12 @@
 /* 
+Q. Top view of a Binary Tree
+
+Top View of a Binary Tree is the set of nodes visible when we see the tree from the top.
 
 
 */
+
+
 
 #include<iostream>
 #include<bits/stdc++.h>

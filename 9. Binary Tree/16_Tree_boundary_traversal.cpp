@@ -106,6 +106,7 @@ void addRightBoundary(Node* root, vector<int>&result){
 vector<int> treeBoundary(Node* root){
     // Time complexity - O(n)
     // space complexity - O(n)
+    
     vector<int>result;
     if(root==NULL){
         return result;

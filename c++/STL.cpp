@@ -199,10 +199,13 @@ void explainUnordered_set(){
 }
 
 void explainMulti_Set(){
+In C++, multiset is an associative container similar to the set, but it can store multiple elements with same value. It is sorted in increasing order by default, but it can be changed to any desired order. It provides fast insertion, deletion and search operations.
+
     // Time - O(log n) 
 
     // sorted but store multiple occurrence 
     // eg - {1,2,2,3,4,4,4,6}
+
     multiset<int>ms;
     ms.insert(1); //{1}
     ms.insert(2); //{1,2}
