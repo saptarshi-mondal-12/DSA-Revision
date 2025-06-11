@@ -22,11 +22,15 @@ In Vertical Order Traversal (left to right) current implementation, map<int, ...
 
 To get right-to-left, you simply need to traverse the map in reverse order (2, 1, 0, -1, -2).
 
-Just 1 change: 
-
-for(auto p: nodes)
-    To:
-for(auto it = nodes.rbegin(); it != nodes.rend(); ++it)
+// MODIFIED (right-to-left)
+for(auto it = nodes.rbegin(); it != nodes.rend(); ++it){
+    vector<int>col;
+    for(auto q: it->second){
+        col.insert(col.end(), q.second.begin(), q.second.end());
+    }
+    ans.push_back(col);
+}
+return ans
 
 
 */
@@ -101,15 +105,26 @@ vector<vector<int>> findVertical(Node* root){
     // prepare final result - vertical,level,data - {-2:{2:{4}}, -1:{1:{2},3:{5}}, 0:{0:{1},2:{9},4:{6}}, 1:{1:{3},3:{10}}, 2:{2:{11}}}
     vector<vector<int>>ans;
 
-    for(auto p: nodes){
-
+    for(auto p : nodes){
         vector<int>col;
-        for(auto q:p.second){
-            col.insert(col.end(),q.second.begin(),q.second.end());
+        for(auto q: p.second){
+            col.insert(col.end(), q.second.begin(), q.second.end());
         }
         ans.push_back(col);
     }
-    return ans;   
+    return ans; 
+    
+    
+
+    // Follow up ----> printing (right to left)
+    // for(auto it = nodes.rbegin(); it != nodes.rend(); ++it){
+    //     vector<int>col;
+    //     for(auto q: it->second){
+    //         col.insert(col.end(), q.second.begin(), q.second.end());
+    //     }
+    //     ans.push_back(col);
+    // }
+    // return ans; 
 }
 
 void printResult(vector<vector<int>>&result){
@@ -133,10 +148,10 @@ int main(){
     root->left->left->right = new Node(5);
     root->left->left->right->right = new Node(6);
     root->right = new Node(3);
-    root->right->right = new Node(10);
+    root->right->right = new Node(11);
     root->right->left = new Node(9);
 
     vector<vector<int>>res=findVertical(root);
-    // printResult(res);
+    printResult(res);
 
 }

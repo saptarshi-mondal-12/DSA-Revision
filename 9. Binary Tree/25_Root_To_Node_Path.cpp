@@ -1,5 +1,15 @@
-/* 
-Root to node path 
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+/* Q. Root to node path 
+
+Problem  Statement: Given a Binary Tree and a reference to a root belonging to it. Return the path from the root node to the given leaf node.
+    No two nodes in the tree have the same data value.
+    It is assured that the given node is present and a path always exists.
+
+Input:Binary Tree: 1 2 3 4 5 -1 -1 -1 -1, Node: 7
+output: [1,2,5,7]
 
 
         1
@@ -7,12 +17,8 @@ Root to node path
 4      5
     6     7
 
-output: [1,2,5,7]
 */
 
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
 
 class Node{
     public:
@@ -28,7 +34,7 @@ class Node{
 };
 
 bool getPath(Node* root, vector<int>&arr, int x){
-    // if we reach at leaves return false
+    // If the current node is null then we return false, indicating the end of the path.
     if(root==NULL){
         return false;
     }
@@ -49,7 +55,7 @@ bool getPath(Node* root, vector<int>&arr, int x){
 }
 
 
-vector<int> isSymmetric(Node* root, int x) {
+vector<int> solve(Node* root, int x) {
     // Time complexity: O(n)
     // Space complexity: O(H)
 
@@ -79,8 +85,8 @@ int main(){
 
     root->right = new Node(3);
     
-
-    vector<int>result=isSymmetric(root, 7);
+    int targetLeafValue=7;
+    vector<int>result=solve(root, targetLeafValue);
     for(auto it: result){
         cout<<it<<" ";
     }

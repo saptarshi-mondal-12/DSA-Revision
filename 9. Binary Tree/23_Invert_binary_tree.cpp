@@ -50,7 +50,10 @@ Node* invertTree(Node* root) {
     root->left=root->right;
     root->right=temp;
 
+    // get done for left subtree
     invertTree(root->left);
+
+    // get done for right subtree
     invertTree(root->right);
     return root;
 }

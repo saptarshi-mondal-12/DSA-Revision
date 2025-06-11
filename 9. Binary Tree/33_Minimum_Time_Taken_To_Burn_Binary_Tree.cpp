@@ -50,8 +50,8 @@ bfsToMergeParents:
     The problem involves both upward (parent) and downward (child) movement of fire.
     A standard tree only has child pointers, so we need to store parent-child relationships to move upwards.
 
-        Solution: We traverse the tree and store the parent of each node in a map. Maps child nodes to their parents using BFS.
-        And The fire starts from a given node (target). Se also identifies the target node (where the fire starts)  while mapping parent-child relationships,
+    Solution: We traverse the tree and store the parent of each node in a map. Maps child nodes to their parents using BFS.
+    And The fire starts from a given node (target). We also identifies the target node (where the fire starts)  while mapping parent-child relationships,
 
 ----------------------------------------------------------------------------------------------------------
 Step 2: Start BFS from the Target Node and spread fire
@@ -96,6 +96,7 @@ int findMaxDistance(map<TreeNode*, TreeNode*>&mpp, TreeNode* target){
 
     // Variable to store the time required to burn the tree
     int time=0;
+    
     while(!q.empty()){
         // Get the number of nodes at the current level
         int size=q.size();
@@ -197,8 +198,8 @@ int minTime(TreeNode* root, int start) {
     TreeNode* target=bfsToMergeParents(root, mpp, start);
 
     // Function to find the minimum time required to burn the tree
-    int maxi=findMaxDistance(mpp, target);
-    return maxi;
+    int mini=findMaxDistance(mpp, target);
+    return mini;
 }
 
 int main(){

@@ -77,7 +77,7 @@ Node* createBinaryTree(vector<vector<int>>& descriptions) {
 
         children.insert(child);
 
-        // The root is the node that is not in the children set 
+        // The root is the node that is not present in the children set 
 
     }
     int root=0;

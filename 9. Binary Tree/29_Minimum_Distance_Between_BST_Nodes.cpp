@@ -1,6 +1,8 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
 
-/* 
-Minimum Distance Between BST Nodes
+/* Q. Minimum Distance Between BST Nodes
 
 Given the root of a Binary Search Tree (BST), return the minimum difference between the values of any two different nodes in the tree.
 
@@ -11,11 +13,9 @@ Given the root of a Binary Search Tree (BST), return the minimum difference betw
 Input: root = [4,2,6,1,3]
 Output: 1
 
-*/
 
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
+NOTE - GIVEN BST
+*/
 
 class Node{
     public:

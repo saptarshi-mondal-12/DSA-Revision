@@ -45,7 +45,10 @@ void print(Node* root){
 
 
 Node* brute_removeLeafNodes(Node* root, int target) {
-    // recursive approach 
+    // Time complexity: O(n)
+    // Space complexity: O(n)
+
+    // post order traversal - beacuse we need to check for leaves left , right then root , if it is a leaf equal to target delete it i.e postorder traversal
 
     // Base case
     if (root==NULL ){
@@ -58,7 +61,7 @@ Node* brute_removeLeafNodes(Node* root, int target) {
     root->right=brute_removeLeafNodes(root->right, target);
 
 
-    // 3. checking if current node value is equal to target
+    // 3. check if the current node is a leaf node and its value equals target.
     if(root->left==NULL && root->right==NULL && root->data==target){
         return NULL;
     }
@@ -67,7 +70,8 @@ Node* brute_removeLeafNodes(Node* root, int target) {
 }
 
 Node* optimal_removeLeafNodes(Node* root, int target) {
-    // iterative approach
+    // Time complexity: O(n)
+    // Space complexity: O(n)
 
     if(root==NULL){
         return root;
@@ -90,10 +94,15 @@ Node* optimal_removeLeafNodes(Node* root, int target) {
         st.pop();
 
         if(currNode->left==NULL && currNode->right==NULL && currNode->data==target){
+            // If the stack is empty after popping, it means the root was a target leaf node.
             if(st.empty()){
                 return NULL;
             }
+
+            // Identify the parent of the current node.
             Node* parent=st.top();
+
+            // Disconnect the current node from its parent.
             if(parent->left==currNode){
                 parent->left=NULL;
             }else{
@@ -101,7 +110,10 @@ Node* optimal_removeLeafNodes(Node* root, int target) {
             }
         }
 
+        // Mark this node as visited by setting 'lastRightNode' to 'currentNode' before moving to the next iteration.
         lastRightNode=currNode;
+
+        // Reset 'currentNode' to null to ensure the next node from the stack is processed.
         currNode=NULL;
     }
     return root;
@@ -123,7 +135,12 @@ int main(){
     root->right->right = new Node(4);
 
     int target = 2;
+
+    // brute
     // Node* res=brute_removeLeafNodes(root, target);
+
+
+    // optimal
     Node* res=optimal_removeLeafNodes(root, target);
 
     print(res);
