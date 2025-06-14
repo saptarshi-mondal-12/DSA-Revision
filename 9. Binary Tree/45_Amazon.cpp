@@ -65,27 +65,35 @@ int findDistanceBetweenNodes(TreeNode* root, int n1, int n2) {
 }
 
 bool findPair(TreeNode* root, int target, int d) {
-    // Time complexity : O(n^2)
+    // Time complexity : O(n^2) due to repeated LCA and distance calculation.
     // space complexity : O(n) due to the map and queue
 
     /* Intuition: 
-    I perform a level order traversal  and check for each node if target - curr_node->val is present in my map or not 
+    To solve the problem, I use a level-order traversal (BFS) to visit each node in the binary tree. While traversing, I maintain a map that stores the value of each node along with the level at which it was encountered.
 
-    if it is present I will find between 2 nodes,  
-    if level are different then I find the distance bewteen 2 nodes and if distance is equal to given d I simple found my pair 
-    so return answer. 
-    
-    conclusion :
-    1. I found 2 node equal to given target.
-    2. I found 2 node are at different level
-    3. I found 2 node are at a distance equal to d. 
+    For every node during traversal, I calculate the value needed to form the target sum:
+        required = target - current_node->val
+
+    I then check if this required value already exists in the map. If it does, I perform additional checks:
+
+        Different Levels: Ensure that the two nodes are not on the same level.
+        Exact Distance: Use the findDistanceBetweenNodes() function to calculate the actual distance between these two nodes.
+        Distance Match: If the calculated distance is exactly equal to d, I have found a valid pair and return true.
+
+    Conclusion:
+    For a pair of nodes to be valid:
+        The sum of their values must equal the target.
+        The two nodes must be at different levels in the tree.
+        The distance between them must be exactly d.
+
+    If all three conditions are satisfied, I return true.
     */
 
     if(root==NULL){
         return false;
     }
 
-    // map to store node and level;
+    // map to store node and their level;
     unordered_map<int, int>mp;
     
     queue<TreeNode*>q;
@@ -128,9 +136,16 @@ bool findPair(TreeNode* root, int target, int d) {
 }
 
 
-// ------------------------------------------------------------------------------------ 
 
-int calculateDistance(TreeNode* root, int u, int v, unordered_map<int,int>mp){
+
+
+
+
+
+
+// Optimal Soln ------------------------------------------------------------------------------------ 
+
+int calculate_Distance_Between_Nodes(TreeNode* root, int u, int v, unordered_map<int,int>mp){
 
     // lowest common ancesstor of 2 node u and v
     TreeNode* LCA = findLCA(root,u,v);
@@ -165,11 +180,10 @@ bool optimal_findPair(TreeNode* root, int target, int d){
 
         distance = (level[u] + level[v] − 2×level[LCA(u,v)])
 
-        E.g u=4, v=5 
-        distance = 2 + 2 - 2*1 = 2
+        level[4] = 2, level[5] = 2, LCA(4, 5) = 2 → distance = 2 + 2 − 2×1 = 2
+        Path: 4 → 2 → 5 (2 edges) ✅
 
-        Q. Why we use 2×level[LCA(u,v)] ?
-        Ans: if i use (level[u] + level[v]) then distance becomes 4 (see in diagram) which is wrong, correct ans is 2 that's wgy we use 2×level[LCA(u,v)].
+        So this formula gives the exact number of edges between two nodes using their levels and LCA — without needing to traverse the path between them every time.
     */
 
     if(root==NULL){
@@ -197,13 +211,13 @@ bool optimal_findPair(TreeNode* root, int target, int d){
             mp[curr->val]=level;
 
             // check if required is present in map. 
-            // if present check for its level, if level are dfferent.
-            // check if distance between these 2 node is equal to d
+            // if it is present - then check for level, both level should be dfferent.
+            // If both level are different - then check if distance between these 2 node is equal to d
             // if all true we find our pair
             if(mp.find(required) != mp.end()){
                 // check if both are in different level
                 if (mp[curr->val] != mp[required]){
-                    int distance = calculateDistance(root, curr->val, required, mp);
+                    int distance = calculate_Distance_Between_Nodes(root, curr->val, required, mp);
 
                     // check if distance between 2 nodes is equal to d
                     if(distance==d){

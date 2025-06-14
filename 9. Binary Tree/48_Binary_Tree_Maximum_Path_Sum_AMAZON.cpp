@@ -47,6 +47,22 @@ class TreeNode{
     }
 };
 
+/*  
+               -10
+             /     \
+            9       20
+                   /  \
+                 15    7
+
+
+    20+15+7 can be our answer 
+
+    15+20-10 or 7+20-10 can be answer - we have to return only 1 path to -10
+    either 15+20-10 or 7+20-10.  whichever is maximum we return.
+
+    or nay other path can be our answer. We considering only maximum path.
+*/
+
 
 int dfs(TreeNode *node, int &maxSum){
     if (node == NULL)
@@ -57,6 +73,7 @@ int dfs(TreeNode *node, int &maxSum){
     int rightGain = max(0, dfs(node->right, maxSum));
 
     // Path sum including current node and both children
+    // considering current root + their 2 child can be our max 
     int currentPathSum = node->data + leftGain + rightGain;
 
     // Update global max sum if current path is better

@@ -59,9 +59,9 @@ The first element of the preorder array is the root of the binary tree
   40 50  60
 
 
-Imagination : O=root
-inorder =  [(---IL---),O,(----IR---)]
-preorder = [O,(---PL---),(----PR---)]
+Imagination : 
+inorder =  [(---IL---),root,(----IR---)]
+preorder = [root,(---PL---),(----PR---)]
 
 
 Algorithm:

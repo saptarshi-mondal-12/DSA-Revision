@@ -26,19 +26,30 @@ TreeNode* findLCA(TreeNode* root, int n1, int n2) {
     TreeNode* leftLCA = findLCA(root->left, n1, n2);
     TreeNode* rightLCA = findLCA(root->right, n1, n2);
 
-    if (leftLCA && rightLCA) return root;  // If both left and right have values, root is LCA
-
-    return (leftLCA != NULL) ? leftLCA : rightLCA;
+    if(leftLCA==NULL){
+        return rightLCA;
+    }else if(rightLCA==NULL){
+        return leftLCA;
+    }else{
+        // if both (lh & rh) are not null means we get our LCA, so return root
+        return root;
+    }
 }
 
 int findDistanceFromLCA(TreeNode* root, int target, int count) {
+    // Base case: if the current node is NULL, return -1 (target not found in this path)
     if (root == NULL) return -1;
 
+    // If the current node matches the target, return the current depth (distance from LCA)
     if (root->val == target) return count;
 
+    // Recursively search for the target in the left subtree
     int left = findDistanceFromLCA(root->left, target, count + 1);
+
+    // If the target is found in the left subtree, return the result (don't search for right)
     if (left != -1) return left;
 
+    // Otherwise, search in the right subtree and return the result
     return findDistanceFromLCA(root->right, target, count + 1);
 }
 

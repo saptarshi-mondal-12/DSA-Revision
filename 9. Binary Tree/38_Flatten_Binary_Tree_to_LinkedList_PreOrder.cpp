@@ -96,6 +96,8 @@ void flatten(TreeNode* root) {
         // Set the left child to NULL to form a right-oriented linked list.
         currNode->left=NULL;
     }
+
+    // preorder_traversal(root);
 }
 
 
@@ -122,6 +124,12 @@ void optimal_flatten(TreeNode* root) {
         Step 3: Repeat until all nodes are processed.
 
     After 1 operatio it look like (4 ka right 5 ho javega (prev->right=curr->right;), aur 1 ka right 2 ho jayega (curr->right=curr->left ) aur 1 ka left null ho jayega (curr->left=NULL)
+          1
+        /   \
+       2     5
+      / \     \
+     3   4     6
+
 
       1
        \
@@ -177,5 +185,5 @@ int main(){
     flatten(root);
 
     // optimal
-    optimal_flatten(root);
+    // optimal_flatten(root);
 }
