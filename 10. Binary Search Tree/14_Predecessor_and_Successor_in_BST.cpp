@@ -40,7 +40,7 @@ void findPreSuc(TreeNode* root, int key){
     TreeNode* dummy1=root;
     TreeNode* dummy2=root;
 
-    // Finding successor
+    // Finding successor - smallest but greater than key
     int successor=-1;
     while(dummy1!=NULL){
         if(key >= dummy1->val){
@@ -50,11 +50,11 @@ void findPreSuc(TreeNode* root, int key){
             dummy1=dummy1->left;
         }
     }
-    // immediate greater of key
+    // immediate greater of key 
     cout<<"Successor of "<<key<<" is: "<<successor<<endl;
         
     
-    // Finding predecessor
+    // Finding predecessor - largest but smaller than key
     int predecessor=-1;
     while(dummy2!=NULL){
         if(dummy2->val < key){
@@ -64,7 +64,7 @@ void findPreSuc(TreeNode* root, int key){
             dummy2=dummy2->left;
         }
     }
-    // immediate greater of key
+    // immediate smaller of key
     cout<<"Predecessor of "<<key<<" is: "<<predecessor<<endl;
 }
 

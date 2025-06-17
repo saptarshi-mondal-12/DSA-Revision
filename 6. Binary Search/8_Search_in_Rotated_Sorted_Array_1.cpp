@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*Search in Rotated Sorted Array 1
+/*Search in Rotated Sorted Array 1 - Amazon
 
 Given an integer array arr of size N, sorted in ascending order (with distinct values) 
 and a target value k. Now the array is rotated at some pivot point unknown to you. 

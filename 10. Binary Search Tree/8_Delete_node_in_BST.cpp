@@ -86,6 +86,18 @@ void inorder(TreeNode* root){
     inorder(root->right);
 }
 
+/* 
+
+        8
+       /  \
+      3    10
+     /  \    \
+    2    6    14
+   / \   / \   /
+  1   5 4   7 13  
+  
+*/
+
 TreeNode* helper(TreeNode* root){
     // if root's left is null, then return root's right
     // NOTE: cuurent node(root) has to delete i.e. we return root->right to connect;

@@ -3,7 +3,7 @@
 using namespace std;
 #include <string>
 
-/* Q. Construct K Palindrome Strings
+/* Q. Construct K Palindrome Strings - AMAZON
 
 Given a string s and an integer k, return true if you can use all the characters in s to construct non-empty k palindrome strings or false otherwise.
 

@@ -1,6 +1,5 @@
 /* 
-Maximum height/depth in binary tree
-
+Maximum height/depth in binary tree - Amazon
 */
 
 #include<iostream>

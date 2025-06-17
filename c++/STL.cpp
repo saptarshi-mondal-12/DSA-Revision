@@ -133,6 +133,10 @@ void explainPriorityQueue(){
     cout<<pq1.top(); // 2
 
 
+    // store maximum element at top
+    priority_queue<int> maxHeap;
+
+
     
 }
 

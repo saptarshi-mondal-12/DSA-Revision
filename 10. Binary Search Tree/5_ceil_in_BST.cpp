@@ -35,14 +35,14 @@ int findCeil(TreeNode* root, int key){
     int ans=-1;
     
     while(root!=NULL){
-        // If the key is smaller, update ceil and move to the left subtree beacuse e have to find Immediate greater so going to left getting more smaller value
-        if (key <= root->data ){
+        // If root->data is greater than key, update ceil and move to the left subtree beacuse we have to find Immediate greater so going to left getting more smaller value
+        if (root->data >= key ){
             ans=root->data;
             root=root->left;
         }
 
         // If the key is greater, move to the right subtree
-        else if(key > root->data ){
+        else if(root->data < key ){
             root=root->right;
         }
     }

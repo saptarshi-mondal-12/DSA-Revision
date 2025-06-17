@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Search in 2D matrix 
+/* Search in 2D matrix - AMAZON 2025
 
 You are given an m x n integer matrix matrix with the following two properties:
 Each row is sorted in non-decreasing order. The first integer of each row is greater than the last integer of the previous row.
@@ -76,12 +76,15 @@ bool optimal_searchMatrix(vector<vector<int>> matrix, int target){
     col = index%m
     */
 
-    int n=matrix.size();
-    int m=matrix[0].size();
+    int n=matrix.size();    // no of rows
+    int m=matrix[0].size(); // no of cols
 
     int low=0, high=(m*n)-1;
     while(low<=high){
+        // Getting my mid
         int mid=(low+high)/2;
+
+        // Now i have to convert mid into 2d coordinate i.e row col
         int row=mid/m, col=mid%m;
 
         if(matrix[row][col] == target) return true;

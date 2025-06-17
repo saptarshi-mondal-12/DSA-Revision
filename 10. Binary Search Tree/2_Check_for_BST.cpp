@@ -17,8 +17,7 @@ Explanation: As the array is not sorted in non-decreasing order, it is not an In
 
 Approach:
 
-The idea is to use the fact that the in-order traversal of Binary Search Tree is sorted. So, just check if given array is sorted or not. 
-
+The idea is ----> Inorder traversal of Binary Search Tree is always sorted. So we just check, if given array is sorted or not. 
 NOTE: Inorder of binary search tree is always in sorted.
 */
 

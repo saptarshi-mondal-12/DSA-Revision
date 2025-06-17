@@ -34,7 +34,7 @@ int findFloor(TreeNode* root, int key){
     int ans=-1;
         
     while(root!=NULL){
-        // If the key is greater, update ceil and move to the right subtree beacuse e have to find greater so going to right getting more greater value
+        // If root->data is lesser, update ceil and move to the right subtree beacuse we have to find greater so going to right getting more greater value
         if (root->data <= key){
             ans=root->data;
             root=root->right;

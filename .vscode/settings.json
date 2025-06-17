@@ -4,5 +4,12 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "vector": "cpp"
-    }
+    },
+    "files.exclude": {
+        "": true
+    },
+    "search.exclude": {
+        "": true
+    },
+    "search.useGlobalIgnoreFiles": true
 }

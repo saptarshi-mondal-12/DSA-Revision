@@ -1,0 +1,26 @@
+custom operator --------------------------------------------------------------
+
+
+We’ll use a custom comparator in the priority queue to sort:
+    Higher priority first
+    If priorities are equal → earlier date first
+
+
+
+delcare database global orderDB
+struct Compare {
+    bool operator()(int id1, int id2) {
+        int priority1 = stoi(orderDB[id1][1]);  // index 1 is priority
+        int priority2 = stoi(orderDB[id2][1]);
+        
+        if (priority1 != priority2)
+            return priority1 < priority2;  // Max heap: higher priority comes first
+
+        string date1 = orderDB[id1][5];  // index 5 is orderDate
+        string date2 = orderDB[id2][5];
+
+        return date1 > date2;  // Earlier date comes first
+    }
+};
+priority_queue<int, vector<int>, Compare> orderList; // stores only orderIDs
+orderList.push(orderID);

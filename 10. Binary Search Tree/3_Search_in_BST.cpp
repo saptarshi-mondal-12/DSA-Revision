@@ -26,8 +26,7 @@ class TreeNode{
 };
 
 bool searchBST(TreeNode* root, int val){
-    // Time Complexity: O(log2N) 
-    // where N is the number of nodes in the Binary Search Tree. In the best case scenario, where the tree is balanced, the time complexity is the height of the tree ie. log2N. In the worst-case scenario, where the tree is degenerate (linear), the time complexity becomes O(n), as it would require traversing all nodes along the path from the root to the leaf.
+    // Time Complexity: O(log2N) where N is the number of nodes in the Binary Search Tree. In the best case scenario, where the tree is balanced, the time complexity is the height of the tree ie. log2N. In the worst-case scenario, where the tree is degenerate (linear), the time complexity becomes O(n), as it would require traversing all nodes along the path from the root to the leaf.
 
     // Space Complexity: O(1)
 
@@ -37,12 +36,12 @@ bool searchBST(TreeNode* root, int val){
             return true;
         }
         // If val is greater, move right.
-        else if(root->data < val){
+        else if(val > root->data){
             root=root->right;
         }
 
         // If val is smaller, move left.
-        else if(root->data > val){
+        else if(val < root->data){
             root=root->left;
         }
     }

@@ -132,78 +132,45 @@ TreeNode* brute_merge_2_BST(TreeNode *root1, TreeNode *root2) {
 
 
 
-// --------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------
 
 
+
+
+
+void inorder(TreeNode* curr, TreeNode*& prev){
+    // Base case
+    if (curr == NULL)
+        return;
+    inorder(curr->left, prev);
+    prev->left = NULL;
+    prev->right = curr;
+    prev = curr;
+    inorder(curr->right, prev);
+}
 
 TreeNode* binaryTreeToSortedLinkedList(TreeNode* root) {
-    // Time complexity: O(n), where n is the number of nodes in the binary tree.
-    // space complexity: O(1)
-
-    if (root == NULL) {
-        return NULL;
-    }
-
-    TreeNode* curr = root;
-
-    // Head of the flattened list
-    TreeNode* head = NULL; 
-
-    // Keeps track of the last processed node
-    TreeNode* prev = NULL;
-
-    while (curr != NULL) {
-        if (curr->left == NULL) {
-            // Process the current node
-            if (head == NULL) {
-                // Set head on the first encountered node
-                head = curr; 
-            }
-            if (prev != NULL) {
-                // Link previous node to current node
-                prev->right = curr; 
-            }
-
-            // Move prev pointer
-            prev = curr; 
-            
-            // Move to the right subtree
-            curr = curr->right; 
-        } 
-        else {
-            // Find the inorder predecessor (rightmost node in the left subtree)
-            TreeNode* pred = curr->left;
-            while (pred->right != NULL && pred->right != curr) {
-                pred = pred->right;
-            }
-
-            if (pred->right == NULL) {
-                // Establish a temporary link and move left
-                pred->right = curr;
-                curr = curr->left;
-            } else {
-                // Remove the temporary link
-                pred->right = NULL;
-
-                // Process current node
-                if (head == NULL) {
-                    head = curr;
-                }
-                if (prev != NULL) {
-                    prev->right = curr;
-                }
-                prev = curr;
-
-                // Set left to NULL to break cycles
-                curr->left = NULL;
-                
-                // Move to the right subtree
-                curr = curr->right; 
-            }
-        }
-    }
-    return head; // Return the head of the flattened list
+    // Time Complexity: O(N)
+    // Auxiliary Space: O(H)
+        
+    // Dummy node
+    TreeNode* dummy = new TreeNode(-1);
+    
+    // Pointer to previous element
+    TreeNode* prev = dummy;
+    
+    // Calling in-order traversal
+    inorder(root, prev);
+    
+    prev->left = NULL;
+    prev->right = NULL;
+    TreeNode* ret = dummy->right;
+    
+    // Delete dummy node
+    delete dummy;
+    return ret;
 }
+
 
 TreeNode* mergeLinkedList(TreeNode* head1, TreeNode* head2){
     // Time complexity: O(n), where n is the number of nodes in the binary tree.
@@ -220,8 +187,7 @@ TreeNode* mergeLinkedList(TreeNode* head1, TreeNode* head2){
 
             }else{
                 tail->right=head1;
-                head1->left=tail;
-                tail=head1;
+                tail=tail->right;
                 head1=head1->right;
             }
         }else{
@@ -231,24 +197,20 @@ TreeNode* mergeLinkedList(TreeNode* head1, TreeNode* head2){
                 head2=head2->right;
             }else{
                 tail->right=head2;
-                head2->left=tail;
-                tail=head2;
+                tail=tail->right;
                 head2=head2->right;
             }
-
         }
     }
 
     while(head1!=NULL){
         tail->right=head1;
-        head1->left=tail;
-        tail=head1;
+        tail=tail->right;
         head1=head1->right;
     }
     while(head2!=NULL){
         tail->right=head2;
-        head2->left=tail;
-        tail=head2;
+        tail=tail->right;
         head2=head2->right;
     }
 
@@ -275,12 +237,19 @@ TreeNode* buildBSTfromSortedLinkedList(TreeNode* &head, int n){
         return NULL;
     }
 
+    // Construct left subtree
     TreeNode* left=buildBSTfromSortedLinkedList(head, n/2);
+
+    // Create root node
     TreeNode* root=head;
     root->left=left;
+
+    // Move head to the next node in the list
     head=head->right;
 
+    // Construct right subtree
     root->right=buildBSTfromSortedLinkedList(head, n-n/2-1);
+
     return root;
 }
 
@@ -300,7 +269,7 @@ TreeNode* optimal_merge_2_BST(TreeNode *root1, TreeNode *root2){
     */ 
 
 
-    // 1. Convert BST into sorted linkedlist
+    // 1. flattern BST into sorted linkedlist
     TreeNode* head1 = binaryTreeToSortedLinkedList(root1);
     head1->left=NULL;
 
@@ -308,7 +277,7 @@ TreeNode* optimal_merge_2_BST(TreeNode *root1, TreeNode *root2){
     head2->left=NULL;
 
 
-    // 2. function to merge both sorted linkedList
+    // 2. function to merge both sorted linkedList into single linkedlist
     TreeNode* head = mergeLinkedList(head1, head2);
 
 

@@ -56,8 +56,8 @@ int countNodes(ListNode* head) {
 
 TreeNode* recursive_buildBSTfromSortedLinkedList(ListNode*& head, int n) {
     // Base case
-    if (n <= 0 || head == nullptr) {
-        return nullptr;
+    if (n <= 0 || head == NULL) {
+        return NULL;
     }
 
     // Construct left subtree

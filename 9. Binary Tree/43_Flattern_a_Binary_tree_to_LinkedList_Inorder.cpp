@@ -24,73 +24,38 @@ void inorder_traversal(TreeNode* root){
     inorder_traversal(root->right);
 }
 
+
+void inorder(TreeNode* curr, TreeNode*& prev){
+    // Base case
+    if (curr == NULL)
+        return;
+    inorder(curr->left, prev);
+    prev->left = NULL;
+    prev->right = curr;
+    prev = curr;
+    inorder(curr->right, prev);
+}
+
 TreeNode* binaryTreeToSortedLinkedList(TreeNode* root) {
-    // Time complexity: O(n), where n is the number of nodes in the binary tree.
-    // space complexity: O(1)
+    // Time complexity: O(N), where n is the number of nodes in the binary tree.
+    // space complexity: O(H)
 
-    if (root == NULL) {
-        return NULL;
-    }
+    // Dummy node
+    TreeNode* dummy = new TreeNode(-1);
+    
+    // Pointer to previous element
+    TreeNode* prev = dummy;
+    
+    // Calling in-order traversal
+    inorder(root, prev);
 
-    TreeNode* curr = root;
-
-    // Head of the flattened list
-    TreeNode* head = NULL; 
-
-    // Keeps track of the last processed node
-    TreeNode* prev = NULL;
-
-    while (curr != NULL) {
-        if (curr->left == NULL) {
-            // Process the current node
-            if (head == NULL) {
-                // Set head on the first encountered node
-                head = curr; 
-            }
-            if (prev != NULL) {
-                // Link previous node to current node
-                prev->right = curr; 
-            }
-
-            // Move prev pointer
-            prev = curr; 
-            
-            // Move to the right subtree
-            curr = curr->right; 
-        } 
-        else {
-            // Find the inorder predecessor (rightmost node in the left subtree)
-            TreeNode* pred = curr->left;
-            while (pred->right != NULL && pred->right != curr) {
-                pred = pred->right;
-            }
-
-            if (pred->right == NULL) {
-                // Establish a temporary link and move left
-                pred->right = curr;
-                curr = curr->left;
-            } else {
-                // Remove the temporary link
-                pred->right = NULL;
-
-                // Process current node
-                if (head == NULL) {
-                    head = curr;
-                }
-                if (prev != NULL) {
-                    prev->right = curr;
-                }
-                prev = curr;
-
-                // Set left to NULL to break cycles
-                curr->left = NULL;
-                
-                // Move to the right subtree
-                curr = curr->right; 
-            }
-        }
-    }
-    return head; // Return the head of the flattened list
+    prev->left = NULL;
+    prev->right = NULL;
+    TreeNode* ret = dummy->right;
+    
+    // Delete dummy node
+    delete dummy;
+    return ret; // Return the head of the flattened list
 }
 
 int main(){
@@ -101,8 +66,6 @@ int main(){
     root->left->right = new TreeNode(7);
     root->right->left = new TreeNode(17);
     root->right->right = new TreeNode(20);
-
-    // brute
     
 
     // optimal 

@@ -3,36 +3,38 @@
 using namespace std;
 
 /*
-Q. Convert Binary Search Tree in Linkedlist
+Q. Convert Binary Search Tree in sorted Linkedlist
 
-Intuition- 
-if we perform a morris inorder traversal, we can solve the problem
-In morris traversalwe are returning a inorder vector as our answer 
-Here we are return a node i.e head of a linkedList.
-    1
+You are given a Binary Search Tree (BST) with n nodes, each node has a distinct value assigned to it. The goal is to flatten the tree such that, the left child of each element points to nothing (NULL), and the right child points to the next element in the sorted list of elements of the BST (look at the examples for clarity). You must accomplish this without using any extra storage, except for recursive calls, which are allowed.
+
+Note: If your BST does have a left child, then the system will print a -1 and will skip it, resulting in an incorrect solution.
+
+Example 1:
+
+Input:
+          5
+        /    \
+       3      7
+      /  \    /   \
+     2   4  6     8
+
+Output: 2 3 4 5 6 7 8
+
+Explanation: After flattening, the tree looks like this
+    2
      \
-      2 
-       \ 
-        3
+      3
+       \
+        4
          \
-          4
+          5
            \
-            5
-
-So for this question, morris inorder traversal has some slightly changes. instead of push_back element in vector we are creating a node tree i.e head (Head of the flattened tree) and a prev to Keeps track of the last processed node. 
-
-below line is added : 
-
-            if (head == NULL) {
-                // Set head on the first encountered node
-                head = curr; 
-            }
-            if (prev != NULL) {
-                // Link previous node to current node
-                prev->right = curr; 
-            }
-            // Move prev pointer
-            prev = curr; 
+            6
+             \
+              7
+               \
+                8
+Here, left of each node points to NULL and right contains the next node.
 */
 
 
@@ -49,81 +51,47 @@ class TreeNode{
     }
 };
 
-TreeNode* printLinkedList(TreeNode* root){
-    while(root!=NULL){
-        cout<<root->val<<" ";
-        root=root->right;
+void inorederTraversal(TreeNode* root){
+    if(root==NULL){
+        return;
     }
-    cout<<endl;
+    inorederTraversal(root->left);
+    cout<<root->val<<" ";
+    inorederTraversal(root->right);
+}
+
+
+void inorder(TreeNode* curr, TreeNode*& prev){
+    // Base case
+    if (curr == NULL)
+        return;
+    inorder(curr->left, prev);
+    prev->left = NULL;
+    prev->right = curr;
+    prev = curr;
+    inorder(curr->right, prev);
 }
 
 TreeNode* binaryTreeToSortedLinkedList(TreeNode* root) {
-    // Time complexity: O(n), where n is the number of nodes in the binary tree.
-    // space complexity: O(1)
-
-    if (root == NULL) {
-        return NULL;
-    }
-
-    TreeNode* curr = root;
-
-    // Head of the flattened tree
-    TreeNode* head = NULL; 
-
-    // Keeps track of the last processed node
-    TreeNode* prev = NULL;
-
-    while (curr != NULL) {
-        if (curr->left == NULL) {
-            // Process the current node
-            if (head == NULL) {
-                // Set head on the first encountered node
-                head = curr; 
-            }
-            if (prev != NULL) {
-                // Link previous node to current node
-                prev->right = curr; 
-            }
-
-            // Move prev pointer
-            prev = curr; 
-            
-            // Move to the right subtree
-            curr = curr->right; 
-        } 
-        else {
-            // Find the inorder predecessor (rightmost node in the left subtree)
-            TreeNode* pred = curr->left;
-            while (pred->right != NULL && pred->right != curr) {
-                pred = pred->right;
-            }
-
-            if (pred->right == NULL) {
-                // Establish a temporary link and move left
-                pred->right = curr;
-                curr = curr->left;
-            } else {
-                // Remove the temporary link
-                pred->right = NULL;
-
-                // Process current node
-                if (head == NULL) {
-                    head = curr;
-                }
-                if (prev != NULL) {
-                    prev->right = curr;
-                }
-                prev = curr;
-
-                // Set left to NULL to break cycles
-                curr->left = NULL;
-                
-                // Move to the right subtree
-                curr = curr->right; 
-            }
-        }
-    }
-    return head; // Return the head of the flattened list
+    // Time Complexity: O(N)
+    // Auxiliary Space: O(H)
+        
+    // Dummy node
+    TreeNode* dummy = new TreeNode(-1);
+    
+    // Pointer to previous element
+    TreeNode* prev = dummy;
+    
+    // Calling in-order traversal
+    inorder(root, prev);
+    
+    prev->left = NULL;
+    prev->right = NULL;
+    TreeNode* ret = dummy->right;
+    
+    // Delete dummy node
+    delete dummy;
+    return ret;
 }
 
 
@@ -143,7 +111,7 @@ int main(){
     root->right->right->left = new TreeNode(13);
 
     // iterative method
-    TreeNode* result = binaryTreeToSortedLinkedList(root);
-    printLinkedList(result);
+    binaryTreeToSortedLinkedList(root);
+    inorederTraversal(root);
 
 }

@@ -23,15 +23,15 @@ lowerRange < x < higherRange (node have to in between this range)
          /  \
         3    10
        / \     \
-       2  6     14
+      2   6     14
 
 
 
                 8 [INT_MIN, INT_MAX]
          /                        \
         3 [INT_MIN, 8]            10 [8, INT_MAX]
-     /                 \               \
-    2[INT_MIN, 3]      6 [8, INT_MAX]   14 [10, INT_MAX]
+     /                 \            \
+    2[INT_MIN, 3]      6 [3, 8]   14 [10, INT_MAX]
    
 */
 
