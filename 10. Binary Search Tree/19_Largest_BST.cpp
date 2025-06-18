@@ -159,7 +159,7 @@ int brute_largestBst(TreeNode* root){
 }
 
 
-// -------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
 
 class info {
     public:
@@ -170,16 +170,11 @@ class info {
 };
 
 info largestBSTHelper(TreeNode* root, int &maxSize) {
-    /*  Q. Why we pass INT_MIN in place of maxi and in mini why we pass INT_MAX
-        Ans: becasue to be a valid BST the condition is (left.maxi < root->val < right.mini)
-            if root is null we pass {INT_MIN, INT_MAX, true, 0} that means
-            left.maxi = INT_MIN and right,mini = INT_MAX
-            so INT_MIN < root->val < INT_MAX
-    */
+    
 
-    /*Step 1: Base case, if root is null return {maxi, mini, isBST, size} - The base case is executed when a node is NULL, which happens in two scenarios: When the tree itself is empty. When we reach a leaf node’s left or right child (both will be NULL). */
+    /*Step 1: Base case, if root is null return {mini, maxi, isBST, size} - The base case is executed when a node is NULL, which happens in two scenarios: When the tree itself is empty. When we reach a leaf node’s left or right child (both will be NULL). */
     if (root==NULL){
-        // {maxi, mini, isBST, size}
+        // {mini, maxi, isBST, size}
         return {INT_MIN, INT_MAX, true, 0};
     }
 

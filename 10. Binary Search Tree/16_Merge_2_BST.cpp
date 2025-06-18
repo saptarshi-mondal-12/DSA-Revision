@@ -61,6 +61,8 @@ void inorderTraversal(TreeNode* root ,vector<int>& inorderContainer){
 }
 
 TreeNode* bulidTree(vector<int>& inorder, int start, int end){
+    // Time complexity: O(m + n)
+    
     if(start>end){
         return NULL;
     }
@@ -78,6 +80,9 @@ TreeNode* bulidTree(vector<int>& inorder, int start, int end){
 }
 
 vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
+    // Time complexity: O(n+m)
+    // space complexity: O(n+m)
+
     int n=nums1.size();
     int m=nums2.size();
 
@@ -97,7 +102,7 @@ vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
         result.push_back(nums1[i]);
         i++;
     }
-    while(j<n){
+    while(j<m){
         result.push_back(nums2[j]);
         j++;
     }

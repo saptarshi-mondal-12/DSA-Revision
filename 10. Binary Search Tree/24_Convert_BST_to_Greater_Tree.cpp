@@ -46,7 +46,7 @@ void inorder(TreeNode* root){
     inorder(root->right);
 }
 
-
+// One solution -> starting from left--------------------------------------------
 void inorder(TreeNode* root, int &totalSum){
     if(root==NULL){
         return;
@@ -67,6 +67,8 @@ void modify_Value(TreeNode* root, int &totalSum){
 TreeNode* mySolution_convertBST(TreeNode* root) {
     // Time complexity: O(n) + O(n)
     // Space complexity: O(n) recursion stack
+
+    // Get the total sum and just subtract from current node 
     int totalSum=0;
     inorder(root, totalSum);
     modify_Value(root, totalSum);
@@ -74,7 +76,11 @@ TreeNode* mySolution_convertBST(TreeNode* root) {
 }
 
 
-// -------------------------------------------------------------------------------
+
+
+
+
+// One solution -> starting from right --------------------------------------------------
 
 void solve(TreeNode *root,int &total){
     if(root == NULL){
@@ -91,11 +97,36 @@ void solve(TreeNode *root,int &total){
     // Second traversing left
     solve(root->left,total);
 }  
+
 TreeNode* optimal_convertBST(TreeNode* root) {
     // Time complexity: O(n)
     // Space complexity: O(n) recursion stack
 
     /* Intuition: First observe give example carefully
+
+    If i start from extreme left (minimum) for that node all other node is greater than the current node.root. 
+             4
+          /     \ 
+         1       6
+        / \     /  \
+       0   2   5    7
+            \        \
+             3        8
+
+    Like for 0 node => 0 + (sum of all node greater than 0)
+                    => 0 + 1 + 2 + 3+ 4 + 5 + 6 + 7 + 8 = 36
+
+    Similary for node 1 => 1 + (sum of all node greater than 1)
+                        => 1 + 2 + 3+ 4 + 5 + 6 + 7 + 8 = 36
+
+    Similary for node 1 => 2 + (sum of all node greater than 1)
+                        => 2 + 3+ 4 + 5 + 6 + 7 + 8 = 35
+
+
+    So for each node i have to calculate sum for all nodes that are greater than current node. 
+
+    Think what if : if i start from extreme right i.e 8.
+
     
     1. First traverse right sub tree(having greater value then node) and then left sub tree(having lesser value then node)
     
@@ -122,8 +153,6 @@ int main(){
     root1->right = new TreeNode(10);
     root1->right->right = new TreeNode(14);
     root1->right->right->left = new TreeNode(13);
-
-
 
  
     // My solution

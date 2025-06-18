@@ -1,6 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
+
 /*
 Q. All Elements in Two Binary Search Trees
 
@@ -28,6 +29,9 @@ class TreeNode{
 };
 
 
+
+// Brute soln ----------------------------------------------------------------------------------
+
 void inorder(TreeNode* root, vector<int>&result){
     if(root==NULL){
         return;
@@ -49,45 +53,72 @@ vector<int> brute_getAllElements(TreeNode* root1, TreeNode* root2) {
 }
 
 
-// --------------------------------------------------------------------
 
-vector<int> optimal_getAllElements(TreeNode* root1, TreeNode* root2) {
-    // TC= O(m+n)
-    // SC = O(m+n) for the stack - in the worst case, we may need to store the entire tree there.
+// Optimal Soln-----------------------------------------------------------------------------------
 
 
-    vector<int> res;
-    stack<TreeNode*> s1, s2;
+void inorderTraversal(TreeNode* root ,vector<int>& inorderContainer){
+    if(root==NULL){
+        return;
+    }
+    inorderTraversal(root->left, inorderContainer);
+    inorderContainer.push_back(root->val);
+    inorderTraversal(root->right, inorderContainer);
+}
 
-    while (root1 || root2 || !s1.empty() || !s2.empty())
-    {
-        while (root1 != NULL)
-        {
-            s1.push(root1);
-            root1 = root1->left;
-        }
-        while (root2 != NULL)
-        {
-            s2.push(root2);
-            root2 = root2->left;
-        }
-        if (s2.empty() || (!s1.empty() && s1.top()->val <= s2.top()->val))
-        {
-            root1 = s1.top();
-            s1.pop();
-            res.push_back(root1->val);
-            root1 = root1->right;
-        }
-        else
-        {
-            root2 = s2.top();
-            s2.pop();
-            res.push_back(root2->val);
-            root2 = root2->right;
+vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
+    // Time complexity: O(n+m)
+    // space complexity: O(n+m)
+
+    int n=nums1.size();
+    int m=nums2.size();
+
+    vector<int>result;
+
+    int i=0, j=0;
+    while(i<n && j<m){
+        if(nums1[i] <= nums2[j]){
+            result.push_back(nums1[i]);
+            i++;
+        }else{
+            result.push_back(nums2[j]);
+            j++;
         }
     }
-    return res;
+    while(i<n){
+        result.push_back(nums1[i]);
+        i++;
+    }
+    while(j<m){
+        result.push_back(nums2[j]);
+        j++;
+    }
+    return result;     
 }
+
+vector<int> optimal_getAllElements(TreeNode *root1, TreeNode *root2) {
+    // Time complexity: O(n+m) + O(m+n)
+    // Space complexity: O(m+n) 
+
+    /*Intuition: 
+    1. traverse both the tree and store their value in 2 seperate vector.
+    2. use merge function to merge the both sorted array.
+    */
+
+    // 1. Traverse tree to store element 
+    vector<int>inorder1;
+    vector<int>inorder2;
+    inorderTraversal(root1, inorder1);
+    inorderTraversal(root2, inorder2);
+
+    // 2. merge both sorted array to get a sorted list
+    vector<int>mergeArray = merge(inorder1, inorder2);
+
+    // return new merge tree
+    return mergeArray;
+}
+
+
 
 
 int main(){
@@ -112,13 +143,17 @@ int main(){
 
 
     // brute
-    // vector<int>result=brute_getAllElements(root1, root2);
+    vector<int>result=brute_getAllElements(root1, root2);
+    for(auto it: result){
+        cout<<it<<" ";
+    }
+    cout<<endl;
 
 
     // optimal
-    vector<int>result=optimal_getAllElements(root1, root2);
-    for(auto it: result){
-        cout<<it<<" ";
+    vector<int> result1 = optimal_getAllElements(root1, root2);
+    for (int val : result1) {
+        cout << val << " ";
     }
 
 }

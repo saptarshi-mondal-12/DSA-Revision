@@ -120,6 +120,21 @@ TreeNode* brute_bstFromPreorder(vector<int>& preorder){
     // 2. sort the inorder because inorder of BST is sorted
     sort(inorder.begin(), inorder.end());
 
+
+    /* NOTE: 
+    yahi soach raha hai na ki 
+    apne pass toh sorted inorder hai kyu na Q15 ka bulidTree wala function use kr lu
+    jisme mid find keke solve krte hai -----> int mid=(start+end)/2
+    
+    
+    yaha pe woh kaam nhi karega kyu ki ape ko preorder se BST banana hai. 
+    woh sirf inorder pe kaam karega 
+    */
+
+
+
+
+
     // 3. Create a map to store indices of elements in the inorder traversal
     map<int, int>mp;
 
@@ -134,6 +149,11 @@ TreeNode* brute_bstFromPreorder(vector<int>& preorder){
     // 6. return root
     return root;
 }
+
+
+
+//--------------------------------------------------------------------------------------------------
+
 
 
 TreeNode* bulidTree(vector<int>& preorder, int &i, int upperBound){

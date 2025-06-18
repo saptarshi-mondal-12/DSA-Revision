@@ -77,8 +77,10 @@ class TreeNode{
     }
 };
 
-// brute solution
+// brute solution -----------------------------------------------------------------------------
 class BSTIterator {   
+    // Time complexity: O(1)
+    // Space complexity: O(n) 
 public: 
     // storing element of BST (inorder -> sorted)
     vector<int>inorder;
@@ -154,7 +156,7 @@ public:
     }
 
     void pushAll(TreeNode* node){
-        /* push extreme left till we get a null. 
+        /* push all extreme left till we get a null. 
         for eg. suppose we are at node 7. pushing all of its left is [7,3,2,1]. See in diagram
         or we are at node 6. pushing all left is [7,6,5,4] 
         */
