@@ -31,8 +31,9 @@ Step 1: Express the problem in terms of index
 Step 2: Do all stuffs on index
 Step 3: take minimum of all stuffs
 
-Q. if i a, jump from index to index-1 what is the energy that is consumed?
+Q. if frog, jump from index to index-1 what is the energy that is consumed?
 Ans: abs(height[index]-height[index-1]) this much amount of energy is consumed.
+
 i asked the recursion, hey i have reached to index-1, now its your job to tell me from index-1 to 0 that how much it will cost you. Recursion will do the job. I know the cost of index to index-1 i.e (abs(height[index]-height[index-1])) get me remaining. 
 
 int jumpOne= solve1(index-1, height)+ abs(height[index]-height[index-1]);

@@ -99,6 +99,10 @@ void inorder(TreeNode* root){
 */
 
 TreeNode* helper(TreeNode* root){
+    // Time complexity: O(h) h is the height of tree
+    // Space complexity: O(n) recursive stack space
+
+
     // if root's left is null, then return root's right
     // NOTE: cuurent node(root) has to delete i.e. we return root->right to connect;
     if(root->left==NULL){
@@ -127,6 +131,9 @@ TreeNode* helper(TreeNode* root){
 }
 
 TreeNode* deleteNode(TreeNode* root, int key) {
+    // Time complexity: O(log n)
+
+
     // if root is NULL, return
     if(root==NULL){
         return NULL;

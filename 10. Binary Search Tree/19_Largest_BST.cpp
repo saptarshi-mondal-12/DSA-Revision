@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-Q. Largest BST
+Q. Largest BST - Amazon
 
 You're given a binary tree. Your task is to find the size of the largest subtree within this binary tree that also satisfies the properties of a Binary Search Tree (BST). The size of a subtree is defined as the number of nodes it contains.
 

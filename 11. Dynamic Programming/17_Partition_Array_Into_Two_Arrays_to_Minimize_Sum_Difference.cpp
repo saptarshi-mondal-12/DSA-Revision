@@ -166,8 +166,10 @@ bool solve1(int index, int target, vector<int>&arr){
     return notTake || take;
 }
 int minSubsetSumDifference1(vector<int>& nums, int n){
-    // Time complexity: O(N*totalSum) +O(N) +O(N)
+    // Time complexity: O(N*totalSum) + O(N) + O(N)
     // Space complexity: O(N)
+
+    if(n==0) return 0;
 
     // Calculating total sum of the array
     int totalSum=0;
@@ -226,6 +228,8 @@ int minSubsetSumDifference2(vector<int>& nums, int n){
     // Time complexity: O(N*totalSum) +O(N) +O(N)
     // Space complexity: O(N*totalSum) + O(N)
 
+    if(n==0) return 0;
+
 
     // Calculating total sum of the array
     int totalSum=0;
@@ -269,6 +273,8 @@ int minSubsetSumDifference3(vector<int>& nums, int n){
     // Time complexity: O(N*totalSum) +O(N) +O(N)
     // Space complexity: O(N*totalSum) 
 
+    if(n==0) return 0;
+
     // Calculate the total sum of the array
     int totalSum=0;
     for(int i=0;i<n;i++){
@@ -277,13 +283,15 @@ int minSubsetSumDifference3(vector<int>& nums, int n){
     vector<vector<bool>> dp(n, vector<bool>(totalSum + 1, false));
 
     // Base case: If no elements are selected (sum is 0), it's a valid subset
+    // If target == 0, ind can take any value from 0 to n-1, therefore we need to set the value of the first column as true.
     for(int i=0;i<n;i++){
         dp[i][0]=true;
     }
 
     // Initialize the first row based on the first element of the array
-    if(nums[0] <= totalSum){
-        dp[0][totalSum] = true;
+    // The first row dp[0][] indicates that only the first element of the array is considered, therefore for the target value equal to arr[0], only cell with that target will be true, so explicitly set dp[0][arr[0]] =true, (dp[0][arr[0]] means that we are considering the first element of the array with the target equal to the first element itself). Please note that it can happen that arr[0]>target, so we first check it: if(arr[0]==target) then set dp[0][arr[0]] = true.
+    if(nums[0] == totalSum){
+        dp[0][nums[0]] = true;
     }
 
     for(int i=1;i<n;i++){
@@ -301,7 +309,9 @@ int minSubsetSumDifference3(vector<int>& nums, int n){
     for (int i = 0; i <= totalSum; i++) {
         if (dp[n - 1][i] == true) {
             // Calculate the absolute difference between two subset sums
-            int diff = abs(i - (totalSum - i));
+            int s1=i;
+            int s2 = totalSum - i;
+            int diff = abs(s1 - s2);
             mini = min(mini, diff);
         }
     }
@@ -314,6 +324,8 @@ int minSubsetSumDifference3(vector<int>& nums, int n){
 int minSubsetSumDifference4(vector<int>& nums, int n){
     // Time complexity: O(N*totalSum) +O(N) +O(N)
     // Space complexity: O(totalSum) 
+
+    if(n==0) return 0;
 
     // Calculate the total sum of the array
     int totalSum=0;
@@ -328,8 +340,8 @@ int minSubsetSumDifference4(vector<int>& nums, int n){
     }
 
     // Initialize the first row based on the first element of the array
-    if(nums[0] <= totalSum){
-        prev[totalSum] = true;
+    if(nums[0] == totalSum){
+        prev[nums[0]] = true;
     }
 
     for(int i=1;i<n;i++){

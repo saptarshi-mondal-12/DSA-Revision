@@ -68,8 +68,8 @@ bool solve1(int index, int target, vector<int>&arr){
     return notTake || take;
 }
 bool isSubsetSum1(vector<int>& arr, int target) {
-    // Time complexity: O(N*K)
-    // space complexity: O(N) recursion stack space
+    // Time complexity: O(2^N)  because for each element, we try both taking and not taking it.
+    // Space complexity: O(N) due to the maximum depth of the recursion stack.
     
     // recursion - Top down approach (n-1 to 0)
     int n=arr.size();

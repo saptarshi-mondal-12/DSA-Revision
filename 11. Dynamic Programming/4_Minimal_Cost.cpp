@@ -5,6 +5,7 @@ using namespace std;
 /* Q. Minimal Cost - 
 
 NOTE: Follow up question of frog jump. 
+
 In frog jump question, frog can jump only one or two step. what if frog can jump to stones i + 1, i + 2, … i + k. What is the minimum cost?
 
 Given an array arr[] of size n, where arr[i] denotes the height of ith stone. Geek starts from stone 0 and from stone i, he can jump to stones i + 1, i + 2, … i + k. The cost for jumping from stone i to stone j is abs(arr[i] – arr[j]). Find the minimum cost for Geek to reach the last stone.
@@ -12,6 +13,7 @@ Given an array arr[] of size n, where arr[i] denotes the height of ith stone. Ge
 Input: k = 3, arr[]= [10, 30, 40, 50, 20]
 Output: 30
 Explanation: Geek will follow the path 1->2->5, the total cost would be |10-30| + |30-20| = 30, which is minimum.
+
 Input: k = 1, arr[]= [10, 20, 10]
 Output: 20
 Explanation: Geek will follow the path 1->2->3, the total cost would be |10 - 20| + |20 - 10| = 20.
@@ -31,7 +33,7 @@ int solve1(int index, vector<int>height, int k){
     int mini=INT_MAX;
     for(int i=1;i<=k;i++){
         if(index-i >= 0){  
-            int jump= solve1(index-i, height, k)+ abs(height[index]-height[index-i]);
+            int jump= solve1(index-i, height, k) + abs(height[index]-height[index-i]);
             mini=min(mini, jump);
         }else{
             break;
@@ -46,7 +48,6 @@ int recursion_minimumCost(vector<int>height, int k){
     int n=height.size();
     int minimum_cost=solve1(n-1,height, k);
     return minimum_cost;
-    
 }
 
 

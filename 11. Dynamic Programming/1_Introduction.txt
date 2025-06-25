@@ -20,7 +20,7 @@ NOTE: Whenever concept of try all possible ways comes in use recursion
 
 Q. How to solve a problem? - shortcut trick
 Ans: 
-Step 1: Try to solve the problem in term if index.
+Step 1: Try to solve the problem in term of index.
 Step 2: Do all possible stuffs on that index according to problem statement.
 Step 3: if question says count all the ways sum up all stuffs or if question says find minimum take minimum of all stuffs.
 

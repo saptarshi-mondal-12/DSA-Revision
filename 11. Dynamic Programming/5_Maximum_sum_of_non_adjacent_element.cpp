@@ -8,6 +8,20 @@ Given an array of ‘N’  positive integers, we need to return the maximum sum 
 
 Note: A subsequence of an array is a list with elements of the array where some elements are deleted ( or not deleted at all) and the elements should be in the same order in the subsequence as in the array.
 
+
+Input: n=3 nums=[1,2,4]
+Output: 5 
+Explanation: 1+4=5 is maximum
+
+
+Input: n=3 nums=[1,2,3,1,3,5,8,1,9]
+Output: 24
+Explanation: 1+3+3+8+9=24 is maximum
+
+
+
+
+
 Intuition: 
 As we need to find the sum of subsequences, one approach that comes to our mind is to generate all subsequences and pick the one with the maximum sum. 
 To generate all the subsequences, we can use the pick/non-pick technique. This technique can be briefly explained as follows:
@@ -16,7 +30,7 @@ At every index of the array, we have two options.
     First, to pick the array element at that index and consider it in our subsequence.
     Second, to leave the array element at that index and not to consider it in our subsequence.
 
-First, we will try to form the recursive solution to the problem with the pick/non-pick technique. T
+First, we will try to form the recursive solution to the problem with the pick/non-pick technique. 
 
 Step 1: Form the function in terms of indexes: 
 We are given an array which can be easily thought of in terms of indexes. 

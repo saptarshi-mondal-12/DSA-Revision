@@ -45,13 +45,20 @@ Base Case: There will be three base cases:
 
 
 ---------------------------Follow up question---------------------
+
+
 Now, each cell in the n × n grid either contains:
 A trap, denoted by -1 — you cannot step into these cells. or
 A non-negative reward, denoted by any >= 0 integer — this is the reward collected when you step on the cell.
 You still start from the top-left cell (0, 0) and aim to reach the bottom-right cell (n - 1, n - 1) by only moving right or down, and never stepping into trap cells (-1).
 Write a function to compute the maximum total reward you can collect along a valid path from (0, 0) to (n - 1, n - 1).
 If there is no valid path, return 0.
+
+
 */
+
+
+
 
 // Recursion----------------------------------------------------------------------
 int solve1(int i, int j, vector<vector<int>> &maze){ 
