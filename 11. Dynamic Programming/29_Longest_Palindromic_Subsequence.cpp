@@ -44,7 +44,7 @@ If we look closely at the highlighted characters, they are nothing but the longe
 
 Now, we have taken the reverse of the string for the following two reasons:
 
-The longest palindromic subsequence being a palindrome will remain the same when the entire string is reversed. The length of the palindromic subsequence will also remain the same when the entire string is reversed. From the above discussion we can conclude:
+The length of the palindromic subsequence will also remain the same when the entire string is reversed. From the above discussion we can conclude:
 
 Ans: The longest palindromic subsequence of a string is the longest common subsequence of the given string and its reverse.
 

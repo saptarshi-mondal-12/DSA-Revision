@@ -116,6 +116,7 @@ int maxProfit2(vector<int>& prices) {
     return solve2(0, 1, prices, dp, transactions);
 
     // NOTE: vector<int>(3, -1) 
+    // n=prices , 2=no of decesions i.e 2, 3=transactions(0,1,2)
     // 3 because it signifies 0 transaction remaining or 1 transaction remaining or 2 transaction remaining. so we have 3 different set of transactions.
 }
 

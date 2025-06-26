@@ -32,6 +32,12 @@ The algorithm approach is stated below:
 
 NOTE: DP table fillup -> max(dp[i-1][j], dp[i][j-1]);
 
+
+
+
+
+
+
 */
 
 // Tabulation------------------------------------------------------------------
@@ -65,6 +71,66 @@ string longestCommonSubsequence3(string s1, string s2) {
             }
         }
     }
+
+    // Print the dp array 
+    //     b d g e k
+    //   0 0 0 0 0 0 
+    // a 0 0 0 0 0 0 
+    // b 0 1 1 1 1 1 
+    // c 0 1 1 1 1 1 
+    // d 0 1 2 2 2 2 
+    // e 0 1 2 2 3 3 
+
+    /* ans is stored over dp[5][5] = 3
+
+    dp[5][5]
+       |  |
+       v   -------> bdgek
+       abcde
+
+    dp[4][2]
+       |  |
+       v   -------> bd   ===> 2  (bd and bd of length 2) length of lcs till here is 2
+       abcd
+
+    In tabulation we wrote 2 condition : 
+
+            if (s1[i-1] == s2[j-1]) {
+                dp[i][j] = 1 + dp[i - 1][j - 1];
+            }
+            else {
+                int move_i = 0 + dp[i - 1][j];
+                int move_j = 0 + dp[i][j - 1];
+                dp[i][j] = max(move_i, move_j);
+            }
+    
+    So if (s1[i-1] == s2[j-1]) we do 1 + diagonal ==> 1 + dp[i - 1][j - 1];
+    and if not equal we take max of these :
+            int move_i = 0 + dp[i - 1][j];
+            int move_j = 0 + dp[i][j - 1];
+            dp[i][j] = max(move_i, move_j);
+    
+    Similarly, we do backtrack 
+    starting from d[n][m] and:  
+                            if equal we add char to our answer and move diagonal
+                            and if not equal then whichever is max we move that side (either dp[i - 1][j] or dp[i][j - 1]).
+    
+    START DP[5][5]
+
+        "e" != "k"
+
+        we move to col-1 i.e move_j because move_j is greater than move_i (3>2)
+
+        now dp[5][4]
+
+        "e" == "e"  ==> add to our answer 
+        moveing diagonal dp[i-1][j-1]
+
+        now dp[4][3] 
+        so on
+
+    */
+
     
     cout<<"Length of Longest common subsequence = "<<dp[n][m]<<endl;
 
@@ -87,7 +153,6 @@ string longestCommonSubsequence3(string s1, string s2) {
         }
         else if(dp[i-1][j] > dp[i][j-1]){
             i--;
-
         }
         else{
             j--;
@@ -98,7 +163,7 @@ string longestCommonSubsequence3(string s1, string s2) {
 
 int main(){
     string s1="abcde";
-    string s2="abdc";
+    string s2="bdgek";
 
     // Tabulation
     cout<<longestCommonSubsequence3(s1,s2)<<endl;

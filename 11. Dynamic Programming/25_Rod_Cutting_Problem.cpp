@@ -4,7 +4,7 @@ using namespace std;
 
 /* Q. Rod Cutting Problem
 
-Given a rod of length n(size of price) inches and an array of prices, price. price[i] denotes the value of a piece of length i. Determine the maximum value obtainable by cutting up the rod and selling the pieces.
+Given a rod of length n(size of price) inches and an array of prices. price[i] denotes the value of a piece of length i. Determine the maximum value obtainable by cutting up the rod and selling the pieces.
 
 Input: price[] = [1, 5, 8, 9, 10, 17, 17, 20]
 Output: 22

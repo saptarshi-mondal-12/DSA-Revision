@@ -31,7 +31,7 @@ We have the following two conditions.
 
 If we calculate the total sum of elements of the array (say totalSum), we can say that,
     S1 + S2 = totalSum
-    S2 = totalSum - S1
+    S1 = totalSum - S2
 
     3. [S1 = totalSum - S2]  ---> (Equation - 3)
 
@@ -97,7 +97,6 @@ int countPartitions1(vector<int>& arr, int d) {
     
     int s2 = (totalSum-d)/2;
     
-    vector<vector<int>> dp(n,vector<int>(s2+1,-1));
     return solve1(n-1,s2,arr);
     
 }

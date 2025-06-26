@@ -36,21 +36,46 @@ The answer is yes! We can use the concept we studied in the following article Co
 
 The following insights will help us to understand intuition better:
 
-If we think deeper, we can say that the given ‘target’ can be expressed as addition of two integers (say S1 and S2). 
-S1 + S2 = target   – (i)
+arr = [1,2,3,1], target = 3
+(3+2-1-1) ==> (3+2) - (1-1) = 3
 
-Now, from where will this S1 and S2 come?  If we are given the array as [a,b,c,d,e], we want to place ‘+’ or ‘-’ signs in front of every array element and then add it. One example is :
-+a-b-c+d+e which can be written as (+a+d+e) + (-b-c).
+If we think deeper, we can say that the given ‘target’ can be expressed as subtract of two subsets (say S1 and S2). (s1 contain all +ve & s2 contain all -ve) then: 
+
+S1 - S2 = target   – (i)
+
+Now, from where will this S1 and S2 come?  If we are given the array as [a,b,c,d,e], we want to place ‘+’ or ‘-’ signs in front of every array element. One example is :
++a-b-c+d+e which can be written as (+a+d+e) - (-b-c) = target.
 
 Therefore, we can say that S1=(+a+d+e) and S2=(-b-c) for this example.
 
- If we calculate the total sum of elements of the array (say totSum), we can can say that,
-S1 = totSum - S2      – (ii)
+If we calculate the total sum of elements of the array (say totalSum), we can can say that,
+    S1 + S2 = totalSum
+    S1 = totalSum - S2
 
-Now solving for equations (i) and (iii), we can say that 
-S2 = (totSum - target)/2    – (iv)
+    3. [S1 = totalSum - S2]  ---> (Equation - 3)
+
+    S1 - S2 = target
+    totalSum - S2 - S2 = target
+    totalSum - target = S2 + S2
+    totalSum - target = 2 * S2 
+
+    S2 = (totalSum - target)/2    – (iv)
 
 Therefore this question is modified to “Count Number of subsets with sum (totSum - target)/2 ”. This is exactly what we had discussed in the article  Count Subsets with Sum K.
+
+
+Eg: arr=[1,2,3,1], target = 3 
+
+totalSum=7 
+S2 = (totalSum - target)/2 
+S2 = (7-3)/2
+S2 = 2  
+
+Now count all subsets with sum equal to s2 i.e 2 
+Ans = 2 
+Exaplantion: {2}, {1,1}
+
+
 
 Edge Cases:
 
@@ -60,6 +85,8 @@ As the array elements are positive integers including zero, we don’t want to f
 S2 can’t be a fraction, as all elements are integers, therefore if totSum - target is odd, we can return 0.
 From here on we will discuss the approach to “Count Subsets with Sum K” with the required modifications. Moreover, as the array elements can also contain 0, we will handle it as discussed in part-1 of this article.
 */
+
+
 
 // Recursion-------------------------------------------------------------------
 int solve1(int index, int target, vector<int>arr){
@@ -101,9 +128,7 @@ int countPartitions1(vector<int>& arr, int d) {
     
     int s2 = (totalSum-d)/2;
     
-    vector<vector<int>> dp(n,vector<int>(s2+1,-1));
     return solve1(n-1,s2,arr);
-    
 }
 
 
@@ -271,7 +296,7 @@ int countPartitions4(vector<int>& arr, int d) {
 
 
 int main(){
-    vector<int>nums={1,1,1,1,1};
+    vector<int>nums={1,2,3,1};
     int target=3;
 
     cout<<countPartitions1(nums, target)<<endl;
