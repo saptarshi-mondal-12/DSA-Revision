@@ -17,8 +17,16 @@ Output: 0
 Input: s = "ab"
 Output: 1
 
-Intution: 
-start from front i.e 0. and use simple recursion -> after partitioning can left side is palindrome . if it is 1 + (check for next)
+Intution: ------------------------------------------------------------------------------
+
+I am sure if i do n-1 partition then every individual substring will be a palindrome 
+Eg: "aabb" a|a|b|b  (n-1 = 3 partition)
+
+But question is find the minimum no of partition such that every substring after partition should be palindrome.
+For eg: if i do a partition like this aa|bb then this is also partition. So 1 cut 
+
+
+start from front partition. i.e 0. and use simple recursion -> after partitioning can left side is palindrome . if it is 1 + (check for next)
 */
 
 // Recursion -------------------------------------------------------

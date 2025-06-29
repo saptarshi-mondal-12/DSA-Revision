@@ -125,7 +125,30 @@ int lengthOfLIS4(vector<int>& nums) {
 
 
 
-// Best solution using Binary search
+// Best solution using Binary search 
+
+/*  Intuition : rewrite 
+
+
+[1,7,8,4,5,6,-1,9]
+
+[1,7,8,9] = 4
+[1,4,5,6,9] = 5
+[-1,9] = 2
+
+Ans: 5
+
+[1,7,8]
+
+When 4 came in can we rewrite over 7 , then it become [1,4,8]
+When 5 came in can we rewrite over 8 , then it become [1,4,5]
+When 6 came in add it to end , then it become [1,4,5,6]
+When -1 came in can we rewrite over 1 , then it become [-1,4,5,6]
+When 9 came in add it to end , then it become [-1,4,5,6,9]
+
+this is not the subsequence but this will give me the length of final array which is my answer because we replicated by putting those values. We same space by putting those values
+
+*/
 int lengthOfLIS5(vector<int>& nums){
     // Time complexity: O(n log n)
     // Space complexity: O(n)

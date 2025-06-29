@@ -12,6 +12,9 @@ Explanation: "aba" is also a valid answer.
 
 Input: s = "cbbd"
 Output: "bb"
+
+
+---Follow up question - Count total palenfromic substrings Q56.
 */
 
 
@@ -34,7 +37,7 @@ string longestPalindrome1(string s) {
     int maxi=0;
     string ans="";
 
-    // Generating all substring 
+    // Generating all substring and check for palindrome
     for(int i=0;i<n;i++){
         string str="";
         for(int j=i;j<n;j++){
@@ -52,6 +55,9 @@ string longestPalindrome1(string s) {
 string longestPalindrome2(string s) {
     // Time complexity: O(N^2)
     // Space complexity: O(1)
+
+    /* Intuition: if we are at i th index expand to left and expand to right if s[left] == s[right] and take the maximum.
+    */
 
     int n = s.size();
     int start = 0, maxLen = 1;

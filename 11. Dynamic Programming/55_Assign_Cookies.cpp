@@ -22,8 +22,8 @@ You need to output 2.
 */
 
 int findContentChildren(std::vector<int>& g, std::vector<int>& s) {
-    // Time Complexity: O(n*logn + m*logm)
-    // Space complexity: O(logm+logn)
+    // Time Complexity: O(n*logn + m*logm) sorting
+    // Space complexity: O(logm + logn)
 
     sort(g.begin(), g.end());
     sort(s.begin(), s.end());

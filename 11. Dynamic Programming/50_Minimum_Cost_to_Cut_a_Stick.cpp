@@ -34,9 +34,29 @@ int solve1(int i, int j, vector<int>cuts){
 
     int mini = INT_MAX;
 
-    // I can do any one as 1st cut so -> run a for loop from 1 to j and find minimum cost
+    // I can take anyone as 1st cut (either 1, either 3, either 4, either 5) so -> run a for loop from 1 to j and find minimum cost
     for (int ind = i; ind <= j; ind++) {
-        // Calculate the cost for making a cut at position 'ind' and solve for left sub problem & right sub problem because i did a partition on index ind.
+        // Calculate the cost for making a cut at position 'ind' 
+        // and solve for left sub problem & right sub problem because i did a partition on index ind.
+
+        /* Q. But how to get the length of stick ? Suppose we cut at 4 
+            cost = length of current stick before cut, i.e here cost = 7  (because we are doing our 1st cut)
+            [0,1,3,4,5,7]
+                   ^
+                   |
+                   |
+                  cut
+
+            i=1, j=4
+            cost = cuts[j + 1] - cuts[i - 1]
+            cost = cuts[4+1] - cuts[1 - 1]
+                 = cuts[5] - cuts[0]
+                 = 7 - 0 = 7 
+            
+            NOTE: That's why we add(below 2 lines) 0 at begin and n (length of stick) in cuts array ---> [0,1,3,4,5,7] - reason -> to calculate length
+                    cuts.push_back(n);
+                    cuts.insert(cuts.begin(), 0);
+        */
         int ans = cuts[j + 1] - cuts[i - 1] + solve1(i, ind - 1, cuts) + solve1(ind + 1, j, cuts);
         mini = min(mini, ans);
     }
@@ -46,11 +66,18 @@ int minCost1(int n, vector<int>cuts) {
     // Time complexity: Exponential
     // space complexity: O(N)
 
+
+    // n = length of stick
+    // cost = length of stick we are cutting 
+
     int c = cuts.size();
 
     // Modify the cuts array by adding 0 at the beginning and 'n' at the end.
     cuts.push_back(n);
     cuts.insert(cuts.begin(), 0);
+
+
+    // Its very important to be sorted because after cut both left & right stick should be independent. So that whenever we solve a subproblem it should not be dependent  
     sort(cuts.begin(), cuts.end());
 
     // Call the recursive function to find the minimum cost.

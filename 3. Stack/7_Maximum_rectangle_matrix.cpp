@@ -3,7 +3,7 @@
 #include<stack>
 using namespace std;
 
-/* Q. Maximal Rectangle 
+/* Q. Maximal Rectangle - Amazon 
 Think every row as histogram and calculate max area
 1 0 1 0 0
 1 0 1 1 1

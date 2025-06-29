@@ -60,7 +60,6 @@ Similarly, let’s try it for the following 3X3 matrix:
 given       dp array
 matrix
 
-
 Now, to get the final answer, we will just add all the values of the cells and the total sum will be our final answer. So, for the 2X2 matrix, the answer is (1+1+1+2) = 5 squares and for the 3X3 matrix, the answer is (1+1+1+1+2+2+1+2+3) = 14 squares.
 
 Now, it’s time to discuss how to fill the values of the dp array:
@@ -71,7 +70,6 @@ If the cell contains 1, we will have to check its three adjacent cells i.e. (i-1
 Otherwise, if the cell(i, j) contains 0, we will also set the value of dp[i][j] as 0.
  Using this approach, we will fill all the cells of the dp array.
 
-Note: If you wish to see the dry run of the above approach, you can watch the video attached to this article.
 
 Approach: 
     1. First, we need to create a dp array of the same size as the matrix.
@@ -82,6 +80,9 @@ Approach:
         dp[i][j] = min(dp[i-1][j], dp[i-1][j-1], dp[i][j-1]) +1
         
     4. After filling all the cells in this way, we will just add all the values of the dp array to get the total sum. And this total sum will be the final answer.
+
+
+Follow up - largest square size
 */
 
 int countSquares(vector<vector<int>>& matrix) {
@@ -102,6 +103,7 @@ int countSquares(vector<vector<int>>& matrix) {
                 int up=dp[i - 1][j];
                 int left=dp[i][j-1];
                 int diagonal=dp[i - 1][j-1];
+
                 dp[i][j] = 1 + min(left, min(up, diagonal));
             }
         }
@@ -111,14 +113,33 @@ int countSquares(vector<vector<int>>& matrix) {
     int sum = 0;
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
+            cout<<dp[i][j]<<" ";
             sum += dp[i][j];
         }
+        cout<<endl;
     }
     return sum;
 }
 
 int main() {
-    vector<vector<int>> arr = {{0, 1, 1, 1}, {1, 1, 1, 1},{0, 1, 1, 1}};
+    vector<vector<int>> arr = {{1, 1, 0, 1}, {1, 1, 1, 1},{1, 1, 0, 1},{1,0,1,1}};
     int squares = countSquares(arr);
     cout<<"The number of squares: "<<squares<<endl;
 }
+/*
+Eg:
+[1,1,0,1]
+[1,1,1,1]
+[1,1,0,1]
+[1,0,1,1]
+
+dp table: 
+[1,1,0,1]
+[1,2,1,1]
+[1,2,0,1]
+[1,0,1,1]
+
+ans = 1+1+1+1+2+1+1+1+2+1+1+1+1 = 15
+
+*/
+

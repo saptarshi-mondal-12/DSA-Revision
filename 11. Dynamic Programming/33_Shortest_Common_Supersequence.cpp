@@ -9,7 +9,7 @@ Given two strings str1 and str2, return the shortest string that has both str1 a
 A string s is a subsequence of string t if deleting some number of characters from t (possibly 0) results in the string s.
 
 Input: str1 = "abac", str2 = "cab"
-Output: "cabac"
+Output: "cabac" ab
 Explanation: 
 str1 = "abac" is a subsequence of "cabac" because we can delete the first "c".
 str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
@@ -46,7 +46,8 @@ DRAW DP TABLE
     r 2 | 0 0 1 1 1 1
     u 3 | 0 0 1 1 1 1
     t 4 | 0 0 1 1 1 2
-    e 5 | 0 0 1 1 1 2 
+    e 5 | 0 0 1 1 1 2
+    
 
 
 If we keep the “shortest” criteria aside, what can be a way to generate a supersequence given two strings. One easy way is to concat the given strings (write one after the other), this will always give us a supersequence for any pair of given strings.
@@ -59,7 +60,7 @@ Q. How can we improve from this naive approach?
 
 If we think a little, there are some common characters that we can avoid writing for both the strings separately. These common characters can’t be all the common characters. They are the characters that are common and come in the same order. In other words, they are the characters of the longest common subsequence. 
 
-In an optimum solution, the characters of the longest common subsequence are written only once and other characters are placed around them. For every character that belongs to the longest common subsequence, the non-lcs characters coming before them in the strings S1 and S2 are placed before the lcs-character in the answer string.
+In an optimul solution, the characters of the longest common subsequence are written only once and other characters are placed around them. For every character that belongs to the longest common subsequence, the non-lcs characters coming before them in the strings S1 and S2 are placed before the lcs-character in the answer string.
 
 Q. Length of Shortest Common Supersequence?
 From the explanation above, we can see that characters of lcs need to be covered only once. Therefore, the length of the shortest Common supersequence = n + m -k, where (n and m are lengths of S1 and S2, and k is the length of the lcs string).
@@ -155,20 +156,24 @@ string longestCommonSubsequence3(string s1, string s2) {
 
     // NOTE : Either i is exhausted or j is exhausted. So whichever is not not exhausted add remaining char to answer. 
 
+
     // if i is not exhausted add char to our answer
     while(i>0){
         ans+=s1[i-1];
         i--;
     }
 
+
     // if j is not exhausted add char to our answer
     while(j>0){
         ans+=s2[j-1];
         j--;
     }
+    
 
     // Reverse the answer because we mov the dp table from bottom to top which give our answer in reverse patteren so reverse it. 
     reverse(ans.begin(), ans.end());
+
 
     return ans;
 }

@@ -2,10 +2,39 @@
 #include<bits/stdc++.h>
 using namespace std; 
 
-/* Q. Count no of longest increasing subsequence 
+/* Q. Count no of longest increasing subsequence
+
+Given an array, ‘Arr’ of length ‘n’, count the number of longest increasing subsequences
+
+Input: nums  = [1, 4, 3, 5, 8, 1]
+Output: 2 
+Expalnation: [1,4,5,8] & [1,3,5,8]
+
+
+
+Intuition: -------------------------------------
+
+Now, what does this dp[i] represent? It represents the LIS in the array ‘arr’ from index 0 to index i in the array ending with element arr[i]. Therefore the maximum value of dp[i] in gives us the LIS of the array
+
+nums: = [1, 4, 3, 5, 8, 1]
+dp    = [1, 2, 2, 3, 4, 1]
+count = [1, 1, 1, 2, 2, 1]
+
+Now, after understanding the approach to finding the LIS, let us revisit the problem of counting the number of longest increasing subsequences of the array.
+
+Let us take a new array ct[ ] to calculate the count and initialize it to 1. Then ct[i] will be the count of the number of longest increasing subsequences where each LIS ends where arr[i] is the last element of the subsequence.
+
+dp[i] = length of LCS till index i. 
+count[i] = count of LCS till index
+
+
+
 */
 
 int count_longestIncreasingSubsequence(vector<int>nums){
+    // Time Complexity: O(N*N)
+    // Space Complexity: O(N)
+
     int n=nums.size();
 
     // The max length will be 1 i.e he itself
@@ -21,7 +50,10 @@ int count_longestIncreasingSubsequence(vector<int>nums){
             if(nums[prev]<nums[i] && 1 + dp[prev] > dp[i]){
                 dp[i] = 1 + dp[prev];
                 count[i] = count[prev];
-            }else if (nums[prev]<nums[i] && 1+dp[prev] == dp[i]){
+            }
+
+            //  in this case we get a new LIS of same length at which the ct[i] is originally holding the value for. Therefore the new ct[j] value will be the number of LIS that was given by its original value plus the number of LIS that ends at element arr[j] at length dp[j]. In simple terms, ct[i] = ct[i] + ct[j]. 
+            else if (nums[prev]<nums[i] && 1+dp[prev] == dp[i]){
                 count[i]+=count[prev];
             }
         }
@@ -41,10 +73,7 @@ int count_longestIncreasingSubsequence(vector<int>nums){
     return totalLIS;
 }
 int main(){
-    vector<int>nums = {1,4,3,5,8,1}; // ans = 2 (1,4,5,8) & (1,3,5,8)
+    vector<int>nums = {1,4,3,5,8,1}; 
     cout<<"Count LIS: "<<count_longestIncreasingSubsequence(nums)<<endl;
 }
 
-// nums  = [1, 4, 3, 5, 8, 1]
-// dp    = [1, 2, 2, 3, 4, 1]
-// count = [1, 1, 1, 2, 2, 1]

@@ -18,7 +18,67 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167
 Input: nums = [1,5]
 Output: 10
 
-Intuition: 
+
+
+
+
+Intuition: -------------------------------------------------------------------------------------------
+
+Move in opposite direction - reverse direction because sub problem is dependent. So solving in reverse direction it would be independent
+
+[b1,b2,b3,b4,b5,b6,b7,b8] 
+
+[b1,b2,b3,*,b5,b6,b7,b8]
+if i burst b4 [b1,b2,b3] & [b5,b6,b7,b8] cannot be solved independtly because if we brust b4, then b3 is dependent on b5 which is anpther subproblem.
+Similartly b5 is dependent on b3. So solving independtly cannot worked. 
+
+So we go in reverse direction, In example we brust 8 last 
+
+1*8*1 = 8 
+then
+
+[3,8]
+
+Now 3 has to be brust. Can i say for this 3 i definetely know since i brusted out before 8 , 8 wiil be the right guy because i am going in reverse direcion. i am very much sure that 3 has a right guy 8
+
+1*3*8 = 24 
+then 
+
+[3,5,8]
+
+3*5*8=120
+
+[3,1,5,8]
+
+3*1*5=15 
+
+
+Total = 8+24+120+15=167
+
+
+[b1,b2,b3] * [b5, b6] Now this 2 subproblen is independent here. Because let me show with example 
+
+Suppose we brust b4 at last ---> [b1,b2,b3,b4,b5, b6]
+
+
+1*b4*1 
+
+Now 1st subproblem [b1,b2,b3] and 2nd sub problem [b5,b6] we have to solve 
+
+As i know b4 is the last guy brusted i definetely know b4 will exit over 2nd last step i.e
+
+Second last step 6: [b4] exist here then only b4 brusted at last step 
+last step 7:        [b4]
+
+Can i say probably step 6: anyone can be [b1,b4] or [b2,b4] or [b3,b4] or [b4,b5] or [b4,b6] no matter who is i am not dependent on [b1,b2,b3]
+instead of that b5 or b5 i am dependent on b4 who is gou left to it. So i proved it is not dependent on left subproblem 
+
+if you solving for b1 it is dependent on range right guy i.e b4, not dependent on right sub problem([b5,b6]) So i proved
+
+
+
+
+
 https://takeuforward.org/data-structure/burst-balloons-partition-dp-dp-51/
 */
 
@@ -29,7 +89,7 @@ int solve1(int i, int j, vector<int>nums){
 
     int maxi=INT_MIN;
 
-    // Iterate through each possible balloon to burst last
+    // Iterate through each possible balloon to burst last - every one can be my last guy
     for(int k=i;k<=j;k++){
         // Calculate the coins obtained by bursting the k-th balloon last
         int coins = nums[i-1]*nums[k]*nums[j+1];
@@ -52,6 +112,9 @@ int maxCoins1(vector<int>nums) {
     nums.insert(nums.begin(),1);
     nums.push_back(1);
 
+    // n= 4
+    // [1,3,1,5,8,1]
+
     return solve1(1, n, nums);
 }
 
@@ -65,7 +128,7 @@ int solve2(int i, int j, vector<int>nums, vector<vector<int>>&dp){
 
     int maxi=INT_MIN;
 
-    // Iterate through each possible balloon to burst last
+    // Iterate through each possible balloon to burst last - every one can be my last guy
     for(int k=i;k<=j;k++){
         // Calculate the coins obtained by bursting the k-th balloon last
         int coins = nums[i-1]*nums[k]*nums[j+1];
@@ -80,7 +143,7 @@ int solve2(int i, int j, vector<int>nums, vector<vector<int>>&dp){
 }
 int maxCoins2(vector<int>nums) {
     // Time complexity: O(N^3)
-    // Spac complexity: O(N^N) + O(N)
+    // Space complexity: O(N^N) + O(N)
 
     int n=nums.size();
 

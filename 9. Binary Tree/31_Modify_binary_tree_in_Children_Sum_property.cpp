@@ -19,35 +19,36 @@ Input: 2 35 3 2 5 10 2
         2
       /   \
     35     10
-   /   \   /  \
-  2     3 5    2
+   /  \   /  \
+  2    3 5    2
 
 
 output: 35 38 3 50 5 12 7 
         50
-      /   \
+      /    \
     38     12
    /  \   /  \
   35   3 5    7
 
 
-Intuition: 
+Intuition:  ----------upar se niche-------------------------------
+
 The constraint is that we cannot decrease the value of any node, only increase it. Also, the structure of the binary tree cannot be changed. If we follow a bottom-up approach and try to adjust parent values based on children, we may reach a situation where the sum of children is less than parent's value, requiring us to decrease the parent's value, which is not allowed.
 
 For e.g. 
         50
       /   \
-    7       2
-   /   \   /  \
-  3     5 1    30
+     7      2
+    / \    / \
+   3   5  1   30
 
   bottom up
 
         50
       /   \
     8       31
-   /   \   /  \
-  3     5 1    30
+   /  \    /  \
+  3    5  1    30
 
   root: 8+31=39 -> cannot change 50 to 39, we can only increment the value not decrement 50 to 39
 
@@ -107,6 +108,9 @@ void changeTree(TreeNode* root){
     changeTree(root->left);
     changeTree(root->right);
 
+
+    // On comming from top we change the child value (left & right) . So when go back from down to top we have to change the root->data to sum of its children(modified value). Therefore it is necessary when going back (bottom to top) chabge the root value  --->  left+right. that's  below code states.
+
     // Calculate the total sum of the values of the left and right children, if they exist.
     int tot = 0;
     if (root->left) {
@@ -117,7 +121,7 @@ void changeTree(TreeNode* root){
     }
 
     // If either left or right child exists, update the current node's value with the total sum.
-    if (root->left or root->right) {
+    if (root->left || root->right) {
         root->data = tot;
     }
 }

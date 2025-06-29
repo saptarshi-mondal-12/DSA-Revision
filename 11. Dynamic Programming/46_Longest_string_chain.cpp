@@ -35,12 +35,51 @@ Longest strig chain = ['a', 'ba', 'bca', 'bdca']
 We need to print the length of the longest string chain, in this case: 4.
 Two consecutive strings in this string chain need to have an insertion of a single character. The character can be added to any place on the string.
 
+"a" --------> "ba" ----------> "bda" ---------> "bdca"
+      + 'b'           + 'd'            + 'c'
+
 Note: This question Longest String Chain expects us to find the longest chain subset instead of subsequence, therefore we will first sort the array (on the basis of the length of the string) to get the answer
+
+
+S1: "bda"
+S2: "ba"
+
+
+i=0
+j=0
+
+s1[i] == s2[j]: b==b
+    i++
+    j++
+
+i=1
+j=1
+
+s1[i] != s2[j]: d != a
+    i++
+
+i=2
+j=1
+
+s1[i] == s2[j]: a==a
+    i++
+    j++
+
+i=3
+j=2
+
+we see i==s1.size() and j==s2.size(). So we return true
+
+
 */
 
 
 bool compare(string& s1, string& s2){
     if(s1.size() != s2.size() + 1) return false;
+    cout<<s1.size()<<" "<<s2.size()<<endl;
+    cout<<s1<<" "<<s2<<endl;
+
+    // After inserting 1 element in s2, both length should equal then only we proceed.
     
     int first = 0;
     int second = 0;

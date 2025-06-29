@@ -10,6 +10,7 @@ The matrix contains only two possible values:
 
 0: A blocked cell through which the rat cannot travel.
 1: A free cell that the rat can pass through.
+
 Your task is to find all possible paths the rat can take to reach the destination, starting from (0, 0) and ending at (n-1, n-1), under the condition that the rat cannot revisit any cell along the same path. Furthermore, the rat can only move to adjacent cells that are within the bounds of the matrix and not blocked.
 If no path exists, return an empty list.
 

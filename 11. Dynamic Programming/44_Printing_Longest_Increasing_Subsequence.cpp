@@ -2,9 +2,9 @@
 using namespace std;
 #include<bits/stdc++.h>
 
-/* Q. Longest Increasing Subsequence
+/* Q. Print Longest Increasing Subsequence
 
-Given an integer array nums, return the length of the longest strictly increasing subsequence.
+Given an integer array nums, print the length of the longest strictly increasing subsequence.
 
 Input: nums = [10,9,2,5,3,7,101,18]
 Output: [2,3,7,101]
@@ -21,7 +21,7 @@ Explanation: longest Increasing subsequence is 0 4 6 9 13 15  and the length of 
 
 -------------Intuition: 
 
-NOTE: All previous Q 43. solution won't help us to print the LIS. So We have to to write another solution to print the LIS.
+NOTE: All previous Q43. solution won't help us to print the LIS. So We have to to write another solution to print the LIS.
 
 dp[i] siginifies the longest increasing subsequence that ends at index i.
 
@@ -188,7 +188,7 @@ void print_longestIncreasingSubsequence(vector<int>nums){
 
 
 int main(){
-    vector<int>nums = {1};
+    vector<int>nums = {10,9,2,5,3,7,101,18};
     Lenght_longestIncreasingSubsequence(nums);
 
     // NOTE: Above solution will be required to print the LIS

@@ -13,6 +13,20 @@ Output: true
       3   6
      / \   \ 
     2   4   7
+
+
+
+---------------------------------------------------------------------------------------------
+NOTE: If it not a BST - Try similar problem AMAZON
+
+    My approach will be for binary tree: 
+        1. First traverse tree and store the values in a vector.
+        2. sort the vector
+        3. Apply 2 pointer technique. 
+        4. Over all time complexity: O(n) + O(n log n) + O(n)
+        O(n) = traversing the tree
+        O(n log n) = sorting
+        O(n) = 2 pointer 
 */
 
 

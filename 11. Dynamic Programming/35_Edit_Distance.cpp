@@ -63,6 +63,9 @@ As we have to return the minimum number of operations, we will return the minimu
 Base Cases:
     We are reducing i and j in our recursive relation, there can be two possibilities, either i becomes -1 or j becomes -1., i,e we exhaust either S1 or S2 respectively.
 
+    rse
+    horse
+
 */
 
 // Recursion------------------------------------------------------------------------
