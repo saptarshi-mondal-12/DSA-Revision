@@ -12,7 +12,10 @@ Input: n = 4, E = 4, edges[][] = [[0, 1], [0, 2], [1, 2], [2, 3]]
    ┃  /  ┃  
    ┃ /   ┃ 
   (0)   (3) 
-      
+
+[1,1,1,0]
+
+
 Output: true
 Explanation: 1 -> 2 -> 0 -> 1 is a cycle.
 
@@ -23,7 +26,7 @@ Explanation: No cycle in the graph.
 
 
 Intuition: ------------------------------
-he intuition is that we start from a node, and start doing BFS level-wise, if somewhere down the line, we visit a single node twice, it means we came via two paths to end up at the same node. It implies there is a cycle in the graph because we know that we start from different directions but can arrive at the same node only if the graph is connected or contains a cycle, otherwise we would never come to the same node again.  
+The intuition is that we start from a node, and start doing BFS level-wise, if somewhere down the line, we visit a single node twice, it means we came via two paths to end up at the same node. It implies there is a cycle in the graph because we know that we start from different directions but can arrive at the same node only if the graph is connected or contains a cycle, otherwise we would never come to the same node again.  
 
 Initial configuration:
     Queue: Define a queue and insert the source node along with parent data (<source node, parent>). For example, (2, 1) means 2 is the source node and 1 is its parent node.

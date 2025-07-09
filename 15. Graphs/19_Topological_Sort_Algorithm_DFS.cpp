@@ -36,6 +36,23 @@ The above result satisfies all the necessary conditions.
 
 
 
+Intuition-----------------------------------------------------------------------------------
+
+1-->2-->3-->4-->5
+
+calling dfs(1)
+
+1 goes to 2, 2 goes to 3, 3 goes to 4, 4 goes to 5. So 5 has not go to anywhere. So before going back to 4 
+store 5 in stack, similary going back to 3 store 4 
+
+|5|
+|4|
+|3|
+|2|
+|1|
+
+So answer is 5 4 3 2 1 and we see u come before v (u->v).
+
 
 
 Topological sorting only exists in Directed Acyclic Graph (DAG). If the nodes of a graph are connected through directed edges and the graph does not contain a cycle, it is called a directed acyclic graph(DAG). 
@@ -55,6 +72,9 @@ Now, let's understand Why topological sort only exists in DAG:
         (3)
         
     If we try to get topological sorting of this cyclic graph, for edge 1->2, node 1 must appear before 2, for edge 2->3, node 2 must appear before 3, and for edge 3->1, node 3 must appear before 1 in the linear ordering. But such ordering is not possible as there exists a cyclic dependency in the graph. Thereby, topological sorting is only possible for a directed acyclic graph.
+
+
+
 
     
 

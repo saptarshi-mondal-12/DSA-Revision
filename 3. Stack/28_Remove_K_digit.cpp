@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-Q. Remove K Digits
+Q. Remove K Digits - AMAZON 2025
 
 Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
 

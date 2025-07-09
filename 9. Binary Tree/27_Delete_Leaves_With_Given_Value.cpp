@@ -42,11 +42,11 @@ void print(Node* root){
 }
 
 
-
+// Best solution - recursive ------------------------------------------------------------------------
 
 Node* brute_removeLeafNodes(Node* root, int target) {
     // Time complexity: O(n)
-    // Space complexity: O(n)
+    // Space complexity: O(h)
 
     // post order traversal - beacuse we need to check for leaves left , right then root , if it is a leaf equal to target delete it i.e postorder traversal
 
@@ -69,6 +69,10 @@ Node* brute_removeLeafNodes(Node* root, int target) {
     return root;
 }
 
+
+
+
+// Can skip this soln ------------------------------------------------------------------
 Node* optimal_removeLeafNodes(Node* root, int target) {
     // Time complexity: O(n)
     // Space complexity: O(n)

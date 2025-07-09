@@ -77,7 +77,7 @@ vector<int> topoSort(int n, vector<vector<int>>&edges){
         adjacency_List[u].push_back(v);
     }
 
-    // indegree - np of incomming edges
+    // indegree - no of incomming edges
     vector<int> indegree(n, 0);
     for (int i = 0; i < n; i++){
         for (auto it : adjacency_List[i]){
@@ -96,9 +96,9 @@ vector<int> topoSort(int n, vector<vector<int>>&edges){
     while (!q.empty()){
         int node = q.front();
         q.pop();
+
+        // Put node is in your topo sort
         topo.push_back(node);
-        // node is in your topo sort
-        // so please remove it from the indegree
 
         for (auto it : adjacency_List[node]){
             indegree[it]--;

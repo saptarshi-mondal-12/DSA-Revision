@@ -17,7 +17,7 @@ grid[][] = {{1, 1, 0, 0, 0},
             {1, 1, 0, 0, 0},
             {0, 0, 0, 1, 1},
             {0, 0, 0, 1, 1}}
-Same colored islands are equal. We have 2 equal islands, so we have only 1 distinct island.
+Same colored islands are equal. We have 2 equal islands i.e size 4, so we have only 1 distinct island.
 
 
 Input:
@@ -32,6 +32,49 @@ grid[][] = {{1, 1, 0, 1, 1},
             {0, 0, 0, 0, 1},
             {1, 1, 0, 1, 1}}
 Same colored islands are equal. We have 4 islands, but 2 of them are equal, So we have 3 distinct islands.
+
+---------------------------------------------------------------------------------------------------------------------------
+Intuition: Subtract from base, to get coordinates
+
+
+
+to count distinct i have to store something like shape . Checkout example 2 
+
+0,0     0,1
+---------
+        |                  1st island 
+    ----
+    |
+-----
+1,0 
+         
+        2,4
+    ------
+    |    |
+----------                2nd island 
+|        |
+----------
+3,3    3,4
+
+
+3,0, 3,1
+-------
+|     |                3rd island
+-------
+
+SO 3 different shape 
+
+
+But for 1st example shape is same i.e square how we differentiate
+
+(0,0),(0,1),(1,0),(1,1)
+(2,3),(2,4),(3,3),(3,4)
+
+what we can do we can subtract from base 
+
+for 1st island base is (0,0)
+for 2nd island base is (2,3). So after subtracting our coordinates looke like (0,0),(0,1),(1,0),(1,1) which is exactly same as 1st corrdinates. So treat as 1 island 
+
 
 */
 

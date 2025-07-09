@@ -20,6 +20,10 @@ Explanation: 1 -> 2 -> 0 -> 1 is a cycle.
 Input: n = 4, E = 3, edges[][] = [[0, 1], [1, 2], [2, 3]]
 Output: false
 Explanation: No cycle in the graph.
+
+----------------------------------------------------------------------------------------------
+Intuition - carry each node with their parent 
+
 */
 
 

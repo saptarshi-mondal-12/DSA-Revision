@@ -33,9 +33,13 @@ Output: [["X"]]
 
 Intuition: ------------------------------------------------------
 
+Anyone who is connected to boundery cannot be converted to X.
+
+
 The boundary elements in the matrix cannot be replaced with ‘X’ as they are not surrounded by ‘X’ from all 4 directions. This means if ‘O’ (or a set of ‘O’) is connected to a boundary ‘O’ then it can’t be replaced with ‘X’. 
 
 The intuition is that we start from boundary elements having ‘O’ and go through its neighboring Os in 4 directions and mark them as visited to avoid replacing them with ‘X’. 
+
 
 
 Approach : 

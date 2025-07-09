@@ -60,7 +60,7 @@ The intuition is the brute force of filling colours using any traversal techniqu
 */
 
 bool dfs(int start, int currentColor, vector<vector<int>>adjacencyList, vector<int>&color){
-        color[start]=currentColor;
+    color[start]=currentColor;
 
     // Traverse adjacent nodes
     for(auto it: adjacencyList[start]){

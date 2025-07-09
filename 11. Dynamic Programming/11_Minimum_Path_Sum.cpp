@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Minimum Path Sum
+/* Q. Minimum Path Sum - AMAZON 2025
 
 Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
 

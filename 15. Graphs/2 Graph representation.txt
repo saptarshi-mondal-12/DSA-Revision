@@ -216,4 +216,4 @@ vector< pair <int,int> > adjList[n+1];
 
 4 --> {(2,1)}
 2 means edge between node 4 and 2
-1 means edge weight
+4 is the edge weight
