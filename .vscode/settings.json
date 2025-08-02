@@ -3,7 +3,9 @@
         "*.ejs": "html",
         "ostream": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "array": "cpp",
+        "regex": "cpp"
     },
     "files.exclude": {
         "": true

@@ -1,0 +1,17 @@
+First of all Thank you for giving me this opportunity.
+
+My name is Saptarshi Mondal. I am from Bilaspur, Chhattisgarh.
+
+I have done my graduation in Information Technology branch from  Shri Shankaracharya College of Engineering and Technology, Durg. My overall CGPA was 8.7.
+
+While doing my graduation, I interned at GeeksforGeeks company as a technical content writer, and I really enjoyed my experience there.
+
+During my academic years, I have done multiple projects on Android and web development. One of them is 'Food Runner,' which serves as an online food ordering application. I used Android Studio as the primary framework, with XML for the frontend design and Kotlin as the programming language.
+
+I am skilled in C, C++ and python programming language  and currently, I am practicing questions on data structure concepts such as arrays, strings, stacks, queues, linked lists, OOPs concepts, etc.
+
+I am preety much active in competetive programming and won many coding contests.
+
+Apart from my education, I like to playing computer games and listening to music and podcasts. 
+
+That's all about me. 
