@@ -89,6 +89,20 @@ Q8. How did you divide your work ?
 
 
 
+
+
+✅Q. Tell me about a recent project which you are proud of and what hurdles you faced in that or Have you faced any challenges while building those projects? How did you solve them? OR Q. Most challenging project you have ever worked on.
+✅Q. All project related questions - modify project file - Architecture and flow.
+✅Q. Tell me about a time you solved a difficult or tricky technical problem.
+✅Q. How did you deploy it live on the server? What challenges did you face during deployment? - put it under happiest moment
+✅Q. Did you implement any form of authentication, data storage, or leaderboard in the game?
+✅Q. Have you built other projects since then that you’re proud of? What was different or better about them?
+✅Q. Was there ever a moment you felt like giving up on the project? How did you push through?
+Q. Make a time complexity chart to revise it. 
+
+
+
+
  
 
 

@@ -17,6 +17,7 @@ After our presentation, the teachers asked several challenging questions. We han
 
 
 ✅Q2. Tell me about a time where you have honest OR Time when you Earn Trust?
+
 💡Ans: I am a honest person but need some time to recollect a specific moment.
 Yes, here’s a time when my honesty made a real difference…
 
@@ -38,6 +39,7 @@ The shopkeeper appreciated my honesty, and that small moment reminded me that st
 
 
 ✅Q3. Short term and long term goal?
+
 💡Ans: My short term goal is to join a company like Amazon where I can contribute meaningfully while learning from some of the best minds in the industry. I want to strengthen my technical skills, understand large-scale product development, and align my work with customer-focused innovation.”
 
  In my long term, I aim to grow into a leadership role where I can take ownership of impactful projects, mentor others, and help shape the direction of products that serve millions of customers. I want to be someone who not only delivers results but also builds a high-performing, trustworthy team that shares a deep obsession with customers.”
@@ -50,6 +52,7 @@ Ultimately, I want to grow in a way that not only helps me improve, but also hel
 
 
 ✅Q4 Why should we hire you?
+
 💡Ans: I’m a self-motivated and open-minded person who learns quickly and adapts well to new challenges. I enjoy solving problems and love collaborating with others, which makes me a strong team player. I believe this role aligns with my interests and gives me a meaningful opportunity to contribute to the company’s growth.”
 
 “I’m confident I’m a good fit for this role because I bring a blend of curiosity, ownership, and a strong willingness to deliver results. I don’t just aim to complete tasks — I care about doing them well, learning in the process, and improving things around me. That’s why I believe I can add real value to your team from day one.
@@ -77,14 +80,12 @@ Similarly,  Amazon revolutionized how we shop — just a few taps on a phone, an
 These innovations made me realize the true power of IT — how it can simplify life, solve daily challenges, and make services more accessible. This deeply motivated me to step into the field of technology, with the goal of contributing to solutions that make life better and easier for people.
 
 
-
 T (Task):
 This sparked a strong  desire in me to understand how such systems work and how I could contribute to building similar solutions that impact real people.
 
 
 ACTION:
 To understand how such systems work behind the scenes, I started learning programming, and as part of my journey, I built a food delivery app similar to Zomato to explore how real-time ordering works. I later developed an advanced food ordering system where users could scan a QR code, view the menu on a website, and place their order without needing a waiter. This eliminated wait times and made restaurant operations more efficient. Through this project, I learned how this big  innovations works behind  to solve a problem with innovation.
-
 
 
 R (Result):
@@ -95,13 +96,15 @@ I aspire to become a software developer who contributes to large-scale systems, 
 
 
 
-✅Q7. Tell me something about your family.
+✅Q7. Tell me something about your family?
+
 💡Ans: I belong to a nuclear family of four members, including myself. My father is a retired electrical engineer, who worked in the private sector, and my mother is a dedicated homemaker. I also had an elder sister who, sadly, passed away. We share a close bond, and my family has always been a strong source of support and motivation throughout my journey.
 
 
 
 
 ✅Q8. Have you done any certification or trained in any domain?
+
 💡Ans: Yes, I have done certifications in Android App Development and Web Development.
 
 In Android Development, I gained experience with the Kotlin programming language, UI/UX design, XML layouts, SharedPreferences, and more. I completed my certification course from Internshala, scoring 81% in the final exam. Some of the projects I built include:
@@ -110,13 +113,11 @@ BookHub – an online book reading platform,
 Avengers App – a superhero photo collection app,
 and FoodRunner – a food delivery app similar to Zomato.
 
-
 In Web Development, I worked with HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, Node.js, and Express.js. Some of my projects include:
 
 A personal portfolio website,
 BookUsNow – a platform to explore local events like movies and stand-up shows with dates and venues,
 and a multiplayer 2-player game, which runs on both web and Android platforms and many more.
-
 
 Additionally, I earned HackerRank certifications in Python, C++, and SQL, strengthening my core programming skills.
 
@@ -125,8 +126,8 @@ These experiences reflect my passion for continuous learning and using technolog
 
 
 
-
 ✅Q9. How you motivate yourself ?
+
 💡Ans: One of my biggest sources of motivation is my parents. Seeing their hard work and the sacrifices they’ve made to provide me with a better future inspires me to give my best every single day . Their dedication drives me to stay focused and make the most of every opportunity.
 
 I motivate myself by setting clear goals and keeping the bigger picture in mind. I break large tasks into smaller milestones, which helps me track progress and stay focused.
@@ -139,6 +140,7 @@ Additionally, I like to reflect on past successes and feedback, which reminds me
 
 
 ✅ Q10. What are your interpersonal skills?
+
 💡Ans: My interpersonal skills include teamwork, time management, adaptability, problem-solving, and effective communication. These skills enable me to work collaboratively in fast-paced environments and contribute meaningfully to team goals.
 
 Teamwork: During my internship at GeeksforGeeks, I worked with a content team to create high-impact technical content. I took full ownership of my assigned tasks while collaborating closely with teammates to maintain consistency and high quality across all content. This experience reflects my ability to work effectively in a team and contribute to shared goals. 
@@ -155,6 +157,7 @@ I believe these interpersonal skills have allowed me to communicate clearly, col
 
 
 ✅Q11. What is your Least favourite subjects and How did you study for that ?
+
 💡Ans: While I’ve enjoyed most of my subjects, I believe growth comes from challenges—especially the ones that push us out of our comfort zone.
 
 
@@ -184,11 +187,7 @@ Through these combined efforts, not only did I overcome my fear of the subject, 
 
 
 
-
-
-
-
-✅Q13.Tell me a scenario where you had a problem but you turn it into an opportunity?
+✅Q12.Tell me a scenario where you had a problem but you turn it into an opportunity?
 
 💡Ans: One such scenario that comes to mind was during my 7th semester in college, when I had the opportunity to lead my project team through a challenging situation.
 
@@ -211,7 +210,7 @@ That’s why I see it as a great opportunity where I learned to lead, take owner
 
 
 
-✅Q24. Was their any problem/ difficulty/ challenges in your life and how did you overcome from it OR Tell me a time when you faced a problem and how you handle it?
+✅Q13. Was their any problem/ difficulty/ challenges in your life and how did you overcome from it OR Tell me a time when you faced a problem and how you handle it?
 
 💡Ans: One such scenario comes to mind was during my 4th semester in college, during the COVID-19 pandemic.
 
@@ -243,6 +242,7 @@ Through these combined efforts, not only did I overcome my fear of the subject, 
 
 
 ✅Q14. Tell me something about your birth place and hometown?
+
 💡Ans: So, I was born and brought up in Bilaspur, Chhattisgarh. The city is popularly known as "The City of Festivals" because we celebrates almost all Indian festivals, along with unique local ones. 
 
 One such local festival that we celebrate is the Raut Nach Mahotsav. It’s a colorful  folk-dance celebration performed by the Yaduvanshis (Rauts) community in honor of Lord Krishna, as a way of giving thanks for a good harvest season.
@@ -262,22 +262,17 @@ That’s a brief overview of my hometown—rich in culture, tradition, and natur
 
 
 
-
-
-
 ✅Q15. What are you doing in last 4 years?
+
 💡Ans: I come from a below middle-class family, and with my father retired, securing a job became more important for me after graduation.
 
 Over the last two years, I’ve been consistently preparing for a career in the tech industry.
 
-
 S (Situation):
 I remember during my 3rd and 4th years of engineering, I was actively preparing for campus placements. I was focused on securing a good job offer before graduation by strengthening my technical skills, giving mock interviews, practicing coding regularly, and improving my resume. However, despite all the preparation, I faced multiple rejections.
 
-
 T (Task):
 Over the last two years, I appeared for multiple companies. Despite being well-prepared, I faced several rejections. I gave my best in every round — from aptitude tests to coding assessments and technical interviews. Some companies didn’t respond to my application, while others rejected it outright.  In several cases even after clearing all coding questions with 100% test cases, I wasn’t shortlisted.  In a few interviews, I even received positive feedback, but the final results were either delayed indefinitely or never communicated at all.
-
 
 A (Action):
 But I didn't give up. Despite of all failure, I stayed motivated and took full ownership of my journey.  I kept applying, kept learning, and stayed consistent with my preparation. I identified my weak areas, worked hard to improve my problem-solving skills, and built multiple projects to strengthen my portfolio. I also participated in coding contests and earned good ranks — including Rank 1459 in TCS CodeVita. Unfortunately, due to being from the 2023 batch, I wasn’t eligible for the interview round.
@@ -290,7 +285,6 @@ I made the most of my time by:
 	• Taking feedback seriously from seniors and mentors
 	• Staying up-to-date with industry trends
 	• Practicing mock interviews and problem-solving regularly.
-
 
 R (Result):
 Even though I haven’t secured  a full-time job yet.  But these two years have helped me become more resilient, independent, and technically strong. More importantly, I  developed  this  mindset of continuous learning, deep self-auditing, and never giving up, is what truly defines me. I’m still actively applying and continue to improve myself every day to be ready for the right opportunity.
@@ -320,9 +314,8 @@ But I’ve learned from every mistake. I’ve corrected these over time and cont
 
 
 
-
-
 ✅Q16. What is your favourite subject and why?
+
 💡Ans: Among all the subjects I studied, Database Management Systems (DBMS) is my favorite subject. Throughout my academic journey, I have consistently achieved high scores in this subject.
 
 My goal was not just to score well in this subject, but to really understand how data is stored, searched, and managed efficiently—since it’s the backbone of almost every application today. 
@@ -449,7 +442,8 @@ Ans: DBMS NOTES- I’d use sharding for data distribution, replication for avail
 
 
 
-✅Q18. Tell me about your leadership skills ?
+✅Q17. Tell me about your leadership skills ?
+
 💡Ans: I believe leadership isn't about just managing a team—it's more about guiding them through challenges and keeping everyone aligned toward a common goal. One example that really came to my mind that tested my leadership skills is
 
 S (Situation):
@@ -469,26 +463,30 @@ We successfully delivered the project on time with all core features working smo
 
 
 
-✅Q19. What is that one thing you would like to change in past?
+✅Q18. What is that one thing you would like to change in past?
 💡Ans:
 
 S (Situation):
-During my college years, I spent a lot of time in completing online certification courses and consuming theoretical content.
+During my college years, I spent a lot of time completing online certification courses and consuming theoretical content, focusing primarily on Android app development to differentiate myself.
 
 T (Task):
-Looking back, I realize that I missed the opportunity to apply my knowledge by participating in competitive programming contests like ICPC or building scalable real-world products through hands-on development.
-
+Looking back, I realize that I missed valuable opportunities—especially during campus placements. Most companies that visited our college prioritized candidates with web development experience and expected them to complete web-based assignments as part of the hiring process. My limited exposure to web development at that time made it harder for me to take advantage of those opportunities.
 
 A (Action):
-If I could go back, I would shift my focus to practicing competitive programming regularly to strengthen my problem-solving under pressure and participate in ICPC or similar contests. I would also engage more deeply in web development and real-world project building—learning by doing, rather than only watching or reading.
+If I could go back, I would balance my focus between Android and web development to broaden my skill set and align better with industry expectations. 
+However, I took ownership of this gap and acted on it. I actively learned web development—not just through tutorials, but by building projects as I learned. I created multiple web-based applications, including a multiplayer game accessible on both Android and the web, a personal portfolio, an e-commerce site, and a show-booking website. This shift in mindset has made me a more well-rounded developer, and I continue to stay curious and proactive about learning technologies beyond my comfort zone.
 
 R (Result):
-This experience taught me the importance of learning by doing. Since then, I’ve actively applied this mindset—contributing to personal projects, consistently practicing DSA, and exploring how large-scale systems are built. I now prioritize hands-on development, which has better prepared me for real-world software engineering challenges.
+Since then, I’ve consistently applied this hands-on learning approach—contributing to meaningful personal projects, regularly practicing data structures and algorithms, and exploring how large-scale systems are designed and maintained. 
+
+This experience taught me to Think Big about my long-term growth, Dive Deep into building scalable solutions, and continuously challenge myself to improve—both technically and strategically.
 
 
 
 
-✅Q20. What new technology you aware of ?
+
+✅Q19. What new technology you aware of ?
+
 💡Ans: I’ve been working with the latest Android UI toolkit, Material 3 design, and developing apps using Kotlin. My projects include an online food ordering platform, a Marvel superheroes card app, and an online book hub where users can read books directly from the app.
 On the web side, I built a real-time 2-player online game using HTML, CSS, Tailwind CSS, Bootstrap, Node.js, and Express.js, while managing version control through Git and GitHub. 
 I'm currently learning React.js to enhance frontend efficiency and exploring scalable databases for better data management in larger systems.
@@ -497,21 +495,20 @@ I'm currently learning React.js to enhance frontend efficiency and exploring sca
 
 
 
-✅Q21. Happiest moment/day in your life?
+✅Q20. Happiest moment/day in your life?
+
 💡Ans: I am generally a very happy person but i would need some time to recollect that ummmm
 
-It was a long time ago when my sister was diagnosed with abnormal electrical signals in her brain, which caused epilepsy & continuous seizures. Just two days later, due to stress, my father suffered a paralysis attack on the right side of his brain, resulting in paralysis only the right side of his body. That day was the saddest day of my life because I felt completely lost. 
+One of the happiest days of my life was when I launched my first multiplayer game live on a server. It was a online multiplayer game that I had built from scratch over several months. Seeing it live, watching users play, receiving feedback, and knowing that people were enjoying something I created was incredibly rewarding. That moment gave me a strong purpose for solving real-world problems through code. 
 
-But the happiest day was when both of them returned home after two months of recovery. Unfortunately, after a year, my sister’s condition worsened and she was declared brain dead. 
-
-Even though it was a hard time, the day they came back home stills remains the most happiest moments of my life.
+That day wasn’t just a happy moment—it shaped my mindset and gave me the confidence to pursue bigger goals in tech. Since then, I’ve continued to build, learn, and take on new challenges with that same excitement.
 
 
 
 
 
+✅Q21. Disappoint moment or unsuccessful in your life OR Tell my your biggest failure of your life?
 
-✅Q32. Disappoint moment or unsuccessful in your life or tell my your biggest failure of your life?
 💡Ans: The most disappointing moment in my life has been not securing a job during my college placements.
 
 S (Situation):
@@ -526,8 +523,6 @@ But things didn’t go as expected. I was rejected in the initial rounds in some
 R (Result):
 Even though I didn’t land a job during college placements but I never lost hope.  I identified and focused on my weak areas, strengthened core concepts, practiced coding daily, and took mock interviews seriously.
 More importantly, I developed a mindset of continuous learning, deep self-auditing, and never giving up, which I believe is essential for overcoming setbacks and achieving long-term success. I’m still actively applying and continue to improve myself every day to be ready for the right opportunity.
-
-
 
 
 
@@ -560,20 +555,25 @@ On the other hand, I personally prefer WFO because:
 
 
 
-
-
 ✅Q23. What is the best feedback receive by you?
 💡Ans: 
-Situation: During my internship at GeeksforGeeks as a Technical Content Engineering Intern, I was responsible for authoring and improving technical articles on data structures and computer science topics.
 
-T (Task): My task was to write new content and enhance the quality of existing articles to make them more informative, accurate and engaging for readers.
+Situation: 
+One example I can remember is from my internship at GeeksforGeeks where I was a part of the technical content team..
 
-A (Action): I took full ownership of the content and I proactively improved code readability, fixed logical errors, and simplified complex explanations for  better user understanding. 
-
-R (Result): As a result, the editorial team appreciated my efforts, and gave me positive feedback, especially for raising the standard quality of published content. I learned the value of  high standards by diving deep into details and how raising the bar in quality can positively influence customer satisfaction and the brand's credibility.
-
+T (Task): 
+During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content
 
 
+A (Action): 
+I took full ownership of my work and decided to go beyond my core responsibilities. I began creating interactive visual diagrams, adding images, making flowcharts, writing clear algorithms, and providing step-by-step explanations using simple illustrations and animations. I also added multiple relatable examples to help learners understand the concepts more easily.
+Additionally, I added mini quizzes at the end of the articles to help users instantly test their understanding without navigating away from the page.
+
+
+R (Result): 
+As a result, I received positive feedbacks from readers and appreciation from the editorial team for raising the overall quality of the content. In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. 
+
+So this was a time when I received meaningful feedback that recognized my efforts to improve the learning experience and raise the overall standard quality of the content.
 
 
 
@@ -581,7 +581,9 @@ R (Result): As a result, the editorial team appreciated my efforts, and gave me 
 
 
 
-✅Q25. Have you done any extra activity in your college?
+✅Q24. Have you done any extra activity in your college?
+
+💡Ans:
 
 ⭐ SITUATION
 During my college years, I actively participated in several extracurricular activities that helped me grow personally and professionally. One notable experience was when our team decided to organize a college-level coding competition hosted on the CodeChef platform.
@@ -630,9 +632,10 @@ That’s a brief overview of my extracurricular activities, which have played a 
 
 
 
+✅Q25. How did you overcome in covid days?
 
-✅Q26. How did you overcome in covid days?
 💡Ans:
+
 S (Situation):
 During the COVID-19 lockdown in 2020–21, all of our classes shifted online. Unfortunately, the study materials provided were often insufficient, lacking detailed explanations and structured notes. One subject in particular — Data Mining, which involved lengthy derivations and numerical problems — became especially difficult for me. Moreover, when I reached out to professors for help, their explanations over calls were hard to follow due to the limitations of remote learning.
 
@@ -656,7 +659,8 @@ Through these combined efforts, I cleared my 5th semester with an 8.8 CGPA. More
 
 
 
-✅Q27. What you do in covid days?
+✅Q26. What you do in covid days?
+
 💡Ans: When I entered the 1st year of college, the COVID-19 pandemic had just started. During this pandemic, regular college activities, in-person lectures, and internships were put on hold. Like many students, I had more time at home but fewer structured learning environments.
 
 T (Task):
@@ -693,7 +697,8 @@ Most importantly, I developed long-term habits around consistency, ownership, an
 
 
 
-✅Q28. What are the qualities that you should want for each team members?
+✅Q27. What are the qualities that you should want for each team members?
+
 💡Ans: I believe that strong teams are built on a few core qualities. If I had to define the ideal qualities in a team member, I would focus on the following:
 
 Ownership
@@ -729,7 +734,8 @@ These are some essential qualities that I look for in each team member.
 
 
 
-✅Q29. What do you do in your free time?
+✅Q28. What do you do in your free time?
+
 💡Ans: In my free time, I focus on activities that help me grow personally and professionally like 
 In my free time I enjoy playing mobile games like BGMI and Call of Duty, which help improve my reaction time, decision-making under pressure, and team coordination 
 
@@ -749,7 +755,7 @@ I also spend time with friends — playing badminton, visiting local places, and
 
 
 
-✅Q30. Any event you arrange in your college?
+✅Q29. Any event you arrange in your college?
 💡Ans: 
 
 ⭐ SITUATION
@@ -779,7 +785,8 @@ This experience helped me strengthen my ownership mindset, attention to detail, 
 
 
 
-✅Q31. How you handle stressful situation?
+✅Q30. How you handle stressful situation?
+
 💡Ans: I handle stressful situations by staying calm, thinking long-term, and focusing on the key inputs that matter. I prioritize tasks based on impact and urgency, which allows me to act quickly and decisively 
 
 Instead of getting overwhelmed, I break down complex problems into smaller, manageable parts and approach them with clarity and focus.
@@ -800,7 +807,8 @@ As a result, I successfully cleared my final exams with good grades, completed m
 
 
 
-✅Q33. Tell me about your college life?
+✅Q31. Tell me about your college life?
+
 💡Ans: In my 4 years of college, I genuinely enjoyed the journey. I explored the campus, participated in various college events and festivals, and spent a lot of time learning new technologies and coding languages. I was also part of the decoration team for our biggest annual fest, Samvid, which was a lot of fun.
 
 Academically, I consistently maintained a good CGPA and stayed focused on my studies. But honestly, the part I enjoyed the most was working with my close group of friends. We were a team of four — we built projects together, prepared presentations, made notes, and yes... sometimes even bunked a few classes together! Those moments created some of the best memories.
@@ -821,7 +829,8 @@ Overall, my college life was a great blend of learning, fun, and growth. It shap
 
 
 
-✅Q34. Tell me about your hostel life ?
+✅Q32. Tell me about your hostel life ?
+
 💡Ans: Hostel life was one of the most transformative phases of my life. It taught me independence, adaptability, and how to live in a diverse community.
 
 In my initial days, it was quite challenging — adjusting to a new environment, managing everything on my own, and being away from family for the first time. But over time, I adapted. II learned how to organize my daily schedule, balance academics with personal responsibilities, and support others while staying focused on my goals.
@@ -840,7 +849,8 @@ Optional Add-on (If Interviewer Follows Up)
 
 
 
-✅Q35. Can you work under pressure OR Describe your ability to work under pressure OR How do you handle stress or pressure?
+✅Q33. Can you work under pressure OR Describe your ability to work under pressure OR How do you handle stress or pressure?
+
 💡Ans: Yes, I can definitely work under pressure. In fact, I believe pressure often brings out my best performance by pushing me to stay focused, organized, and action-oriented. I believe that pressure is not something to avoid. But it helps me deliver faster, think more clearly, and take decisive action.
 
 S (Situation):
@@ -848,7 +858,6 @@ As i remember , during my final year of engineering, I had to manage multiple re
 
 T (Task):
 Balancing both these responsibilities wasn’t easy. On one hand, I was expected to deliver high-quality technical articles consistently, and on the other, I had to maintain strong academic performance
-
 
 A (Action):
 To handle the pressure, I stayed calm and focused on prioritization. I made a clear schedule for each day and broke down larger tasks into smaller, manageable goals. I avoided multitasking and focused on one thing at a time. I also made sure to take short breaks, get proper sleep, and stay positive by reminding myself of the bigger picture.
@@ -861,7 +870,8 @@ Despite the pressure, I successfully cleared my final exams with good grades, co
 
 
 
-✅Q36. What kind of problem do you want to solve? why ?
+✅Q34. What kind of problem do you want to solve? why ?
+
 💡Ans: 
 
 T (Task):
@@ -877,7 +887,7 @@ This not only gave me satisfaction but also validated the impact of solving a re
 
 
 
-✅Q37. Did you solve any problem? 
+✅Q35. Did you solve any problem? 
 💡Ans: 
 
 S (Situation):
@@ -898,9 +908,7 @@ Although I’m still early in my career, I haven’t had the opportunity to work
 
 
 
-
-
-✅Q38. Did you face any issue with your team mates and How did you handle conflict between team member?
+✅Q36. Did you face any issue with your team mates and How did you handle conflict between team member?
 
 💡Ans: 
 
@@ -921,40 +929,30 @@ By staying neutral, solution-focused I believe most conflicts can be resolved co
 
 
 
-✅Q39. How you manage coordination between team members?
+✅Q37. How you manage coordination between team members?
+
 💡Ans: To manage coordination between team members, I usually  start by creating a clear roadmap of the team’s goals. I define individual roles and responsibilities so that everyone knows what they are accountable for. I maintain open communication within the team, encourage collaboration, and try to make the work environment more engaging and enjoyable. I also provide regular feedback and small rewards to keep the team motivated and aligned. Good coordination creates momentum—when everyone is clear, connected, and motivated, the team performs at its best, and that’s what I always aim for.
 
 
 
 
 
+✅Q38. How was your experience working as a team or Did you enjoy while working in a team?
 
-✅Q40. How was your experience working as a team or Did you enjoy while working in a team?
-💡Ans: Yes, I really enjoyed working in a team, and overall, it was a great experience. Each member had clear responsibilities, and we worked together to complete our tasks within the given timeframe. I liked how we supported each other, shared ideas, and stayed aligned toward a common goal. Working in a team taught me that collaboration brings out better results than working alone, and I look forward to bringing that mindset into any future role.
+💡Ans: I’d like to share my internship experience at GeeksforGeeks, where I was part of an 8-member team. During the internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content.
 
+Yes, I really enjoyed working in a team, and overall, it was a great experience. Each member had clear set of responsibilities, and we worked together to complete our tasks within the given timeframe. I liked how we supported each other, communicate well through google meet, shared ideas openly, and stayed aligned toward a common goal. 
 
-S (Situation):
-During my internship at GeeksforGeeks, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content.
-
-T (Task):
-Our goal was to research high-demand technical topics, write clear and accurate content.
-
-A (Action):
-Although  we were working remotely, we stayed well-connected through regular Google Meet calls where we discussed progress, set goals, and shared ideas. Everyone had clear responsibilities, but we built an open and supportive environment where we could ask questions and help each other especially on complex topics. We as team regularly supported each other. We openly shared feedback, brainstormed better explanations, and kept each other motivated.
+As a result, we consistently met our publishing targets. Some of my articles even ranked high in search results, which helped boost the platform’s visibility and brought in positive feedback & comments from readers. 
 
 
-R (Result):
-As a result, we consistently met our publishing targets. Some of my articles even ranked high in search results, boosting the platform’s visibility. More importantly, I learned that teamwork isn’t just about splitting tasks — it’s about shared ownership, continuous support, and delivering results together.
-
-
-I believe this experience aligns with Amazon’s leadership principles that is "Earn Trust" and "Dive Deep", because in a team, it’s not just about your own work — it’s about lifting the entire team’s performance.
+From this experience, I learned that teamwork isn’t just about dividing tasks or focusing only on your own work— it’s about lifting the entire team’s performance, taking ownership, offering support, and delivering collective results. Working in a team taught me that collaboration often leads to better outcomes than working alone, and I look forward to applying that mindset in any future role.
 
 
 
 
+✅Q39. How you handle a team member if they not okay with your decision?
 
-
-✅Q41. How you handle a team member if they not okay with your decision?
 💡Ans: Before making a final decision, I make sure to actively listen to all the viewpoints shared by my team members. If someone disagrees with my decision, I try to understand the root cause of their concern. I believe healthy disagreements often lead to better outcomes. If the reasoning is valid and benefits the overall goal, I’m open to reconsidering and modifying my decision. 
 
 S (Situation):
@@ -976,7 +974,8 @@ At the end of the day, my goal is to ensure that we move forward with the best p
 
 
 
-✅Q42. “What kind of UI/UX design did your team members present to you?”,
+✅Q40. What kind of UI/UX design did your team members present to you?
+
 💡Ans: Yes, one of my team members proposed a more visual-heavy and modern UI, with animated transitions, floating action buttons, and a custom-themed color palette inspired by popular food delivery apps.
 
 While the design looked attractive, I had concerns about performance and load times, especially for users with slower internet connections, as the animations and custom elements increased complexity.
@@ -989,8 +988,8 @@ After discussing both approaches, we ended up best of both — using a clean lay
 
 
 
-
-✅Q43. Walk me through your resume. 
+✅Q41. Walk me through your resume?
+ 
 💡Ans: I'm Saptarshi Mondal, and I completed my B.Tech in Information Technology from Shri Shankaracharya Technical Campus with a CGPA of 8.7. Throughout my academic journey, I’ve consistently enjoyed exploring core Computer Science subjects—especially DBMS, Data Structures & Algorithms, and OOPS.
 
 During college, I had the opportunity to intern at GeeksforGeeks as a Technical Content Engineering Intern, where I authored 58+ technical articles on topics like data structures and core CS fundamentals. My work received over 400K+ views and significantly improved user engagement on the platform.
@@ -1018,9 +1017,8 @@ Overall, I’m passionate about building real-world solutions, competitive codin
 
 
 
+✅Q42. Suppose one of your team member is not working what you do to make him work?
 
-
-✅Q43. Suppose one of your team member is not working what you do to make him work?
 💡Ans: If one of my team members is not working, I don’t jump to conclusions. First, I try to understand the reason behind it by having an open conversation. Maybe they’re facing personal issues or struggling with the task given but are afraid to ask for help.
 
 Once I know the problem, I offer support—whether it’s breaking down the task, pairing them with a teammate, or helping them learn the required skills. I also make sure the rest of the team stays on track by adjusting the workload if needed.
@@ -1032,7 +1030,8 @@ As a leader, it’s important to address issues with empathy, act fast, and upli
 
 
 
-✅Q44. Still he is not interested to do what you will do ?
+✅Q43. Still he is not interested to do what you will do?
+
 💡Ans: If, even after offering help and support, the team member still isn’t showing interest or taking responsibility, I would take a direct approach. I’d clearly explain how their actions are affecting the team and the project, and remind them of the commitment they made when they joined the team.
 
 If there’s no improvement despite this, I’d escalate the issue to a mentor, faculty, or manager, depending on the situation. I believe in giving chances and being empathetic, but I also have to ensure the team’s progress is not blocked. Delivering results is important, and sometimes making tough decisions becomes necessary for the success of the team.
@@ -1040,9 +1039,8 @@ If there’s no improvement despite this, I’d escalate the issue to a mentor, 
 
 
 
+✅Q44. Describe a situation where you worked hard but could not succeed?
 
-
-✅Q. Describe a situation where you worked hard but could not succeed?
 💡Ans: One example I’d like to share is from my college days.
 
 S – Situation:
@@ -1065,9 +1063,8 @@ This experience helped me build a strong mindset of continuous, self-auditing, a
 
 
 
-
-
 ✅Q45. What is your failure OR A time when you failed?
+
 💡Ans: Sir i don't not see things as failures or successes. I just see them as a part of my experiences. 
 
 One example I would like to share is from my college days.
@@ -1121,7 +1118,8 @@ That’s how I changed my approach to become more focused and interview-ready.
 
 
 
-✅Q. Give me 3 reasons why we should not select you.
+✅Q46. Give me 3 reasons why we should not select you?
+
 💡Ans: Sir, I don' t think their is any reason you should not select me. Smile 
 If there is any reason i know i can work upon it i definitely work upon it and I'll  do my best to contribute to this service.
 
@@ -1129,8 +1127,10 @@ If there is any reason i know i can work upon it i definitely work upon it and I
 
 
 
-✅Q46. Tell me about a time when you faced a challenging situation at work.
+✅Q47. Tell me about a time when you faced a challenging situation at work.
+
 💡Ans: 
+
 S (Situation):
 Sure Sir, One of the most challenging situations that I clearly remember was during my 5th semester of engineering. At the time, I was  juggling two major responsibilities. One is preparing for my final semester exams and working remotely as a Technical Content Intern at GeeksforGeeks.
 
@@ -1139,7 +1139,6 @@ Balancing both these responsibilities wasn’t easy. On one hand, I was expected
 
 A (Action):
 Instead of panicking, I stayed calm and focused on prioritization. I made a clear schedule for each day and broke down larger tasks into smaller, manageable goals. I avoided multitasking and focused on one thing at a time. I also made sure to take short breaks, get proper sleep, and stay positive by reminding myself of the bigger picture.
-
 
 R (Result):
 Despite the pressure, I successfully cleared my final exams with good grades, completed my internship with over 50+ published articles. Most importantly, I learned that staying organized, calm, and solution-focused is the best way to handle pressure.
@@ -1150,7 +1149,31 @@ This was one of the most challenging moments I faced during my college days.
 
 
 
-✅Q48. Can you tell me 5 leadership principle that you mention in your resume.
+✅Q48. When was the last time you worked outside of your comfort zone? 
+
+💡Ans: 
+
+S (Situation):
+During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content. But one day, I was asked to work on a topic that was completely new to me: the Swift programming language.
+
+T (Task):
+My task was to write multiple articles on Swift programming concepts, such as types of statements, loops, and syntax with examples and code. I hadn’t worked with Swift before. So I was a bit nervous because I didn't want to deliver low-quality content, and I had a deadline to meet.
+
+A (Action):
+Instead of avoiding the task, I stepped out of my comfort zone and approached it with a structured plan. I spent extra hours researching high-quality resources, watching YouTube tutorials, and reading existing articles online. I also reached out to a senior mentor to review my drafts and provide constructive feedback.
+
+R (Result):
+The article turned out well and was appreciated by the editorial team for its clarity and simplicity. It was even featured on the homepage for a few days. More importantly, I gained confidence in dealing with unfamiliar technical topics and realized that stepping out of my comfort zone helped me grow both technically and professionally.
+
+So this was a time when I stepped out of my comfort zone to deliver results that reflected my adaptability, learning mindset, and commitment to quality.
+
+
+
+
+
+
+✅Q49. Can you tell me 5 leadership principle that you mention in your resume?
+
 💡Ans: Yes, the five leadership principles I’ve highlighted in my resume and also experience in my real life are
 
 👉 Time Management,
@@ -1178,9 +1201,7 @@ We successfully delivered the project on time with all core features working smo
 
 
 
-
-
-✅Q49. How would you prioritize tasks when facing multiple critical deadlines
+✅Q50. How would you prioritize tasks when facing multiple critical deadlines? OR Tell me about a time when you meet a tight deadline. How did you manage your time and priorities ?
 
 💡Ans: When I’m faced with multiple critical deadlines, I follow a structured approach to stay focused, and avoid feeling overwhelmed. 
 
@@ -1202,7 +1223,7 @@ At the result, I successfully cleared my final exams with good grades, completed
 
 
 
-✅Q50. Give an example of a time you had to quickly learn a new technology or tool. How did you approach it, and what was the outcome? OR How do you manage and adapt to new task?
+✅Q51. Give an example of a time you had to quickly learn a new technology or tool. How did you approach it, and what was the outcome? OR How do you manage and adapt to new task?
 
 💡Ans: I remember a time when I was in my 2nd year of engineering, and our summer vacation had just started. We had only 25 days, and our sir gave us a challenging task — to complete and submit a full technical project during the vacation. Along with that, we also had to provide a training certificate, a vocational training certificate, a detailed project report, and a presentation. 
 
@@ -1232,7 +1253,23 @@ I completed the course with 81% in the final exam and successfully submitted my 
 
 
 
-✅Q52. What generally excites you? what areas of work would you like to explore?
+✅Q52. How would you approach learning a new language/framework used in the company? OR How do you manage and adapt to new task? OR How would you learn a new technology  -- Example - Q51. 
+
+💡Ans: If I need to learn a new language or framework used at Amazon,.......... 
+
+When I’m assigned a new task — especially one involving unfamiliar tools, languages, or frameworks .......
+
+I would approach it with a structured & practical way. I’d start by breaking down the core concepts into smaller topics and creating a learning timeline with short-term, achievable goals.  I usually prefer learning by doing which is the fastest way to learn, so instead of just reading theory, I focus on hands-on implementation through mini-projects or real code examples to understand how things work.
+
+If I get stuck, I look up for official  documentation, use Stack Overflow, or YouTube tutorials — and if I still can’t figure it out, I don’t hesitate to reach out to peers or seniors. I stay consistent with my learning so I can ramp up efficiently and start contributing to the team as soon as possible.
+
+
+
+
+
+
+✅Q53. What generally excites you? what areas of work would you like to explore?
+
 💡Ans: What excites me most is how technology can solve real-world problems at scale and make everyday life simpler. For example,  earlier we often faced issues like not carrying cash, losing wallets, or lacking change — and then platforms like Paytm, BHIM UPI, and PayPal emerged, making cashless transactions simple and secure.
 
 Similarly,  how Amazon revolutionized how we shop — just a few taps on a phone, and products are delivered to our doorsteps. In the transportation sector, we often had to wait long hours or deal with unfair fares from local autos or rickshaws. But then, Ola, Uber, and Rapido came in, using technology to provide reliable rides at fair prices.
@@ -1251,7 +1288,8 @@ As for areas I’d like to explore:
 
 
 
-✅Q53. What did you do when you needed to motivate a group or promote collaboration on particular project.
+✅Q54. What did you do when you needed to motivate a group or promote collaboration on particular project?
+
 💡Ans: Whenever I’m part of a team project, I focus on building a positive and clear environment. First, I make sure everyone knows their responsibilities and strengths are being used effectively. I encourage open communication so people feel comfortable sharing ideas or asking for help.
 
 If someone is falling behind, I offer support or help them break the task into smaller parts. I also share regular updates, celebrate small milestones, and keep the team motivated by appreciating their efforts. 
@@ -1260,8 +1298,8 @@ I believe that earning trust, communicating openly, and taking ownership are key
 
 
 
+✅Q55. How our company help you to achieve you career goal?
 
-✅Q54. How our company help you to achieve you career goal?
 💡Ans: Amazon aligns perfectly with my career goals because it offers exactly the kind of environment I’m looking for — one that values ownership, continuous learning, and innovation at scale. I want to grow as a software developer by solving real-world problems, building customer-focused products, and working on large-scale systems that impact millions of users.
 
 At Amazon, I’ll get to learn from experienced engineers, contribute to high-impact projects, and be part of a culture that encourages raising the bar. The company’s emphasis on bar-raising mentorship, high standards, and customer obsession directly supports my goal of becoming not just a skilled developer, but a well-rounded leader over time.
@@ -1272,8 +1310,8 @@ So, being at Amazon won’t just help me build technical expertise — it’ll s
 
 
 
+✅Q56. What motivates or excites you about the job role?
 
-✅Q55. What motivates or excites you about the job role?
 💡Ans: What excites me most about this job is the opportunity to work on real-world, large-scale problems that impact millions of users. As a software developer, the idea of building systems that are fast, reliable, and user-focused truly motivates me.
 
 I’m especially excited by Amazon’s strong engineering culture — where ownership is encouraged, innovation is expected, and learning never stops. Being surrounded by smart, driven people and contributing to customer-obsessed products makes this role both challenging and rewarding.
@@ -1284,14 +1322,11 @@ This job offers exactly the kind of environment I’m looking for: fast-paced, i
 
 
 
+✅Q57. Why do you want to earn money?
 
-
-
-✅Q. Why do you want to earn money?
 💡Ans: I want to earn money for both practical responsibilities and personal growth. First and foremost, I want to support my family and give my parents the life they truly deserve. One of my dreams is to take them across India — to experience different cultures, try local cuisines, celebrate diverse festivals, and visit spiritual places like Banaras, Kedarnath, and more. I want to see them enjoy a boat ride at the Banaras ghats during the evening aarti and create beautiful memories together. 
 
 I also want to take them on a cruise ship vacation — something they’ve never experienced before, so they can see how a whole new world exists inside a ship. It would mean a lot to me to give them that joy.
-
 
 Secondly, I wanted to be financially  independent — not just to meet day-to-day needs, but to invest in my learning, explore new technologies, and maybe even support others the way I was supported. 
 
@@ -1301,7 +1336,8 @@ For me, money is not the end goal — it’s a tool to support responsibility, g
 
 
 
-✅Q. Why did you apply for this job?
+✅Q58. Why did you apply for this job?
+
 💡Ans: I applied for this job because it aligns perfectly with my career goals and offers exactly the kind of environment I’m looking for  — one that values ownership, continuous learning, and innovation at scale. I want to grow as a software developer by solving real-world problems, building customer-focused products, and working on large-scale systems that impact millions of users.
 
 At Amazon, I’ll get to learn from experienced engineers, contribute to high-impact projects, and be part of a culture that encourages raising the bar. The company’s emphasis on bar-raising mentorship, high standards, that directly supports my goal of becoming not just a skilled developer, but a well-rounded leader over time.
@@ -1312,7 +1348,7 @@ So for me, this role is not just a job — it’s a launchpad for long-term grow
 
 
 
-✅Q. If you do not get this position, what will be your next career move? OR What will you do if you don’t get this position?
+✅Q59. If you do not get this position, what will be your next career move? OR What will you do if you don’t get this position?
 
 💡Ans: Sir, I don' t think their is any reason you should not select me. Smile
 
@@ -1325,7 +1361,8 @@ At the same time, I’ll keep applying to roles that match my values — especia
 
 
 
-✅Q. Why do you want to join this program. What kind of impact you bring in this program if you selected.
+✅Q60. Why do you want to join this program. What kind of impact you bring in this program if you selected.
+
 💡Ans: I want to join this program because it aligns perfectly with my career goals and offers exactly the kind of environment I’m looking for  — one that values ownership, continuous learning, and innovation at scale. I want to grow as a software developer by solving real-world problems, building customer-focused products, and working on large-scale systems that impact millions of users.
 
 At Amazon, I’ll get to learn from experienced engineers, contribute to high-impact projects, and be part of a culture that encourages raising the bar. The company’s emphasis on bar-raising mentorship, high standards, that directly supports my goal of becoming not just a skilled developer, but a well-rounded leader over time.
@@ -1339,7 +1376,8 @@ I’m not just looking to learn — I’m here to contribute. Whether it’s sol
 
 
 
-✅Q. What do you want to achieve from this position ?
+✅Q61. What do you want to achieve from this position ?
+
 💡Ans: From this position, I want to achieve both technical growth and personal development. I’m looking to deepen my skills in problem-solving, system design, and writing clean, efficient, and scalable code — while also learning how large-scale, real-world systems are built and maintained.
 
 I want to gain exposure to Amazon’s engineering practices, understand how customer-first decisions are made, and learn from teams that consistently raise the bar. More than just writing code, I want to develop the ability to think critically, work collaboratively, and contribute to building products that have real impact on millions of users.
@@ -1349,7 +1387,8 @@ Long term, I aim to become a developer who not only delivers results, but also t
 
 
 
-✅Q. Why amazon ?
+✅Q62. Why amazon ?
+
 💡Ans: Amazon is one of the most influential tech companies in the world — known not just for its scale, but for its culture of innovation, customer obsession, and long-term thinking. Its milestones — from transforming global e-commerce, launching AWS (which powers much of the internet today), to innovations like Alexa, Prime — show how Amazon continuously redefines what’s possible.
 
 What really stands out to me is Amazon’s vision to be Earth’s most customer-centric company, and its constant effort to simplify life for millions through technology. Whether it’s one-day delivery, smart assistants, or cloud infrastructure — every solution Amazon builds focuses on scalability, inclusivity, and long-term impact.
@@ -1368,7 +1407,8 @@ So for me, Amazon is not just a workplace — it’s the right launchpad to chal
 
 
 
-✅Q. How do you identify with our company’s core values?
+✅Q63. How do you identify with our company’s core values?
+
 💡Ans: I strongly identify with Amazon’s Leadership Principles because many of them naturally align with how I approach work and learning:
 
 Ownership: I never say “that’s not my job.” Whether it’s debugging, documenting, or supporting teammates, I take full ownership of outcomes. I believe in delivering long-term impact, not just short-term fixes.
@@ -1386,21 +1426,8 @@ Overall, I don’t just admire Amazon’s principles — I try to practice them 
 
 
 
+✅Q64. Is there anything you would change about our office/website/hiring process/business model?
 
-✅Q444. How would you approach learning a new language/framework used in the company? OR How do you manage and adapt to new task?
-
-💡Ans: If I need to learn a new language or framework used at Amazon,.......... 
-
-When I’m assigned a new task — especially one involving unfamiliar tools, languages, or frameworks .......
-
-I would approach it with a structured & practical way. I’d start by breaking down the core concepts into smaller topics and creating a learning timeline with short-term, achievable goals.  I usually prefer learning by doing which is the fastest way to learn, so instead of just reading theory, I focus on hands-on implementation through mini-projects or real code examples to understand how things work.
-
-If I get stuck, I look up for official  documentation, use Stack Overflow, or YouTube tutorials — and if I still can’t figure it out, I don’t hesitate to reach out to peers or seniors. I stay consistent with my learning so I can ramp up efficiently and start contributing to the team as soon as possible.
-
-
-
-
-✅Q. Is there anything you would change about our office/website/hiring process/business model?
 💡Ans: As a fresher I found the process well-structured and transparent. The communication was clear, and I appreciated how the interview stages focused not only on technical skills but also on leadership principles. 
 
 Also, the interview preparation material provided by Amazon — like guidelines, example questions was extremely helpful in preparing for both technical rounds.
@@ -1413,7 +1440,8 @@ At this point, I don’t see anything I’d change, but I admire Amazon’s cult
 
 
 
-✅Q. Which are the top 5 startups and blogs that you follow? What do you like about them?
+✅Q65. Which are the top 5 startups and blogs that you follow? What do you like about them?
+
 💡Ans: To be honest, I don’t regularly follow specific tech blogs right now. As a fresher, I’ve been more focused on building my skills through hands-on practice, courses, and solving problems on platforms like LeetCode and CodeChef.
 
 However, I do explore articles and videos on YouTube when I need to understand a concept deeply. I’m always open to learning from more sources and would love to start following tech blogs more consistently as I grow in my career.
@@ -1423,7 +1451,8 @@ However, I do explore articles and videos on YouTube when I need to understand a
 
 
 
-✅Q. How do you stay organized?
+✅Q66. How do you stay organized?
+
 💡Ans: I stay organized by creating a clear to-do list and setting short-term goals for each day.  I plan my day by dividing tasks based on their priority and time required, and I strictly follow that schedule. I also make a timeline for topics I need to study or complete.
 
 At the end of each day, I review which tasks are pending and prioritize them for the next day to ensure steady progress.
@@ -1438,7 +1467,8 @@ This approach helps me manage my time effectively, avoid last-minute stress, and
 
 
 
-✅Q. What are your hobbies? 
+✅Q67. What are your hobbies? 
+
 💡Ans:  Honestly, I enjoy a mix of things depending on my mood and free time. I like playing mobile games like BGMI and Call of Duty — not just for fun, but they’ve actually helped me get better at quick decision-making and working in a team under pressure.
 
 I also play chess quite often — my rating is around 800+. I’m not a pro, but I enjoy how it pushes me to think ahead and recognize patterns. It’s helped me with logical thinking in general.
@@ -1455,7 +1485,8 @@ These are my hobbies that help me to stay balanced, keep learning, and recharge 
 
 
 
-✅Q. What does work-life balance mean to you?
+✅Q68. What does work-life balance mean to you?
+
 💡Ans: For me, work-life balance means giving 100% during work hours, but also having time to relax, spend time with family, or do things I enjoy. I think it’s important to have that space to recharge — it actually helps me focus better and stay productive for long run.
 
 Even when I’m studying or working on projects,  I follow this mindset — I take small breaks or do something fun like playing games, going for a walk, or just talking with friends. It keeps me motivated and avoids burnout.
@@ -1466,7 +1497,8 @@ I feel Amazon’s culture of ownership and long-term thinking also values this b
 
 
 
-✅Q. What would be your ideal work schedule?
+✅Q69. What would be your ideal work schedule?
+
 💡Ans: My ideal work schedule would be a standard full-time structure — something like 9 AM to 6 PM where I can focus fully on my tasks during work hours, collaborate with my team, and maintain productive  throughout the day.
  
 I’m adaptable and open to different schedules based on team needs or project deadlines, but I believe a consistent routine, especially in the beginning of my career, will help me to stay organized, learn effectively, and deliver quality work.
@@ -1476,8 +1508,8 @@ I’m adaptable and open to different schedules based on team needs or project d
 
 
 
+✅Q70. How you defend your viewpoint from others?
 
-✅Q. How you defend your viewpoint from others?
 💡Ans: I believe in healthy discussions and data-driven decision-making. When I have a viewpoint, I make sure it's supported by strong reasoning, customer impact, and relevant data. If others disagree, I actively listen to their perspectives without interruption. This helps me understand if there are gaps in my approach or if they’re missing critical context.
 
 Whenever I have a different opinion, I don’t argue emotionally. Instead, I calmly explain my viewpoints with logic or examples. I make sure all my points align with the company's vision and focus on customer impact.
@@ -1488,7 +1520,8 @@ At the same time, I stay open-minded. If someone presents stronger data or a bet
 
 
 
-✅Q. What tools or apps allow you to work more efficiently?
+✅Q71. What tools or apps allow you to work more efficiently?
+
 💡Ans: I use several tools that help me stay efficient and organized.
 
 For coding and debugging, I prefer Visual Studio Code, depending on the tech stack. It speeds up development and helps me catch issues early.
@@ -1508,7 +1541,8 @@ These tools have helped me build habits of working efficiently, managing my time
 
 
 
-✅Q. How to say no to someone for an ethical work?
+✅Q72. How to say no to someone for an ethical work?
+
 💡Ans: If someone asks me to do something ethical and meaningful, I first take a moment to think whether I’m the right person for it — considering my current workload, priorities, and whether I have the right skills for it.
 
 If I have to say no, I do it respectfully and explain the reason clearly — whether it's due to workload, lack of expertise, or conflicting priorities. I make sure they understand it’s not about avoiding work, but about being realistic. 
@@ -1523,7 +1557,8 @@ For me, it’s not just about saying no and walking away — it’s about making
 
 
 
-✅Q. Describe end to end project development process including software development life cycle and various software engineering concepts?
+✅Q73. Describe end to end project development process including software development life cycle and various software engineering concepts?
+
 💡Ans: Software development follows a structured process called the Software Development Life Cycle, or SDLC. It typically includes the following phases:
 
 1. Requirement Gathering
@@ -1535,21 +1570,17 @@ For me, it’s not just about saying no and walking away — it’s about making
 1. Requirement Gathering and Analysis:
 First It starts with requirement gathering, where we try to understand what the client or users actually need. This is where functional and non-functional requirements are collected and documented.
 
-
 2. System Design: 
 Once the requirements are clear, we move into the design phase. Here, high-level design decisions are made, like architecture and tech stack, and low-level design includes things like database schema and APIs.
 
 3. Implementation (Coding):
 Then comes the implementation or coding phase. Based on the design, developers write clean, modular, and maintainable code. 
 
-
 4. Testing:
 After coding, the next step is testing. This includes unit testing, integration testing, and system testing to make sure the application works as expected.
 
-
 🚀 5. Deployment:
 Once everything is tested, we move to deployment, where the application is made live — maybe on a cloud server like AWS or a production environment.
-
 
 🔄 6. Maintenance and Updates
 Finally, there’s the maintenance phase — where updates, bug fixes, and new features are handled based on user feedback or performance.
@@ -1573,7 +1604,8 @@ Example: Online Banking System
 
 
 
-✅Q. What you have done apart from academics?
+✅Q74. What you have done apart from academics?
+
 💡Ans: I’ve been quite active beyond academics. One of the highlights was organizing a college-level coding competition through our CodeChef College Chapter. I was the main coordinator and lead problem setter — so I handled everything from creating DSA-based problems, coordinating with CodeChef to host the contest, planning prizes and certificates, to promoting the event across campus and social media. We had over 500 participants, and the event received great feedback from both students and faculty.
 
 Apart from that, I actively participated in competitive programming — with a LeetCode rating of 1700+ and 1600+ on CodeChef. I consistently took part in weekly challenges and online contests. One of my best rankings was 1459 in TCS CodeVita at the national level, which really pushed me to improve my skills under pressure.
@@ -1589,7 +1621,8 @@ So overall, I’ve always tried to go beyond just academics — whether it’s t
 
 
 
-✅Q. What will you choose AI or ChatGPT and Why ?
+✅Q75. What will you choose AI or ChatGPT and Why ?
+
 💡Ans: If I had to choose between AI in general and ChatGPT specifically, I would choose AI — because ChatGPT is just one powerful application of AI, whereas AI as a whole universe with endless possibilities.
 
 By choosing AI, I’m not limiting myself to just chat-based models — I’m opening up to areas like computer vision, recommendation systems, autonomous systems, and predictive analytics like in cancer treatment. These technologies can solve complex problems at scale across industries — healthcare, e-commerce, logistics, even agriculture.
@@ -1600,22 +1633,8 @@ I have huge respect for ChatGPT. It's one of the best examples of how AI can be 
 
 
 
-✅Q445. Any appreciation throughout college or school ?
-💡Ans: Yes, I’ve received many appreciations during college. One that I clearly remember is when I was appreciated by faculty and seniors for organizing a coding competition on the CodeChef platform — especially for handling the entire process from setting problems to managing logistics. I also received positive feedback from HODs for my leadership and initiative.
 
-I’ve also won several online coding contests and received certificates and vouchers during college. One of my best ranks was 1459 in TCS CodeVita, which was recognized by our department. 
-
-During my internship, I was appreciated by my team for contributing quality content to their website.
-
-Apart from formal recognition, I believe consistent feedback and trust from my mentors, faculty, and peers have been the most rewarding forms of appreciation.
-
-
-
-
-
-
-
-✅Q. Tell me about a time when you missed a deadline ? OR A project with strict deadline ?
+✅Q76. Tell me about a time when you missed a deadline ? OR A project with strict deadline ?
 
 💡Ans: Yes, I remember a situation during my 3rd year of college when I nearly missed the deadline for submitting my project report. 
 
@@ -1641,7 +1660,7 @@ I also learned the importance of staying calm under pressure. Now, I always prio
 
 
 
-✅Q. Tell me about a time when you transferred your responsibilities.
+✅Q77. Tell me about a time when you transferred your responsibilities?
 
 💡Ans: To be honest, I’ve never formally transferred all of my responsibilities. But there was one college experience where I had to hand over some of my tasks, and I learned a lot about trusting others and working as a team.
 
@@ -1657,7 +1676,7 @@ I think this was the moment when I truly distributed some of my responsibilities
 
 
 
-✅Q35. Tell me about a time when you were the most productive. What made that time special? Did you change anything about your day-to-day work as a result of that productivity?
+✅Q78. Tell me about a time when you were the most productive. What made that time special? Did you change anything about your day-to-day work as a result of that productivity?
 💡Ans: 
 
 S – Situation:
@@ -1682,7 +1701,7 @@ So, that was the time when I felt the most productive — and the habits I built
 
 
 
-✅Q. Tell me about a dream job ?
+✅Q79. Tell me about a dream job ?
 💡Ans: To be honest, my dream job is one where I get to solve real-world problems, work with smart and driven people and continue learning and growing every day. I enjoy building things that make people’s lives easier — especially through technology. I want to work in a place where innovation is encouraged, and high standards are the norm.
 
 That’s why a company like Amazon excites me — where innovation is part of the culture that really aligns with the way I like to work. 
@@ -1695,8 +1714,7 @@ So yes, for me, a dream job means building innovative solutions, learning contin
 
 
 
-
-✅Q. What experience do you have in this field.
+✅Q80. What experience do you have in this field?
 
 💡Ans: As a recent Computer Science graduate, I may not have full-time industry experience yet, but I’ve worked on multiple projects that gave me real exposure to this field.
 
@@ -1839,23 +1857,7 @@ I believe this experience aligns with Amazon’s leadership principles that is "
 
 
 
-✅Q. Describe a time when you exceeded people’s expectations?
-💡Ans: One example that I can remember is from my internship at GeeksforGeeks, where I was part of the content writing and editorial team.
 
-S (Situation):
-During my internship, I was assigned to write technical articles on data structures and algorithms, which would be published on the website and used by thousands of learners.  Apart from that, I also had to research trending topics and edit existing articles to improve their quality.
-
-T (Task):
-My responsibilities included writing new articles, modifying existing ones, and reviewing drafts that were scheduled to be published—while maintaining high standards of quality and accuracy. That was the standard expectation.
-
-A (Action):
-I took full ownership of the task. I realized that while completing the articles on time was important, creating high-impact content could really help learners and stand out. So, I didn’t just stick to the minimum.
-I researched deeply, added real coding examples, created custom diagrams, and even included edge cases and interview-level insights in each post. I also proactively reviewed peer articles to raise the overall quality of our team output.
-
-R (Result):
-In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. My mentor appreciated the depth and consistency of my work and mentioned that it helped raise the quality benchmark for future interns.
-
-So this was an experience I remember where I went beyond the baseline and created a big impact on my senior and the team
 
 
 
@@ -1887,25 +1889,82 @@ Through these combined efforts, not only did I overcome my fear of the subject, 
 
 
 
-✅Q446. Tell me about a time you went above and beyond your normal responsibility to achieve a goal.
+✅Q. Describe a time when you exceeded people’s expectations? OR Time when you went above and beyond your expectation?
 
-💡Ans: One example that I can remember is from my internship at GeeksforGeeks, where I was part of the content writing and editorial team.
+💡Ans: One example I can remember is from my internship at GeeksforGeeks.
 
-S (Situation): 
-I was assigned to write technical articles on data structures and algorithms, which would be published on the website and used by thousands of learners.  Apart from that, I also had to research trending topics and edit existing articles to improve their quality.
+S (Situation):
+During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content, which would be published on the website and used by thousands of learners.
+
 
 T (Task):
-My main task was to writing new articles, modifying existing ones, and reviewing drafts that were scheduled to be published—while maintaining high standards of quality and accuracy. That was the standard expectation.
+My task was to write articles in a more detailed and simplified manner so that students — especially beginners — could easily understand the concepts without feeling overwhelmed.
+
 
 A (Action):
-I took full ownership of the task. I realized that while completing the articles on time was important, creating high-impact content could really help learners and stand out. So, I didn’t just stick to the minimum.
-I researched deeply, added real coding examples, created custom diagrams, and even included edge cases and interview-level insights in each post. I also proactively reviewed peer articles to raise the overall quality of our team output.
+I took full ownership of my work and decided to go beyond my core responsibilities. I began creating interactive visual diagrams, adding images, making flowcharts, writing clear algorithms, and providing step-by-step explanations using simple illustrations and animations. I also added multiple relatable examples to help learners understand the concepts more easily.
+Additionally, I added mini quizzes at the end of the articles to help users instantly test their understanding without navigating away from the page.
+
 
 R (Result):
-In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. My mentor appreciated the depth and consistency of my work and mentioned that it helped raise the quality benchmark for future interns.
+As a result, I received positive comments from readers and appreciation from the editorial team for raising the overall quality of the content. In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. 
 
-So this was an experience where I went above and beyond my core responsibilities and made a meaningful impact—not just by meeting goals, but by helping raise the overall standard for the team.
+So this was a time when I exceeded people’s expectations — not just by fulfilling my responsibility of writing articles, but by creating high-value content that significantly raised the overall quality of the platform
 
+
+
+
+
+
+✅Q446. Tell me about a time you went above and beyond your normal responsibility to achieve a goal? OR A time you took something significant outside your responsibility?
+
+
+💡Ans: One example I can remember is from my internship at GeeksforGeeks.
+
+S (Situation):
+During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content. While reviewing the comments on some of my published articles, I noticed that a few students were struggling to understand certain parts — especially the explanations and examples. I also realized that some articles were only available in C++, limiting accessibility for students from other programming backgrounds.
+
+
+T (Task):
+My task was to write articles in a more detailed and simplified manner so that students — especially beginners — could easily understand the concepts without feeling overwhelmed.
+
+
+A (Action):
+I took full ownership of my work and decided to go beyond my core responsibilities. I began creating interactive visual diagrams, adding images, making flowcharts, writing clear algorithms, and providing step-by-step explanations using simple illustrations and animations. I also added multiple relatable examples to help learners understand the concepts more easily.
+Additionally, I added mini quizzes at the end of the articles to help users instantly test their understanding without navigating away from the page.
+
+
+R (Result):
+As a result, I received positive comments from readers and appreciation from the editorial team for raising the overall quality of the content. In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. My mentor appreciated the depth and consistency of my work and mentioned that it helped raise the quality benchmark for future interns.
+
+So this was a time when I went above and beyond my core responsibilities and made a meaningful impact — not just by meeting goals, but by helping to raise the overall standard for the team.
+
+
+
+
+
+
+✅Q550. Tell me about a time when you created something extra for the user ?
+
+💡Ans:  One example I can remember is from my internship at GeeksforGeeks.
+
+S (Situation):
+During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content. While reviewing the comments on some of my published articles, I noticed that a few students were struggling to understand certain parts — especially the explanations and examples. I also realized that some articles were only available in C++, limiting accessibility for students from other programming backgrounds.
+
+
+T (Task):
+My task was to write articles in a more detailed and simplified manner so that students — especially beginners — could easily understand the concepts without feeling overwhelmed.
+
+
+A (Action):
+I took full ownership of my work and decided to go beyond my core responsibilities. I began creating interactive visual diagrams, adding images, making flowcharts, writing clear algorithms, and providing step-by-step explanations using simple illustrations and animations. I also added multiple relatable examples to help learners understand the concepts more easily.
+Additionally, I added mini quizzes at the end of the articles to help users instantly test their understanding without navigating away from the page.
+
+
+R (Result):
+As a result, I received positive comments from readers and appreciation from the editorial team for raising the overall quality of the content. In the end, I delivered 58+ high-quality articles, far above the expected number. Several of my articles ranked high in search results, boosting the platform’s visibility and reach on social media. My mentor appreciated the depth and consistency of my work and mentioned that it helped raise the quality benchmark for future interns.
+
+So this was a time when I made a meaningful impact for the user — not just by writing articles, but by helping to raise the overall quality of the article.
 
 
 
@@ -1946,7 +2005,8 @@ It was the moment I realized how much there is to learn beyond just coding, and 
 
 
 
-✅Q. A time when you had to debug a problem?
+✅Q. A time when you had to debug a problem? OR Tell me about a time when you solve a complex problem?
+
 💡Ans: One of the most challenging debugging experiences I’ve faced was during the development of a real-time multiplayer game using WebSockets.
 
 S (Situation):
@@ -2095,6 +2155,9 @@ Q. Why did you use a Map instead of a plain object for game state?
 
 
 
+
+
+
 ✅Q. A time when you had a disagreement with a teammate?
 💡Ans: Sir, I’d like to take a moment to think about that...
 
@@ -2108,22 +2171,8 @@ There might have been moments where we had different ideas, but I always handled
 
 
 
-✅Q. When was the last time you worked outside of your comfort zone?
-💡Ans: 
 
-S (Situation):
-During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content. But one day, I was asked to work on a topic that was completely new to me: the Swift programming language.
 
-T (Task):
-My task was to write multiple articles on Swift programming concepts, such as types of statements, loops, and syntax with examples and code. I hadn’t worked with Swift before. So I was a bit nervous because I didn't want to deliver low-quality content, and I had a deadline to meet.
-
-A (Action):
-Instead of avoiding the task, I stepped out of my comfort zone and approached it with a structured plan. I spent extra hours researching high-quality resources, watching YouTube tutorials, and reading existing articles online. I also reached out to a senior mentor to review my drafts and provide constructive feedback.
-
-R (Result):
-The article turned out well and was appreciated by the editorial team for its clarity and simplicity. It was even featured on the homepage for a few days. More importantly, I gained confidence in dealing with unfamiliar technical topics and realized that stepping out of my comfort zone helped me grow both technically and professionally.
-
-So this was a time when I stepped out of my comfort zone to deliver results that reflected my adaptability, learning mindset, and commitment to quality.
 
 
 
@@ -2137,6 +2186,22 @@ What made it special was when our faculty coordinator came to our class, appreci
 
 
 I consider this a significant achievement because it not only showcased my technical skills, but also earned recognition from peers and faculty.
+
+
+
+
+
+✅Q445. Any appreciation throughout college or school ?
+💡Ans: Yes, I’ve received many appreciations during college. One that I clearly remember is when I was appreciated by faculty and seniors for organizing a coding competition on the CodeChef platform — especially for handling the entire process from setting problems to managing logistics. I also received positive feedback from HODs for my leadership and initiative.
+
+I’ve also won several online coding contests and received certificates and vouchers during college. One of my best ranks was 1459 in TCS CodeVita, which was recognized by our department. 
+
+During my internship, I was appreciated by my team for contributing quality content to their website.
+
+Apart from formal recognition, I believe consistent feedback and trust from my mentors, faculty, and peers have been the most rewarding forms of appreciation.
+
+
+
 
 
 
@@ -2191,29 +2256,6 @@ I followed a structured approach: topic-wise practice, mock contests, and daily 
 
 
 
-✅Q. Tell me about a time when you created something extra for the user ? 
-💡Ans:  I would like to share my internship experience at GeeksforGeeks 
-
-S (Situation):
-During my internship, I was responsible for writing technical articles on data structures, algorithms, and computer fundamentals, as well as editing and improving existing content. While reviewing the comments on some of my published articles, I noticed that a few students were struggling to understand certain parts — especially the explanations and examples. Additionally, I realized that some articles were only available in C++, which limited accessibility for students from other programming backgrounds.
-
-
-T (Task):
-My task was to write articles in a more detailed and simplified manner so that students — especially beginners — could easily understand the concepts without feeling overwhelmed.
-
-
-A (Action):
-So, I went beyond my regular responsibilities and began creating interactive visual diagrams, adding images, making flowcharts, writing clear algorithms, and providing step-by-step explanations using simple illustrations and animations. I also added multiple relatable examples to help learners understand the concepts more easily.
-Additionally, I added mini quizzes at the end of the articles to help users instantly test their understanding without navigating away from the page.
-
-
-R (Result):
-As a result, I received positive comments from readers and appreciation from the editorial team for  raising the overall quality of the content. Some of my articles ranked higher in search results and gained attraction on social media, boosting the platform’s visibility.
-
- f. Some of my articles even ranked high in search results, boosting the platform’s visibility and reach on social media. This experience taught me the importance of diving deep into user needs and maintaining high standards by going the extra mile.
-
-So, this is one experience where I went beyond the baseline and created a meaningful impact for the user.
-
 
 
 
@@ -2237,22 +2279,28 @@ If faced with such a situation in the future, I’m confident in my ability to h
 
 
 
+✅Q. Tell me something that you are not good at?
+
+💡Ans: To be honest, I’m currently not very strong in web development. I’m still in the early phase of learning — I’ve picked up the basics like HTML, CSS, JavaScript, jQuery, Node.js, and Express.js, but I haven’t yet worked with advanced frameworks like React, or gained industry-level experience in development.
+
+However, I enjoy learning it, and I’ve already started building small projects to improve — such as a personal portfolio website, an online multiplayer game, and BookUsNow, a website that fetches nearby events based on location. These have helped me improve my hands-on skills and confidence.
+
+I know that mastering any skill takes time and consistent effort, so I’m gradually improving by building things from scratch, watching tutorials, and learning from online communities.
+
+While I may not be fully confident in web development but I’m someone who enjoys learning new things and I’m actively working on becoming better.
 
 
 
 
+✅Q. Why do you feel you're not good at it yet, despite building multiple projects?
 
+💡Ans: While I have built multiple projects but I still feel I’m not good at web development from an industry or production-level perspective.
 
-------------------------------------------Below pending -------------------------------------------------------
+Most of my projects were built independently or for learning purposes, and I haven’t yet had the opportunity to work in a team environment where things like scalability, code structure, design ,testing, security, and deployment best practices are crucial.
 
-✅Q. Tell me about a recent project which you are proud of and what hurdles you faced in that 
-✅Q. All project related questions - modify project file - Architecture and flow.
-✅Q. Tell me about a time you solved a difficult or tricky technical problem. 
+Also, I haven’t worked deeply with modern frontend frameworks like React or state management tools, which are common in real-world development.
 
-Q19 modify, Q21 modify, Q.40, 46 - swift wala answer, 50 fix it , Q444 k0 swift was question ke niche daal, Q445 ko Q12 ke niche daal, Sb geeks ka format edit kr. , jitna geekforgeeks - result sudhar - sirf 1 same answer , Q446 - situation and task same, 
-Q. Make a time complexity chart to revise it. 
-
-
+So, while I do have practical experience, I believe there’s still a lot of depth and professionalism to gain — and that’s why I say I’m still learning and improving in this area.
 
 
 
