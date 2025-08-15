@@ -2,7 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Product of Array Except Itself
+/* Q. Product of Array Except Itself - AMAZON 2025 
+
 Problem Statement: Given an array arr[] of integers, you need to 
 return the product of given array elements except including the element itself.
 

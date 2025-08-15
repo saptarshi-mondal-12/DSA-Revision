@@ -2,7 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*Merge Overlapping Sub-intervals 
+/* Q. Merge Overlapping Sub-intervals 
+
 Given an array of intervals, merge all the overlapping intervals and return an array of non-overlapping intervals.
 
 Input: intervals=[[1,3],[2,6],[8,10],[15,18]]

@@ -2,24 +2,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Implement queue using stack
+/* Q. Implement queue using 2 stack - AMAZON 2025
 
 Intuition : By making enQueue operation costly: This method makes sure that oldest entered element is always at the top of stack 1, so that deQueue operation just pops from stack1. To put the element at top of stack1, stack2 is used.
 */
 
-// Time Complexity: Push: O(N), Pop: O(1)
+// Time Complexity: Push: O(N) (because we transfer elements twice), Pop: O(1), Front: O(1)
 // Space Complexity: O(N)
 
 
 
-class Queue{
+
+class MyQueue{
     public:
+   
     int top;
+    stack<int>st, st2; // Two stacks
 
-    // Using 2 stack 
-    stack<int>st, st2;
-
-    void enqueue(int x){
+    // Push element to the back of queue
+    void push(int x){
         // 1. Move all element to stack 2 
         while(!st.empty()){
             st2.push(st.top());
@@ -36,7 +37,8 @@ class Queue{
         }
     }
 
-    void dequeue(){
+    // Remove the element from the front of queue
+    void pop(){
         // if stack is empty return 
         if(st.empty()){
             cout<<"Stack Underflow"<<endl;
@@ -44,6 +46,8 @@ class Queue{
         }
         st.pop();
     }
+
+    // Get the front element
     int front(){
         if(!st.empty()){
             return st.top();
@@ -54,12 +58,13 @@ class Queue{
 };
 
 int main(){
-    Queue q;
-    q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(3);
-    q.enqueue(4);
+    MyQueue q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4);
     cout<<"Front = "<<q.front()<<endl;
-    q.dequeue();
+    q.pop();
     cout<<"Front = "<<q.front()<<endl;
 }
+
