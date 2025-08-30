@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Meeting rooms - Find minimum meeting rooms 
+/* Q. Meeting rooms - Find minimum meeting rooms - Amazon 2 times
 
 Given two arrays start[] and end[] such that start[i] is the starting time of ith meeting and end[i] is the ending time of ith meeting. Task is to find minimum number of rooms required to attend all meetings.
 
@@ -16,6 +16,14 @@ Explanation: Since all the meetings are held at different times, it is possible 
 Input: start[] = [2, 9, 6], end[] = [4, 12, 10]
 Output: 2
 Explanation: 1st and 2nd meetings can be attended at one room but for 3rd meeting another room is required.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE : LEARN CUSTOM COMPRATOR 
+
+If input given like this {{start,end}, {start,end}, {start,end}, {start,end}} how to sort? 
+(sorting rule - meetings with earlier end times are prioritized)
 
 */
 
@@ -36,6 +44,7 @@ int brute_getMinimumRooms(vector<int>&start, vector<int>&end){
 
             if(i!=j){
                 // Increment room when there is an overlap
+                // {3,6} {2,5}
                 if (start[i] >= start[j] && end[j]>start[i]){
                     room++;
                 }
@@ -101,8 +110,8 @@ int main(){
     // vector<int>start={0,5,15};
     // vector<int>end={30,10,20};
 
-    vector<int>start={7,2};
-    vector<int>end={10,4};
+    vector<int>start={2,6,9};
+    vector<int>end={4,10,12};
 
     // brute soln
     cout<<brute_getMinimumRooms(start,end)<<endl;

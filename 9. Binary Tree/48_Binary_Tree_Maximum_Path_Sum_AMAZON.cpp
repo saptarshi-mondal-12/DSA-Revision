@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Q. Binary Tree Maximum Path Sum
+/* Q. Binary Tree Maximum Path Sum - Amazon 2025 2 times
 
 A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
 
@@ -31,6 +31,10 @@ At each node, we compute:
     5. Return the max gain from the current node to its parent (i.e., root + max(left, right))
 
 If any subtree gives a negative sum, we discard it by comparing it with 0.
+
+
+
+FOLLOW UP QUES - Print the path
 
 */
 
@@ -92,10 +96,86 @@ int maxPathSum(TreeNode *root){
     return maxSum;
 }
 
+
+
+// ----------------------------------------------------------
+
+
+
+// helper returns pair: (max branch sum, path for that branch)
+
+pair<int, vector<int>> solve(TreeNode* root, int &maxSum, vector<int>&bestPath){
+    if(root == NULL){
+        return {0, {}};
+    }
+
+    auto left = solve(root->left, maxSum, bestPath);
+    auto right = solve(root->right, maxSum, bestPath);
+
+
+    int leftSum = max(0, left.first);
+    int rightSum = max(0, right.first );
+
+    int currSum = root->data + leftSum + rightSum;
+
+    if(currSum > maxSum){
+        maxSum = currSum;
+        bestPath.clear();
+
+        // left path (reversed because recursion returns bottom-up)
+        vector<int> leftPath = left.second;
+        reverse(leftPath.begin(), leftPath.end());
+
+        // right path
+        vector<int> rightPath = right.second;
+
+        // final = leftPath + root + rightPath
+        bestPath.insert(bestPath.end(), leftPath.begin(), leftPath.end());
+        bestPath.push_back(root->data);
+        bestPath.insert(bestPath.end(), rightPath.begin(), rightPath.end());
+    }
+
+    
+    if(left.first > right.first){
+        vector<int> branch = left.second;
+        branch.push_back(root->data);
+        return {(root->data + leftSum), branch};
+    } else {
+        vector<int> branch = right.second;
+        branch.push_back(root->data);
+        return {(root->data) + rightSum, branch};
+    }
+}
+
+void maxPathSum_and_printPaht(TreeNode *root){
+    // Time:
+    // Space: 
+
+    int maxSum = INT_MIN;
+    vector<int>bestPath;
+    solve(root, maxSum, bestPath);
+
+
+    cout<<"Maximum Sum is: " << maxSum<<endl;
+    cout<<"Path is: ";
+    for(auto it: bestPath){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+}
+
+
+
+
 int main(){
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
 
-    cout<<maxPathSum(root)<<endl;
+    // cout<<maxPathSum(root)<<endl;
+
+
+    // Follow up question --> To print the path 
+    maxPathSum_and_printPaht(root);
+
 }

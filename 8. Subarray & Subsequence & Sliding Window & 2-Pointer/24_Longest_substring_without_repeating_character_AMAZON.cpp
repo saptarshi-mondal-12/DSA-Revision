@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Longest Substring Without Repeating Characters
+/* Longest Substring Without Repeating Characters - AMAZON 2 times
 
 Given a string s, find the length of the longest substring without repeating characters.
 
@@ -48,27 +48,28 @@ int better_longestSubstring(string s){
     // space complexity = O(n)
 
     // two pointer sliding window
-    int n=s.size();
+    int n = s.size();
     int result=0;
-    int left=0;
-    int right=0;
-    unordered_map<char, int>mp;
-    while (right < n){
-        if (mp.find(s[right])!=mp.end()){
-            // it is present in the map
 
-            if (left <= mp[s[right]]){
-                left=mp[s[right]]+1;
-                mp[s[right]]=right;
+    unordered_map<char, int> mp;
+
+    int left=0, right=0;
+    while(right < n){
+        char ch = s[right];
+        mp[ch]++;
+
+        while(mp[ch] > 1){
+            mp[s[left]]--;
+            if(mp[s[left]] == 0){
+                mp.erase(s[left]);
             }
+            left++;
         }
 
-        mp[s[right]]=right;
         result=max(result, right-left+1);
         right++;
     }
     return result;
-
 }
 int main(){
     string s="abcabcbb";

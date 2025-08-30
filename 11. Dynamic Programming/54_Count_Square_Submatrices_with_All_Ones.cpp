@@ -83,6 +83,8 @@ Approach:
 
 
 Follow up - largest square size
+
+Similar Question Q.66 - Count Submatrices With All Ones
 */
 
 int countSquares(vector<vector<int>>& matrix) {
