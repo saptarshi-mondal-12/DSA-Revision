@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Q. Steps by Knight
+/* Q. Steps by Knight - AMAZON 2025
 
 Given a square chessboard of size (n x n), the initial position and target postion of Knight are given. Find out the minimum steps a Knight will take to reach the target position.
 

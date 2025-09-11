@@ -57,6 +57,26 @@ Edge case to handle in code
 
 If after sorting the first element is "0" (e.g., input has only zeros), return "0" instead of "000...".
 
+
+-------------------------------------------------------------------------
+Bucket {3, 33, 303, 19, 12, 122}
+
+Do pairwise:
+    "3" vs "33": "333" vs "333" → tie → "3" first.
+    "3" vs "303": "3303" vs "3033" → "3303" > "3033" → "3" first.
+    "33" vs "303": "33303" vs "30333" → "33" first.
+
+So order: 3, 33, 303.
+
+Bucket {3, 33, 303, 19, 12, 122}
+    "19" vs "12": "1912" vs "1219" → "1912" > "1219" → "19" first.
+    "19" vs "122": "19122" vs "12219" → "19" first.
+    "122" vs "12": "12212" vs "12122" → "122" first.
+
+So order: 19, 122, 12.
+
+final = ["3","33","303","19","122","12"]
+
 */
 
 static bool mycomp(string a, string b){
@@ -91,6 +111,6 @@ string largestNumber(vector<int> &nums){
 }
 
 int main(){
-    vector<int>nums = {3,30,34,5,9};
+    vector<int>nums = {3, 33, 303, 19, 12, 122};
     cout<<largestNumber(nums);
 }

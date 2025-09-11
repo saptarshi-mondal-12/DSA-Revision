@@ -4,6 +4,10 @@ using namespace std;
 
 /* Longest Substring Without Repeating Characters - AMAZON 2 times
 
+OR 
+
+Longest Substring with All Distinct Characters
+
 Given a string s, find the length of the longest substring without repeating characters.
 
 Input: s = "abcabcbb"

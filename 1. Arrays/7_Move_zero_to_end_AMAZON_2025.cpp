@@ -2,7 +2,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Move all zero to end of the array 
+/* Q. Move Zeroes - AMAZON 2025
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
 input : arr={1,0,2,3,2,0,0,4,5,1};
 output : {1,2,3,2,4,5,1,0,0,0}
 */

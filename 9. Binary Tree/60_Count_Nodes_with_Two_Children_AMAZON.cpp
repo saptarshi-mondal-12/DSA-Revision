@@ -14,7 +14,7 @@ class Node{
     Node* right;
 
     Node(int val){
-        int data = val;
+        data = val;
         left = NULL;
         right = NULL;
     }

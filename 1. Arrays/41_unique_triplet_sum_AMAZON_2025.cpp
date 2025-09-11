@@ -1,6 +1,8 @@
 // All unique triplet 
 // time complexity O(n^2)
 
+// Check OA Q.42
+
 #include<iostream>
 #include<bits/stdc++.h>
 #include<vector>

@@ -1,11 +1,22 @@
-/* 
-
-
-*/
-
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
+
+/* Q. Bottom View of Binary Tree - AMAZON 2025 
+
+Given a binary tree, return an array where elements represent the bottom view of the binary tree from left to right.
+
+Note: If there are multiple bottom-most nodes for a horizontal distance from the root, then the later one in the level order traversal is considered. For example, in the below diagram, 7 and 34 both are the bottommost nodes at a horizontal distance of 0 from the root, here 34 will be considered.  
+
+        20 
+       /  \
+      8    22
+     / \   / \
+    5   7 34  25
+
+[5, 8, 34, 22, 25]
+
+*/
 
 class Node{
     public:
