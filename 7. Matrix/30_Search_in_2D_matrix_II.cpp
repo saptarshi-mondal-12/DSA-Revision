@@ -4,7 +4,7 @@ using namespace std;
 
 /* Search in 2D matrix II
 
-Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+Write an efficient algorithm that searches for a value target in an m x n integer matrix. This matrix has the following properties:
 1. Integers in each row are sorted in ascending from left to right.
 2. Integers in each column are sorted in ascending from top to bottom.
 
@@ -72,12 +72,10 @@ bool optimal_searchMatrix_II(vector<vector<int>> matrix, int target){
         if(matrix[row][col]==target){
             return true;
         }
-        else if(matrix[row][col]<target){
-           row++;
-
-        }else{
+        else if(target < matrix[row][col] ){
             col--;
-
+        }else{
+            row++;
         }
     }
     return false;  

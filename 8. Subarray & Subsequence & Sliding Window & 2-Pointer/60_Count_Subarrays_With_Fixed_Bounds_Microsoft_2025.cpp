@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Count Subarrays With Fixed Bounds
+/* Q. Count Subarrays With Fixed Bounds - MICROSOFT 2025
 
 You are given an integer array nums and two integers minK and maxK.
 A fixed-bound subarray of nums is a subarray that satisfies the following conditions:
@@ -58,6 +58,7 @@ long long countSubarrays(vector<int>& nums, int minK, int maxK) {
             lastMin = -1;
             lastMax = -1;
         }
+        cout<<"i="<<i<<" "<<result<<endl;
     }
     return result;
 
@@ -82,7 +83,8 @@ long long countSubarrays(vector<int>& nums, int minK, int maxK) {
 }
 
 int main(){
-    vector<int>nums={1,3,5,2,7,5};
+    vector<int>nums={2,3,4,1,3,5,2,7};
     int minK=1, maxK=5;
     cout<<countSubarrays(nums, minK, maxK)<<endl;
 }
+

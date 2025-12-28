@@ -38,8 +38,15 @@ bool better_searchMatrix(vector<vector<int>> matrix, int target){
     // time complexity - O(n) + (log m)
     // space complexity - O(1)
 
+    /*  understand - take each row as a sorted array and do a binary search of it (0 to m-1) - Just do it for all rows 
+    
+        [[1,3,5,7]
+        [10,11,16,20]
+        [23,30,34,60]]
+    */
+
     int n=matrix.size();
-    int m=matrix[0].size();
+    int m=matrix[0].size(); // total column
 
     for(int i=0;i<n;i++){
         if(matrix[i][0] <= target && matrix[i][m-1] >= target){

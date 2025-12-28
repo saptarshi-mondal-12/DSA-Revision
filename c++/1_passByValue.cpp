@@ -16,8 +16,6 @@ int main(){
 
     int num=10;
     doSum(num);
-    cout<<num<<endl; // 10
-    
-    
+    cout<<num<<endl; // 10 
 }
 

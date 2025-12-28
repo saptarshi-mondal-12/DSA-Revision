@@ -82,3 +82,48 @@ in space optimization we convert
 
 ---------------------------------------------------------------------------
 RULE : Whenever their is infinite supplies in the question (take) remain in same index 
+
+
+
+Q. How i know where to use dfs and bfs?
+Ans: 
+    If you need the shortest / minimum / earliest / least number of steps → use BFS.
+    If you need to explore, enumerate, or validate structure → use DFS.
+
+Step 1: Is the problem about distance / time / minimum moves?
+    Look for keywords:
+        minimum time
+        shortest path
+        least number of steps
+        minimum operations
+        reach within T
+        earliest arrival
+    ✅ Yes → BFS
+
+
+Step 2: Is the graph unweighted (each move cost = 1)?
+    Grid moves
+    One edge = one step
+    ✅ Yes → BFS
+
+
+Step 3: Are you just checking existence or structure?
+    Keywords:
+        does a path exist?
+        detect cycle
+        connected components
+        tree properties
+        count islands
+        validate graph/tree
+        backtracking / combinations
+    ✅ DFS
+
+
+Practical Thumb Rules: ---------------------------------------
+
+    1. Grid + minimum steps → BFS
+    2. Tree recursion → DFS
+    3. Cycle / ordering → DFS
+    4. Unweighted shortest path → BFS
+    5. Weighted shortest path → Dijkstra
+    6. Generate all possibilities → DFS

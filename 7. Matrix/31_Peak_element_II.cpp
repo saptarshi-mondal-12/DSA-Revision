@@ -32,6 +32,7 @@ void brute_findPeakGrid(vector<vector<int>>matrix, int n, int m){
     vector<int>result={-1,-1};
 
     for(int i=0;i<n;i++){
+        int flag = false;
         for(int j=0;j<m;j++){
 
             int left=-1;
@@ -52,26 +53,33 @@ void brute_findPeakGrid(vector<vector<int>>matrix, int n, int m){
                 right=matrix[i][j+1];
             }
 
-            cout<<left<<" "<<right<<" "<<top<<" "<<bottom<<endl;
+            // cout<<matrix[i][j]<<" "<<left<<" "<<right<<" "<<top<<" "<<bottom<<endl;
 
             if(matrix[i][j] > left && matrix[i][j] > right && matrix[i][j] > top && matrix[i][j] > bottom){
                 result[0]=i;
                 result[1]=j;
+                flag = true;
+                break;
             }   
         }
+        if(flag){
+            break;
+        }
     }
-    cout<<result[0]<<" "<<result[1]<<endl;
+    cout<<result[0]<<" "<<result[1]<<" ans = "<<matrix[result[0]][result[1]]<<endl;
 }
 
 int findMaxIndex(vector<vector<int>>matrix, int n, int m, int col){
     int maxValue=-1;
     int index=-1;
     for(int i=0;i<n;i++){
+        // cout<<matrix[i][col]<<endl;
         if (matrix[i][col] > maxValue){
             maxValue=matrix[i][col];
             index=i;
         }
     }
+    cout<<"maxValue = "<<maxValue<<" index = "<<index<<endl;
     return index;
 }
 
@@ -79,15 +87,26 @@ void optimal_findPeakGrid(vector<vector<int>>matrix, int n, int m){
     // time complexity - O(log m * n)
     // space complexity - O(1)
 
+    /* [10, 1, 15]
+       [25, 23, 17]
+       [27,  7,  8]
+
+       Intuition - 1. Select col and find max element from that column and find the row(where max eleement is present).
+       2. check its surroundings and if it meets all conditions return (row,col) answer else shift col to col-1 to left if left element is greater else col+1 to serch right half. repeat same process 
+
+    */
+
     vector<int>result={-1,-1};
     int low=0, high=m-1;
 
     while(low<=high){
         int mid=(low+high)/2;
-        int maxRowIndex=findMaxIndex(matrix,n,m, mid);
+        int maxRowIndex=findMaxIndex(matrix,n,m,mid);
 
         int left=mid-1 >= 0 ? matrix[maxRowIndex][mid-1]:-1;
         int right=mid+1 < m ? matrix[maxRowIndex][mid+1]:-1;
+
+        cout<<"mid = "<<mid<<" maxRowIndex = "<<maxRowIndex<<"matrix[maxRowIndex][mid] = "<<matrix[maxRowIndex][mid]<<endl;
 
         if(matrix[maxRowIndex][mid] > left && matrix[maxRowIndex][mid]> right){
             result[0]=maxRowIndex;
@@ -100,18 +119,17 @@ void optimal_findPeakGrid(vector<vector<int>>matrix, int n, int m){
             low=mid+1;
         }
     }
-    cout<<result[0]<<" "<<result[1]<<endl;
+    cout<<result[0]<<" "<<result[1]<<" ans = "<<matrix[result[0]][result[1]]<<endl;
 }
 
 
 int main(){
-    int row = 3, col = 3;
-    vector<vector<int>> matrix = {{1, 3, 8},
-                                  {2, 3, 4},
-                                  {1, 2, 5}};
+    int row = 5, col = 3;
+    vector<vector<int>> matrix = {{10, 19, 15},{2, 43, 17},
+                                  {7, 2, 8}, {1,35,1},{1,1,1}};
 
     // 1. brute
-    brute_findPeakGrid(matrix,row,col);
+    // brute_findPeakGrid(matrix,row,col);
 
     // 2. optimal
     optimal_findPeakGrid(matrix,row,col);

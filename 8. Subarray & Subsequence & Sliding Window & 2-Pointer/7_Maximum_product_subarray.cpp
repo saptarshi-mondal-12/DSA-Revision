@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Maximum Product Subarray in an Array 
+/* Maximum Product Subarray in an Array - Amazon 2025
 
 Given an array that contains both negative and positive integers, find the maximum product subarray.
 
