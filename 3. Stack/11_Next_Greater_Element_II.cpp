@@ -23,8 +23,8 @@ Output: [2,3,4,-1,4]
 
 
 void nextGreaterII(int arr[], int n){
-    // time complexity = 
-    // space complexity = 
+    // time complexity = O(n)  
+    // space complexity = O(n)
 
     stack<int>s;
     vector<int>result(n,-1);

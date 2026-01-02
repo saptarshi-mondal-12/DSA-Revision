@@ -18,8 +18,10 @@ store ans in result
      
 */
 
-
 vector<int>prevSmallerElement(vector<int>v, int col){
+    // Time complexity - O(n)
+    // space complexity - O(n)
+
     stack<int>s;
     s.push(-1);
     vector<int> result(col);
@@ -38,6 +40,9 @@ vector<int>prevSmallerElement(vector<int>v, int col){
 }
 
 vector<int>nextSmallerElement(vector<int>v, int col){
+    // Time complexity - O(n)
+    // space complexity - O(n)
+
     stack<int>s;
     s.push(-1);
     vector<int> result(col);
@@ -56,6 +61,8 @@ vector<int>nextSmallerElement(vector<int>v, int col){
 }
 
 int maxArea(vector<int>v, int n){
+    // Time complexity - O(n)
+    // space complexity - O(n)
 
     vector<int>prev(n);
     prev=prevSmallerElement(v,n);
@@ -78,7 +85,7 @@ int maxArea(vector<int>v, int n){
 
 
 int maximumRectangle(vector<vector<int>>arr){
-    // Time complexity - O(n * (row*col) )
+    // Time complexity - O(n * (row*col) ) 
     // space complexity - O(n)
     
     int row=arr.size();

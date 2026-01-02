@@ -78,9 +78,14 @@ bool optimal_searchMatrix(vector<vector<int>> matrix, int target){
     /* flattern 2D matrix in 1D matrix in hypothetical 
     But if we really try to flatten the 2D matrix, it will take O(N x M) time complexity and extra space to store the 1D array. 
     In that case, it will not be the optimal solution anymore.
+
+    [[1,3,5,7]
+    [10,11,16,20]
+    [23,30,34,60]]
     
     row = index/m
     col = index%m
+
     */
 
     int n=matrix.size();    // no of rows

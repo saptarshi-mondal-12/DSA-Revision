@@ -4,6 +4,9 @@
 using namespace std;
 
 void nextSmaller(int arr[], int n){
+    // TC - O(N)
+    // SC - O(N)
+    
     stack<int>s;
 
     vector<int>result(n,-1);

@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Lowest Common Ancestor of Deepest Leaves
+/* Q. Lowest Common Ancestor of Deepest Leaves || Smallest Subtree with all the Deepest Nodes
 
 Given the root of a binary tree, return the lowest common ancestor of its deepest leaves.
 

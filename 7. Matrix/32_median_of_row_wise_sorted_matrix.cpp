@@ -22,7 +22,10 @@ int brute_median(vector<vector<int>> matrix){
 
 
 int main(){
-    vector<vector<int>> matrix={{1,5,7,9,11},{2,3,4,5,10},{9,10,12,14,16}};
+    vector<vector<int>> matrix={
+        {1,5,7,9,11},
+        {2,3,4,5,10},
+        {9,10,12,14,16}};
 
     // 1. brute 
     cout<<brute_median(matrix)<<endl;

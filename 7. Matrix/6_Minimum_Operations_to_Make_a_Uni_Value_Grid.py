@@ -50,10 +50,10 @@ We can see that if it is possible to make all elements equal, the optimal final 
 
 For example, given grid = [[2, 4], [6, 8]] and x = 2, we can make all elements equal to 10 in 4 + 3 + 2 + 1 = 10 operations. However, this is not optimal because, along the way, we reached a state where all elements were equal to 8 in just 3 + 2 + 1 = 6 operations (not the best, but still better). From that point, increasing all numbers by 2 again is unnecessary.
 
-Approach 1: Sorting and Median
+Approach 1: Sorting and Median 2 7
 
 First, let's think about when it's possible to make all grid elements equal.
-Consider any two numbers in the grid, a and b, and a number x. Suppose we want to make both a and b equal to some value v. The only operation allowed is adding or subtracting xsome number of times. This means we must be able to reachvfrom bothaandbusingx`.
+Consider any two numbers in the grid, a and b, and a number x. Suppose we want to make both a and b equal to some value v. The only operation allowed is adding or subtracting x some number of times. This means we must be able to reach v from both a and b using x.
 For this to be possible, the differences v - a and v - b must both be multiples of x, or equivalently:
 
 (v-a)%x=0 and (v-b)%x=0

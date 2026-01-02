@@ -8,6 +8,8 @@ void prevSmaller(int arr[], int n){
     // Time complexity - O(n)
     // space complexity - O(n)
 
+    // []
+
     stack<int>s;
 
     vector<int>result(n,-1);

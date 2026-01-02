@@ -18,6 +18,21 @@ vector<vector<int>> brute_rotate(vector<vector<int>> &matrix, int r, int c){
     // Time complexity - O(n^2)
     // space complexity - O(n^2)
 
+    /* Q. Why mat[j][r - i - 1] = matrix[i][j] ? Why no matrix[i][j] = mat[j][r - i - 1] ?
+        Ans: Here:
+            matrix = source (read-only)
+            mat = destination (write-only)
+
+        So every read happens from the original matrix, which remains unchanged during the operation.
+        There is no data loss
+
+        BUT 
+
+        what if we do matrix[i][j] = mat[j][r - i - 1], then we are writing into the source matrix and reading from mat.
+        This will lead to data loss as some values will be overwritten before they are read.
+
+    */
+
         // some observations
         // 00 - 02
         // 01 - 12
@@ -86,7 +101,7 @@ vector<vector<int>> Anti_clock_wise(vector<vector<int>> &matrix, int r, int c){
 
 
 int main(){
-    vector<vector<int>> matrix = {{5,1,9,11}, {2,4,8,10}, {13,3,6,7},{15,14,12,16}};
+    vector<vector<int>> matrix = {{1,2,3}, {4,5,6}, {7,8,9}};
     int r = matrix.size();
     int c = matrix[0].size();
     for (int i = 0; i < matrix.size(); i++) {
@@ -99,14 +114,14 @@ int main(){
 
     // CLOCK WISE
     // 1. brute
-    // vector<vector<int>> rotated = brute_rotate(matrix, r, c);
+    vector<vector<int>> rotated = brute_rotate(matrix, r, c);
 
     // 2. optimal
     // vector<vector<int>> rotated = optimal_rotate(matrix, r, c);
 
 
     // ANTI CLOCK WISE
-    vector<vector<int>> rotated = Anti_clock_wise(matrix, r, c);
+    // vector<vector<int>> rotated = Anti_clock_wise(matrix, r, c);
 
 
 

@@ -5,7 +5,7 @@ using namespace std;
 
 
 // Time complexity - O(n)
-// space complexity - 
+// space complexity - O(n)
 
 bool isValid(string s){
     stack<char>st;

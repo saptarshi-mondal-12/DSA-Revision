@@ -2,6 +2,38 @@
 #include<vector>
 #include<stack>
 using namespace std;
+             
+/* Q. Largest Rectangle in Histogram
+
+Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
+    height
+    6 |       █
+    5 |     █ █
+    4 |     █ █
+    3 |     █ █   █
+    2 | █   █ █ █ █
+    1 | █ █ █ █ █ █
+    +----------------
+        0 1 2 3 4 5   (index)
+        2 1 5 6 2 3   (value)
+
+    Largest Rectangle (area = 10)
+    Rectangle spans index 2 to 3, height = 5
+
+
+    height
+    6 |         █
+    5 |     ▓▓▓▓▓
+    4 |     ▓▓▓▓▓
+    3 |     ▓▓▓▓▓   █
+    2 | █   ▓▓▓▓▓ █ █
+    1 | █ █ ▓▓▓▓▓ █ █
+    +----------------
+        0 1 2 3 4 5
+
+
+*/
 
 
 int brute_largestRectangleArea(int heights[], int n){
@@ -99,6 +131,7 @@ int optimal_largestRectangleArea(int arr[], int n){
         if (next[i]==-1) {
             next[i]=n;
         }
+        cout<<"curr="<<length<<" next["<<i<<"] = "<<next[i]<<" "<<"prev["<<i<<"] = "<<prev[i]<<endl;
         int breadth=next[i]-prev[i]-1;
         int newArea=length*breadth;
         area=max(area,newArea);

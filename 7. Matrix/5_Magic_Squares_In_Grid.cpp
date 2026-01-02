@@ -21,7 +21,7 @@ With the given grid, you want to find the number of subarrays in grid that are m
 */
 
 int numMagicSquaresInside(vector<vector<int>>& grid) {
-    // Time complexity = O(row*col)
+    // Time complexity = O(row*col) 
     // space complexity = O(1)
 
     int row = grid.size();

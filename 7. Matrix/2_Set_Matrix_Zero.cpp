@@ -94,6 +94,10 @@ vector<vector<int>> optimal_zeroMatrix(vector<vector<int>> &matrix, int r, int c
     // Time complexity - O(r*c) + O(r*c) = O(2*(r*c))
     // space complexity - O(1)
 
+    // [1, 0, 1]
+    // [0, 0, 1]
+    // [1, 1, 1]
+
     int col0=1;
     // step 1: Traverse the matrix and
     // mark 1st row & col accordingly
