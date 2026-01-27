@@ -27,7 +27,9 @@ string solve(string s){
         mp[s[i]]++;
     }
 
-    
+    // string s = "ACBACBACD"; // CBAD
+    // stack = []
+    // set = {}
 
     // check for duplicates characters
     unordered_set<char>contains;

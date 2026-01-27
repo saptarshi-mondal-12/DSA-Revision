@@ -17,7 +17,7 @@ Output:4
 Approach :
 We can part it in such a way that our kth element will be at the end of the left half array. Let’s make some observations. 
 We can see that all elements of the right half of the array are always larger than the left ones. So, with help of binary search, 
-\we will divide arrays into partitions with keeping k elements in the left half. We have to keep in mind that l1 <= r2 and l2 <= r1. 
+we will divide arrays into partitions with keeping k elements in the left half. We have to keep in mind that l1 <= r2 and l2 <= r1. 
 Why so? This ensures that left-half elements are always lesser than right elements.
 
 */

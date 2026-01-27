@@ -36,6 +36,7 @@ class Stack{
         q.push(x);
 
         // pop all the previous element and put them after current element
+        // so that top element should be always at first i.e (front) to get popped
         for(int i=0;i<n;i++){
             // pushing front element
             q.push(q.front());

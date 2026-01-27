@@ -5,7 +5,11 @@ using namespace std;
 // insert = 2*val-min;
 // retrive = 2*mini-st.top()
 
+/* Smaller val than min then its modified value */
+
 class brute_MinStack{
+    // Time complexity: O(1)
+    // Space complexity: O(2n)
     public:
     stack<pair<int, int>>st;
 
@@ -31,6 +35,14 @@ class brute_MinStack{
 };
 
 class optimal_MinStack{
+    // Time complexity: O(1)
+    // Space complexity: O(n)
+
+    /* if val is smaller than min then its a modified value - so we return min
+    if val is greater than min then it is not modified value - so we val itself
+    */
+
+
     public:
     stack<long long> st;
     long long mini;
@@ -80,7 +92,8 @@ class optimal_MinStack{
 };
 
 int main(){
-    optimal_MinStack s;
+    // optimal_MinStack s;
+    brute_MinStack s;
     s.push(1);
     s.push(2);
     s.push(3);
@@ -90,3 +103,4 @@ int main(){
     s.pop();
     cout<<s.getMin()<<endl;
 }
+

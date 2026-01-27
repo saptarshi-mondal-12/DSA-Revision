@@ -142,6 +142,7 @@ void explainPriorityQueue(){
 
 void explainSet(){
     // sorted order + unique element
+    // Time - O(log n) for insertion , deletion , search
     set<int>st;
     st.insert(1); //{1}
     st.insert(2); //{1,2}
@@ -199,6 +200,7 @@ void explainSet(){
 
 void explainUnordered_set(){
     // stores unique element + no particular order (random order)
+    // Time - O(1) in best and average case , O(n) in worst case
     unordered_set<int>st;
 }
 

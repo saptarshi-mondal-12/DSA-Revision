@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Q. Remove All Adjacent Duplicates in String II - AMAZON 2025
+/* Q. Remove All Adjacent Duplicates in String II - AMAZON 2025 - 2 times
 
 You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.
 
@@ -22,6 +22,7 @@ Finally delete "ddd", get "aa"
 
 Input: s = "pbbcggttciiippooaais", k = 2
 Output: "ps"
+
 
 */
 

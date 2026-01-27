@@ -44,7 +44,7 @@ int optimal_search(int n , int arr[], int x){
         // if mid points the target
         if(arr[mid]==x) return mid;
 
-        // if left part is sorted
+        // if left part is sorted arr = [4,5,6,7,0,1,2,3], x = 0
         if(arr[low] <= arr[mid]){
             if(arr[low] <= x && x <= arr[mid]){
                 // we eliminate right half

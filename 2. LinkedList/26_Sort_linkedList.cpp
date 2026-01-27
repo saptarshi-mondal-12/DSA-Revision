@@ -62,7 +62,7 @@ node* sort_LinkedList(node* &head){
     return head;
 
 
-    // another method - merge sort
+    // another method - merge sort - Linked list Q32. 
 }
 
 

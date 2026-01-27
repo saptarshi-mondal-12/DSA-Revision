@@ -23,7 +23,7 @@ int brute_trappingRainwater(int arr[], int n){
         right[i]=max(right[i+1],arr[i]);
     }
 
-    // calculating min(leftmax-rightmax)- index
+    // calculating min(leftmax,rightmax) - index
     int ans=0;
     for(int i=0;i<n;i++){
         // arr[i]= total capacity it can hold total me se kitna hold kr sakte ho 

@@ -55,7 +55,7 @@ int countPartition(int n, vector<int>arr, int maxSum){
 }
 
 int splitArrayLargestSum(int n, vector<int>arr, int k){
-    int mini=*min_element(arr.begin(),arr.end());
+    int mini=*max_element(arr.begin(),arr.end());
     int maxi=accumulate(arr.begin(),arr.end(),0);
 
     for(int low=mini; low<=maxi; low++){
@@ -68,7 +68,7 @@ int splitArrayLargestSum(int n, vector<int>arr, int k){
 }
 
 int optimal_splitArrayLargestSum(int n, vector<int>arr, int k){
-    int low=*min_element(arr.begin(),arr.end());
+    int low=*max_element(arr.begin(),arr.end());
     int high=accumulate(arr.begin(),arr.end(),0);
 
     int ans;

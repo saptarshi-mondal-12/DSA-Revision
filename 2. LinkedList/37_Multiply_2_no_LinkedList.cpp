@@ -52,6 +52,8 @@ node* reverse(node* &head){
 node* Multiply_Two_LinkedList(node* &head1, node* &head2){
     // Time complexity - O(max(m,n)) + O(n) + O(n)
     // space complexity - O(n)
+
+
     
     long long num1=0, num2=0;
     long long m=1000000007;
@@ -111,21 +113,19 @@ int main(){
     node* head1=NULL;
 
     // 1. insert at tail
-    insertAtTail(head1,999999);
-    // insertAtTail(head1,6);
-    // insertAtTail(head1,3);
+    // insertAtTail(head1,999999);
+    insertAtTail(head1,6);
+    insertAtTail(head1,3);
     display(head1);
 
     node* head2=NULL;
-    insertAtTail(head2,99999);
-    // insertAtTail(head2,4);
-    // insertAtTail(head2,2);
+    // insertAtTail(head2,99999);
+    insertAtTail(head2,4);
+    insertAtTail(head2,2);
     display(head2);
 
     node* head3=Multiply_Two_LinkedList(head1,head2);
     display(head3);
-
-    
     
 }
 

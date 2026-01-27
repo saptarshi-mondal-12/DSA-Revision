@@ -21,10 +21,11 @@ The index sequence of the duplicate numbers in the left half is always (even, od
 That means one of the following conditions will be satisfied if we are in the left half:
 
     - If the current index is even, the element at the next odd index will be the same as the current element.
-    - Similarly, If the current index is odd, the element at the preceding even index will be the same as the current element.
+    - Similarly, If the current index is odd, the element at the preceding even index will be the same as the current element. 
+    - means single element not in left half - eleminate left half i.e left = mid + 1
 
-    The index sequence of the duplicate numbers in the right half is always (odd, even).
-    That means one of the following conditions will be satisfied if we are in the right half:
+The index sequence of the duplicate numbers in the right half is always (odd, even).
+That means one of the following conditions will be satisfied if we are in the right half:
 
     - If the current index is even, the element at the preceding odd index will be the same as the current element.
     - Similarly, If the current index is odd, the element at the next even index will be the same as the current element.
@@ -87,6 +88,8 @@ int optimal_singleNonDuplicate(int n, int arr[]){
     }
     return -1;
 }
+
+1 1 2 2 3 3
 
 
 int main(){

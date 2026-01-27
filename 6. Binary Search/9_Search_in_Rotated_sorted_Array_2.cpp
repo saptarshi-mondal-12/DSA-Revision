@@ -43,7 +43,7 @@ bool optimal_search(int n , int arr[], int x){
         // if mid points the target
         if(arr[mid]==x) return true;
 
-        // Edge case
+        // Edge case - [4,5,6,7,8,4,4,4,4,4,4] or [4,4,4,4,4,4,5,6,7,8,4]
         if(arr[low]==arr[mid] && arr[mid]==arr[high]){
             low=low+1;
             high=high-1;

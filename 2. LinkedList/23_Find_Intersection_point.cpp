@@ -108,6 +108,11 @@ int long_findIntersection(node* &head1, node* &head2){
 int short_findIntersection(node* &head1, node* &head2){
     // Time complexity - O(2 * max(m,n))
     // space complexity - O(1)
+
+    //  1 2 3 4 5 6 7 8
+    //         /
+    //  10 20 30  
+        
     node* temp1=head1;
     node* temp2=head2;
 

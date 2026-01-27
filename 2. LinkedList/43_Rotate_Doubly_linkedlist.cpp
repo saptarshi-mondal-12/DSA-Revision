@@ -9,6 +9,8 @@ Here N is a given positive integer and is smaller than the count of nodes in lin
 Input : 1,2,3,4,5   N = 2
 Output : 3 4 5 1 2 
 
+intuition: Circular bana ke link tod 
+
 */
 
 

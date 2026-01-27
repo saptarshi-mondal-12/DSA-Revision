@@ -50,6 +50,8 @@ node* insertAtTail(node* &head, int val){
     return head;
 }
 
+// 1 2 3 4
+
 node* reverse(node* &head){
     node*prev=NULL;
     node* curr=head;

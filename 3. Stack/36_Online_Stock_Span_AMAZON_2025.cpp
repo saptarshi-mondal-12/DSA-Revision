@@ -65,3 +65,6 @@ int main(){
         cout << stockSpanner.next(price) << " ";
     }
 }
+
+
+

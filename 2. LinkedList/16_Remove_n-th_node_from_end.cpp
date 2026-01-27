@@ -85,8 +85,10 @@ node* optimal_remove_nth(node* &head, int k){
     for(int i=1; i<=k; i++){
         fast=fast->next;
     }
+
+    cout<<fast->data<<endl;
     
-    // 1,2,3,4,5,6 - k=6 - 1 ko delete krna hai
+    // 1,2,3,4,5,6,7,8,9,10,11 - k=3 - 9 ko delete krna hai
     if (fast==NULL){
         head=head->next;
         return head;
@@ -118,14 +120,19 @@ int main(){
     insertAtTail(head,4);
     insertAtTail(head,5);
     insertAtTail(head,6);
-    display(head);
+    insertAtTail(head,7);
+    insertAtTail(head,8);
+    insertAtTail(head,9);
+    insertAtTail(head,10);
+    insertAtTail(head,11);
+    // display(head);
 
     // brute
     // brute_remove_nth(head,2);
     // display(h1);
 
     // optimal
-    optimal_remove_nth(head,6);
+    optimal_remove_nth(head,3);
     display(head);
     
 

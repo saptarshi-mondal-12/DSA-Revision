@@ -97,11 +97,15 @@ vector<int> optimal_findClosestElements(vector<int> &nums, int k, int x){
         }
     }
 
+    // Input: arr = [1,2,3,4,5], k = 4, x = 3
+    // Output: [1,2,3,4] 
+
 
     // 2. use two pointers to find the k closest elements to x
     // Now low is the index of the smallest number greater than or equal to x
     int right = low;
     int left = low - 1;
+    
     while(k--){
         if (left < 0){
             right++;

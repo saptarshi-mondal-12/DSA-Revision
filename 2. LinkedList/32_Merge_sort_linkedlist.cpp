@@ -1,4 +1,4 @@
-// Merge sort in LinkedList
+// Merge sort in LinkedList - AMAZON 2025
 
 #include<iostream>
 #include<bits/stdc++.h>
@@ -36,6 +36,7 @@ node* insertAtTail(node* &head, int val){
     temp->next=n;
     return head;
 }
+
 
 
 node* middle(node* &head){
@@ -116,6 +117,7 @@ node* mergeSort(node* &head){
 
     return result;
 }
+
 
 
 int main(){

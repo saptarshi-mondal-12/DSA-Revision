@@ -42,6 +42,14 @@ void display(ListNode* head){
 
 // Q1. Q2. -------------------------------------------------
 ListNode* sortList(ListNode*head, int order){
+    // Time complexity: O(n) + O(n log n) + O(n)
+    // Space complexity: O(n)
+
+    // NOTE: WE CAN SORT IT USING MERGE SORT ALGORITHM 
+    // Benefit (n log n) - space complexity
+    // Aur agar decending order me sort krna hai to sign (>) change kr de while loop me - greater pehle, small baad me
+
+
     vector<int>container;
     ListNode* temp=head;
     while(temp!=NULL){
@@ -74,8 +82,10 @@ ListNode* sortList(ListNode*head, int order){
 
 // Q3. Sorting by number of setbit -------------------------
 ListNode* sortBy_setBit(ListNode*head){
+    // {no_of_bit, num}
     vector<pair<int,int>>container;
     ListNode* temp=head;
+
     while(temp!=NULL){
         int n=temp->data;
 
@@ -91,10 +101,6 @@ ListNode* sortBy_setBit(ListNode*head){
 
     sort(container.begin(), container.end());
 
-    // for(auto it: container){
-    //     cout<<"n ="<<it.second<<" Set bits ="<<it.first<<endl;
-    // }
-    // cout<<endl;
 
     ListNode* ansNode = new ListNode(-1);
     ListNode* pt = ansNode;
@@ -157,7 +163,7 @@ ListNode* sortBy_numberOfZeros(ListNode*head){
 
 
 int main(){
-    ListNode* head = new ListNode(4);
+    ListNode* head = new ListNode(0);
     head->next=new ListNode(2);
     head->next->next=new ListNode(1);
     head->next->next->next=new ListNode(3);
@@ -174,12 +180,12 @@ int main(){
     // display(ans);
 
     // Q3. Sort by the number of set bits
-    // ListNode* ans = sortBy_setBit(head);
-    // display(ans);
+    ListNode* ans = sortBy_setBit(head);
+    display(ans);
 
     // In addition to the above, sort the list by the number of zeros
-    ListNode* ans = sortBy_numberOfZeros(head);
-    display(ans);
+    // ListNode* ans = sortBy_numberOfZeros(head);
+    // display(ans);
     
 
 }

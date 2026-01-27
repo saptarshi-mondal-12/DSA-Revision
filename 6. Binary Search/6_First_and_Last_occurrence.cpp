@@ -33,59 +33,7 @@ void brute_search(int n, int arr[], int target){
     cout<<firstIndex<<" "<<lastIndex<<endl;
 }
 
-int lowerBound(int n, int arr[], int x){
-    
-    int index=n;
-    int low=0, high=n-1;
-    while(low<=high){
-        int mid=(low+high)/2;
 
-        // maybe an answer
-        if (arr[mid] >= x) {
-            index = mid;
-            //look for smaller index on the left
-            high = mid - 1;
-        }
-        else {
-            low = mid + 1; 
-        }
-    }
-    return index; 
-}
-
-int upperBound(int n, int arr[], int x){
-
-    int index=n;
-    int low=0, high=n-1;
-    while(low<=high){
-        int mid=(low+high)/2;
-
-        // maybe an answer
-        if (arr[mid] > x) {
-            index = mid;
-            //look for smaller index on the left
-            high = mid - 1;
-        }
-        else {
-            low = mid + 1; 
-        }
-    }
-    return index;
-}
-
-void optimal_search(int n, int arr[], int target){
-    // Time complexity - O(log n)
-    // space complexity - O(1)
-
-    int lb=lowerBound(n,arr,target);
-    int ub=upperBound(n,arr,target);
-
-    if(lb==n || arr[lb]!=target){
-        cout<<-1<<" "<<-1<<endl;
-    }else{
-        cout<<lb<<" "<<ub-1<<endl;
-    }
-}
 
 int binary_first(int n, int arr[], int x){
     int first=-1;
@@ -134,11 +82,11 @@ int main(){
     // 1. brute 
     brute_search(n,arr,target);
 
-    // optimal
-    optimal_search(n,arr,target);
+    // 2. optimal
+    cout<<binary_first(n,arr,target)<<" "<<binary_last(n,arr,target)<<endl;
 
     /* use binary search to find first and last occurrence of x
     we cannot find both in single binary search so we have to use seperate to find first and last occurrence of x */
 
-    cout<<binary_first(n,arr,target)<<" "<<binary_last(n,arr,target)<<endl;
+    
 }

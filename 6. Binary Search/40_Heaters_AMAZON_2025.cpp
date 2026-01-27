@@ -23,6 +23,7 @@ Explanation: The two heaters were placed at positions 1 and 4. We need to use a 
 
 Input: houses = [1,5], heaters = [2]
 Output: 3
+1 2 3 4 5
 
 */
 

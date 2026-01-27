@@ -72,7 +72,8 @@ void detectLoop(node* head){
         if(fast==slow){
             slow=head;
 
-            // if slow==fast the move fast till fast is != slow and make fast->next =NULL
+            // if slow==fast means we both are standing on head, 
+            // so move only fast pointer till fast is != slow and make fast->next =NULL
             if(slow==fast){
                 fast=fast->next;
                 while(fast->next!=slow){

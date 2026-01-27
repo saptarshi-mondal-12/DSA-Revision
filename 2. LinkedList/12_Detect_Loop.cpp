@@ -63,6 +63,7 @@ bool detectLoop(node* head){
     // Time complexity - O(n)
 
     // NOTE- when list is circular i.e there is no NULL the condition will be (fast->next!=NULL && fast->next->next!=NULL)
+    
     if(head == NULL) return false;
     
     node* slow=head;

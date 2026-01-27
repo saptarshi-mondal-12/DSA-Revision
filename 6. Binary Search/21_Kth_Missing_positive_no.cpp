@@ -2,12 +2,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Kth Missing Positive Number
+/* Kth Missing Positive Number 
 
 Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
 Return the kth positive integer that is missing from this array.
 
- Input: arr = [2,3,4,7,11], k = 5
+Input: arr = [2,3,4,7,11], k = 5
 Output: 9
 Explanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.
 
@@ -22,6 +22,10 @@ void brute_findKthPositive(int n, int arr[], int k){
     // TC = O(n)
     // SC = O(1)
 
+    // Intuition: Iterate through the array and for each element less than or equal to k, increment k.
+    // This works because each time we find an element in the array that is less than or equal to k,
+    // it means that there is one less missing number before k.
+
     for(int i=0;i<n;i++){
         if(arr[i]<=k) k++;
         else break;
@@ -32,6 +36,10 @@ void brute_findKthPositive(int n, int arr[], int k){
 void optimal_findKthPositive(int n, int arr[], int k){
     // TC = O(log n)
     // SC = O(1)
+
+    // Intuition: The number of missing elements up to index i is arr[index] - (index+1).
+    // We use binary search to find the largest index such that the number of missing elements is less than k.
+    // Then, the kth missing element is k + high + 1.
 
     int low=0, high=n-1;
     while(low<=high){
@@ -44,6 +52,8 @@ void optimal_findKthPositive(int n, int arr[], int k){
             high=mid-1;
         }
     }
+    // we know at index high missing elements are less than k, so the kth missing element is k + high + 1
+    // why +1 because index starts from 0 
     cout<<k+high+1<<endl;
 }
 

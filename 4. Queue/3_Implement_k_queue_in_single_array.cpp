@@ -35,9 +35,13 @@ class Queue{
     Queue(int n, int k){
         this->n=n;
         this->k=k;
+
         arr=new int[n];
+
         front=new int[k];
+    
         rear=new int[k];
+
         for(int i=0;i<k;i++){
             front[i]=-1;
             rear[i]=-1;
@@ -77,7 +81,7 @@ class Queue{
         //update next
         next[index]=-1;
 
-        //update rear
+        //update rear to current index because we have added element at the rear
         rear[q-1]=index;
 
         //push element

@@ -19,11 +19,12 @@ void brute_findRotation(int n, int arr[]){
     // Time complexity - O(n)
     // space complexity - O(1)
 
-    int ans = INT_MAX;
+    // find the index of minimum value 
+    int mini = INT_MAX;
     int index = -1;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] < ans) {
-            ans = arr[i];
+    for(int i=0;i<n;i++){
+        if(arr[i] < mini){
+            mini = arr[i];
             index = i;
         }
     }

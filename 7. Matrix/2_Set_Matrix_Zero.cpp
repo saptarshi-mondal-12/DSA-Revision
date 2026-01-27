@@ -98,6 +98,8 @@ vector<vector<int>> optimal_zeroMatrix(vector<vector<int>> &matrix, int r, int c
     // [0, 0, 1]
     // [1, 1, 1]
 
+    // Intuition: Mark 0th column and mark 0th row (starting from (1st col)) i.e (j!=0) 
+
     int col0=1;
     // step 1: Traverse the matrix and
     // mark 1st row & col accordingly
@@ -126,7 +128,7 @@ vector<vector<int>> optimal_zeroMatrix(vector<vector<int>> &matrix, int r, int c
                 // check for col & row
                 if(matrix[i][0]==0 || matrix[0][j]==0){
                     matrix[i][j]=0;
-                }
+                } 
             }
         }
     }

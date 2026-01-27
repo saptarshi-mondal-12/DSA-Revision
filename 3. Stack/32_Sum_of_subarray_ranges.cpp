@@ -171,6 +171,8 @@ long long subArrayRanges(vector<int>& nums) {
     return result;
 }
 
+
+// brute force approach-----------------------------------------
 long long brute_subArrayRanges(vector<int>& nums) {
     // Time complexity - O(n^2)
     // space complexity - O(1)

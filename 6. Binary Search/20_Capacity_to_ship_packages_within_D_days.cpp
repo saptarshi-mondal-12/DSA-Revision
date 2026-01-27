@@ -90,9 +90,13 @@ void optimal_leastWeightCapacity(int n, vector<int>weights, int days){
 }
 
 int main(){
-    int n=8;
-    vector<int>weights={5,4,5,2,3,4,5,6};
-    int days=5;
+    // int n=8;
+    // vector<int>weights={5,4,5,2,3,4,5,6};
+    // int days=5;
+
+    int n=5;
+    vector<int>weights={1,2,3,1,1};
+    int days=4;
 
     // brute 
     brute_leastWeightCapacity(n,weights,days);

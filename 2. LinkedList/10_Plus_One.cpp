@@ -52,6 +52,11 @@ node* reverse(node* &head){
 }
 
 node* plusOne(node* &head){
+    // 109
+    // + 1
+    // ---
+    // 110
+
     head=reverse(head);
     node* temp=head;
     int carry=1;

@@ -29,8 +29,22 @@ int brute_floor(int n, int arr[], int x){
         }
     }
     return ans;
-
 }
+
+int brute_ceil(int n, int arr[], int x){
+    // Time complexity - O(n)
+
+    // smallest no in array >= x
+    int ans;
+    for(int i=0;i<n;i++){
+        if (arr[i]>=x){
+            ans=arr[i];
+            break;
+        }
+    }
+    return ans;
+}
+
 
 int optimal_floor(int n, int arr[], int x){
     // Time complexity - O(n)
@@ -52,21 +66,6 @@ int optimal_floor(int n, int arr[], int x){
     return ans; 
 }
 
-
-
-int brute_ceil(int n, int arr[], int x){
-    // Time complexity - O(n)
-
-    // smallest no in array >= x
-    int ans;
-    for(int i=0;i<n;i++){
-        if (arr[i]>=x){
-            ans=arr[i];
-            break;
-        }
-    }
-    return ans;
-}
 
 int optimal_ceil(int n, int arr[], int x){
     // Time complexity - O(log n)

@@ -29,6 +29,7 @@ vector<int> brute_NGE(vector<int> v){
 }
 
 vector<int> optimal_NGE(vector<int> v){
+    
 
     
 }

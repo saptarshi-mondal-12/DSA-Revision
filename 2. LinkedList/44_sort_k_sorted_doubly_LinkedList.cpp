@@ -9,6 +9,8 @@ can be at positions 5, 6, 7, 8, 9 in the given doubly linked list.
 Input: 3 6 2 12 56 8, k=2
 Output: 2 3 6 8 12 56
 
+
+
 */
 
 #include<iostream>
@@ -73,8 +75,7 @@ node* sortAKSortedDLL(node* &head, int k){
     // Time complexity - O(n log k)
     // space complexity - O(k)
 
-    /* O(N * LogK), where N is the number of nodes in the given linked list and K is the maximum deviation of an element 
-    from its target position. As removing an element and adding a new element to min heap will take logK time, hence for N nodes it will be O( N * log K)
+    /* O(N * LogK), where N is the number of nodes in the given linked list and K is the maximum deviation of an element from its target position. As removing an element and adding a new element to min heap will take logK time, hence for N nodes it will be O( N * log K)
     */
 
     // we can sort in nlogn time complexity using merge sort 

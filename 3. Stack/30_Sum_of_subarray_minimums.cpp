@@ -12,6 +12,89 @@ Explanation: Subarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,
 
 Input: arr = [11,81,94,43,3]
 Output: 444
+
+
+Explanation:
+------------
+
+[3, 1, 2, 4]
+
+3 = 3
+3,1 = 1
+3,1,2 = 1
+3,1,2,4 = 1
+
+1 = 1
+1,2 = 1
+1,2,4 = 1
+
+2 = 2
+2,4 = 2
+
+4 = 4
+
+Total = 3+1+1+1+1+1+1+2+2+4 = 17 (ans)
+
+
+Q. How many time each element contribute to out answer ?
+Ans:    x1 x6 x2 x1
+        [3, 1, 2, 4]
+
+        3*1 + 1*6 + 2*2 + 4*1 = 3+6+4+4 = 17 
+
+
+Q. But how do we find how many time does each element contributes to answer ?
+Ans: 
+    [1, 4, 6, 7, 3, 7, 8, 1]
+
+    Let's calculate for 3 -------> finding how many 3 contribute to our answer
+    
+    On Right side: 3
+                 |-----|
+    [1, 4, 6, 7, 3, 7, 8, 1]
+
+
+     On Left side: 4
+        |--------|
+    [1, 4, 6, 7, 3, 7, 8, 1]
+
+
+Q. But how we caluculate 3 on right side and 4 on left side ?
+Ans: Using next smaller element and previous smaller element. 
+
+    for 3: 3 is at 4th index
+            next smaller element is 1 and its index is = 7th
+            previous smaller element of 1 and its index is = 0th
+
+    So, 
+        7-4 = 3
+        4-0 = 4
+
+    Total = 4 x 3 = 12 Time its contrubute measn 12 x 3 = 36 is added to our answer. 
+
+    [4,6,7,3], [4,6,7,3,7], [4,6,7,3,7,8]
+    [6,7,3], [6,7,3,7], [6,7,3,7,8]
+    [7,3], [7,3,7], [7,3,7,8]
+    [3], [3,7], [3,7,8]
+
+    Total = 12 subarray where 3 is minimum . so 12 x 3 = 36 is added to answer
+
+Optimal Solution:
+        1. Find next smaller element index 
+                    |
+                    --> if no next smaller put n
+
+        2. Find previous smaller or equal index
+                    |
+            put 0 <--
+
+        3. Calculate for each element
+
+        NOTE: STORE INDEX ONLY 
+
+        total += (left * right * arr[i])
+
+
 */
 
 vector<int>prev_smaller_element(vector<int>& arr){
@@ -77,6 +160,8 @@ int sumSubarrayMins(vector<int>& arr) {
     return result;
 }
 
+
+// Brute soln - Generating all subarray, finding minimum in each subarray, and adding to answer
 int brute_sumSubarrayMins(vector<int>& arr) {
     // Time complexity - O(N^2)
     // space complexity - O(1)

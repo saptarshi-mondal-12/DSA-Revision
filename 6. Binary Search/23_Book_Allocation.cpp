@@ -59,6 +59,7 @@ int countStudents(int n, vector<int>arr, int pages){
             pagesStudent=arr[i];
         }
     }
+    cout<<"mid = "<<pages<<" students = "<<students<<endl;
     return students;
 }
 
@@ -90,28 +91,29 @@ int optimal_findPages(int n, vector<int>arr, int m){
     int low=*max_element(arr.begin(),arr.end());
     int high=accumulate(arr.begin(), arr.end(), 0);
 
-    int ans=-1;
     while(low<=high){
         int mid=(low+high)/2;
 
-        if(countStudents(n,arr,mid)<=m){
-            ans=mid;
+        if((countStudents(n,arr,mid) == m)){ 
+            high = mid - 1;
+        }
+        else if(countStudents(n,arr,mid) < m){ // if no of student is less than m then it is not possible to allocte books
             high=mid-1;
-            
-        }else{
+        }
+        else{ // if no of student is more than m i eleminate the left half .  
             low=mid+1;
         }
     }
-    return ans;
+    return low;
 }
 
 int main(){
-    int n=4;
-    vector<int> arr={12, 34, 67, 90};
-    int m=2;
+    int n=5;
+    vector<int> arr={25, 46, 28, 49, 24};
+    int m=4;
 
     // brute
-    cout<<brute_findPages(n,arr,m)<<endl;
+    // cout<<brute_findPages(n,arr,m)<<endl;
 
     // optimal
     cout<<optimal_findPages(n,arr,m)<<endl;
