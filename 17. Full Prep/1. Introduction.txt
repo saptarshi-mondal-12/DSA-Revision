@@ -1,17 +1,17 @@
-First of all Thank you for giving me this opportunity.
+My name is Saptarshi Mondal, and I am from Bilaspur, Chhattisgarh.
 
-My name is Saptarshi Mondal. I am from Bilaspur, Chhattisgarh.
+I have completed my Bachelor’s degree in Information Technology from Shri Shankaracharya College of Engineering and Technology, Bhilai, with an overall CGPA of 8.7
 
-I have done my graduation in Information Technology branch from  Shri Shankaracharya College of Engineering and Technology, Durg. My overall CGPA was 8.7.
+During my graduation, I interned at GeeksforGeeks as a Technical Content Writer, where I worked on writing technical problem explanations and reviewing articles related to Data Structures, Algorithms, and core Computer Science concepts.
 
-While doing my graduation, I interned at GeeksforGeeks company as a technical content writer, and I really enjoyed my experience there.
+I have worked on multiple projects in Android and web development. One of my recent projects is ChawalKart, an Android-based rice delivery platform that addresses the real-world challenge of purchasing and transporting heavy rice bags.I developed this application using Android Studio with Kotlin as the primary programming language.
 
-During my academic years, I have done multiple projects on Android and web development. One of them is 'Food Runner,' which serves as an online food ordering application. I used Android Studio as the primary framework, with XML for the frontend design and Kotlin as the programming language.
+In terms of technical skills, I am proficient in C, C++ and python programming language and currently I am strengthening my knowledge in Data Structures, Algorithms and Low-Level Design.
 
-I am skilled in C, C++ and python programming language  and currently, I am practicing questions on data structure concepts such as arrays, strings, stacks, queues, linked lists, OOPs concepts, etc.
+I am also quite active in competitive programming and have won several coding contests.
 
-I am preety much active in competetive programming and won many coding contests.
+Apart from my academics, I enjoy playing computer games and listening music and podcasts.
 
-Apart from my education, I like to playing computer games and listening to music and podcasts. 
+I am now seeking an SDE-1 or Fresher-level role where I can apply my problem-solving skills and contribute to building scalable software systems.
 
-That's all about me. 
+That’s all about me.

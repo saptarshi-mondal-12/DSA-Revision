@@ -1,0 +1,527 @@
+Q. Tell me about your recent project. 
+
+⭐1. Introduction - 
+
+✦Project Description: 
+So my recent project is an Android app I built called ChawalKart.
+
+ChawalKart is a modern rice-delivery android application where users can browse, add, and buy different rice varieties online and get them delivered directly to their doorstep. 
+
+✦Problem Statement:  
+The problem I wanted to solve was the difficulty customers face while buying rice. They often need to carry heavy 25–30 kg bags, and it becomes even difficult when purchasing multiple bags. Customers also have to travel to different vendors or wholesale markets for better pricing or bulk orders, which is time-consuming, and physically tiring.
+
+✦Solution: 
+ChawalKart solves all these issues in a single Android app  where users can explore multiple rice categories online, add items to the cart, place orders easily. It offers wide range of rice varieties, better pricing, smooth cart management and have special discounts that local shops usually don’t provide.
+
+
+⭐2. Role - 
+
+In this project, I handled everything end-to-end — from designing the UI/UX to building the entire Android app.
+During development, I followed the Incremental model and went through the complete software development lifecycle, like:
+1. Requirement Gathering
+2. Analysis
+3. Designing
+4. Coding
+5. Testing
+
+
+⭐3. Key Features - 
+
+The app has several important features like :
+
+1. I implemented secure login and signup using Firebase Authentication, including Google Sign-In for quick access.
+
+2. Users can add items to the cart with real-time quantity updates, mark items as favourites to make repeat ordering faster.
+
+3. The app supports offline caching, so users can still browse products even with low internet connection.
+
+4. Users can also view their complete order history and current orders details and many more.
+
+
+⭐4. Technologies Used :-
+
+In this project, I used Android Studio as the primary IDE, with Kotlin as the programming language, and XML for the frontend UI design.
+
+On the backend side, I used Firebase including Firebase Authentication for secure login and Sign-In. I used Cloud Firestore as the real-time database for storing all product and order data, and Cloud Storage for managing product images.
+
+I also integrated Firebase Cloud Messaging service for push notifications, used Glide for fast image loading, and SharedPreferences for storing small local data.
+
+Altogether, these tools helped me build a smooth, fast, and reliable app.
+
+
+⭐ 5. Impact: 
+
+In terms of impact, ChawalKart actually reduced the physical burden for customers, saved their time, and made buying rice much easier
+
+The app has successfully delivered more than 20+ real orders so far, and we’ve received positive feedback for the smooth checkout and fast delivery experience. 
+
+Overall, this project helped me gain hands-on experience in Android app development and building user-friendly mobile solutions.
+
+
+⭐6. Future Feature :-  
+
+Looking ahead, if I expand the ChawalKart in future, I would love to add online payment integration like UPI, wallets, and cards, live order tracking with Google Maps, multiple address support with delivery time slots, a referral and cashback system, and even a vendor dashboard for managing stock and pricing.
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------Project Related Questions-------------------------------
+
+
+✅Q1. Blinkit, Instamart and many other platforms already sell rice and deliver groceries to the doorstep. When users can buy all household and grocery items from a single app, why would they choose ChawalKart? Why would someone buy rice from your app when Blinkit/Instamart also sell it?
+
+Ans: To answer this question I support my answer with 3 points:
+
+1. Heavy weight delivery: 
+First, Blinkit/Instamart or any other brand does not deliver more than 10 kg rice. They mostly provide only 1kg, 5kg or 10kg bags. Whereas ChawalKart delivers 30 to 100 kg rice bags directly to the customer.
+
+2. Limited rice variety: 
+Second, apps like Blinkit/Instamart sell thousands of items, but ChawalKart sells only rice.
+Blinkit/Instamart sell only branded packet items like Daawat, India Gate, Fortune, brown rice, red rice, etc., mostly in 1kg, 5kg, 10kg. But ChawalKart covers all types of rice — from low price to premium — including regional varieties and branded ones.
+
+3. Quantity:
+Third, Blinkit/Instamart do not support bulk ordering. They limit a maximum of 10 units per item. Whereas ChawalKart allows customers to order more than 10+ quantity of any rice item, making bulk purchase easy for families, hostels, and restaurants.
+
+So even though big apps sell rice, people choose ChawalKart because we deliver heavy bags, offer more variety, support bulk orders, and provide better pricing.
+
+That's how ChawalKart is different from all other online grocery stores.
+
+
+
+
+
+✅Q2. What are the challenges or difficulties you faced during project?
+
+Ans: I faced multiple challenges during the development process. I still remember some specific issues that took time to figure out:
+
+In the beginning, setting up Firebase properly and configuring Android Studio with the correct API levels and Java/Kotlin SDK versions was a bit confusing.
+
+Then, while working on the cart feature, I noticed another challenge. One major challenge was keeping the cart quantity updated when navigating between activities. For example, if a user changed the item quantity in the CartActivity, it should immediately reflect on the previous screen as well. I handled this by using a shared ViewModel so the data stays updated between activities.
+
+Maintaining a smooth user experience was also a bit challenging for me like loading rice images and product details from the Firestore database slowed the app at first. I solved this by using Glide for fast image loading and use efficient loading techniques to maintain performance.
+
+Another practical issue I faced was during slow or unstable internet. Users sometimes double-tapped the “Place Order” button, and the same order got placed multiple times when the connection came back.
+I fixed this by showing a toast like “internet connection is low,” disabling the button when there’s no internet, and enabling it again when the connection restores, and also keeping it disabled after the first click so that multiple orders don’t happen.
+
+So these were some challenges I encountered, and they helped me understand real problems in Android development. These challenges also improved my skills in UI design, backend integration, debugging, and writing cleaner, more reliable code.
+
+
+
+✅Q3. What you learn from this project or Why should we consider this project as valuable experience?
+
+Ans: Throughout the development of this project, I learned a lot — not just technical skills, but also how to think from a product perspective by focusing on user experience, performance, and real-world use cases.
+
+1. I learned how to take an idea from scratch and convert it into a fully functional Android app. This included UI design, backend integration, testing, and deployment.
+
+2. I learned how to write clean and organized code, how to use reusable components, and how to avoid UI crashes and layout issues. This made my overall codebase easier to maintain.
+
+3. My ChawalKart app uses Firebase for login and data management. From this, I learned Firestore reads/writes, user authentication, async operations, and handling database rules.
+
+4. I realized how important small design details are. I learned to make responsive layouts  maintain proper spacing and alignment, and make design consistent across multiple screens This improved my design thinking skills.
+
+5. Throughout the project, I faced several issues like crashing screens, Firebase delays, image loading problems, and device compatibility issues. By working through these, I became stronger at debugging with Logcat, fixing XML layout bugs, and understanding Android Studio warnings.
+
+6. Most importantly, I started thinking like a product owner:
+Why would users use my app?
+What makes it different from competitors?
+What features matter the most?
+
+All these things helped me think beyond just coding and helped me build a product that actually solves a user problem.
+
+
+
+
+✅Q4. Who motivate you to do this project or how you find this idea?
+
+Ans: The idea for ChawalKart came from a real problem in my own neighborhood.
+
+Every few months, we buy 30–30 kg rice and wheat bags from a wholesale market because it’s cheaper than buying from local shops. My neighbour often saw us carrying these heavy bags.
+
+Many times, my neighbour requested me to bring a 30 kg bag for her as well. 
+That’s when I realized how difficult and tiring it is to carry almost 90 kg of grains at once, and how inconvenient this process is for many people
+
+When I suggested app like Blinkit or Instamart,  she said they only deliver premium rice and usually in 1 kg, 5 kg, or 10 kg packs. 
+
+So I did some research. I found that:
+	a. Most e-commerce platforms don’t offer a wide variety of rice categories. They mainly sell branded packets items like Daawat, India Gate, Fortune, brown rice, red rice, etc.
+
+	b. Most platforms do not deliver more than 10 kg rice bags. They mostly provide only 1 kg, 5 kg, or 10 kg options.
+
+	c. Customers often have to visit multiple vendors or wholesale markets for good pricing.
+
+	d. Carrying heavy bags is physically tiring and inconvenient.
+
+That’s when the idea of ChawalKart came to me — To build a simple Android app that allows users to explore multiple rice categories online, add items to the cart, place orders easily, and get them delivered to their doorstep.
+
+Today, the app has successfully delivered 20+ real orders, and also received positive feedback from users.
+
+This real-life problem and the gap in the market is what motivated me to build this project.
+
+
+
+✅Q5. How many member are their in your project?
+
+Ans: I am the individual contributor of this project. 
+
+
+
+✅Q6. Explain the architecture of your chawalKart app. 
+
+Ans: The architecture of my ChawalKart app is simple. I divided it into three parts: UI, Logic, and Data.
+The UI contains the Activities and XML layouts.
+All the main logic—like loading products, adding to cart, and placing orders—is handled in separate Kotlin classes.
+For the backend, I used Firebase. Firestore stores all product details, user details and live orders , completed order and many more.
+Overall, the architecture is simple, clean, and easy to scale.
+
+
+✴️ Cross Question 1: Why did you choose this architecture?
+Answer:
+“I chose this architecture because it keeps the UI clean. All Firebase work stays in one place, so it’s easier to debug and update. 
+
+
+✴️ Cross Question 2: What is the benefit of separating UI and Firebase code?
+Answer:
+It avoids mixing design and backend code. The UI becomes simple, and the Firebase functions become reusable. It also reduces bugs.
+
+
+✴️ Cross Question 3: What happens when data changes in Firebase?
+Answer:
+I use Firestore listeners. Whenever product price, discount, or order status changes, the UI updates automatically without refresh.
+
+
+✴️ Cross Question 4: Why Firebase for backend?
+Answer:
+
+
+
+✴️ Cross Question 5: How does the login system work?
+Answer:
+“I used Firebase Auth for login. User can login with their google account or register himself for first time. 
+After login, I store the user’s ID and and profile to Firestore.
+
+
+✴️ Cross Question 6: How do you store product data?
+Answer:
+“Product details like name, price, image URL, and quantity are stored in Firestore collections. Images are stored in Firebase Storage.
+
+
+✴️ Cross Question 7: What happens when a user places an order?
+Answer:
+When the user places an order, I create an order document in Firestore, clear the cart, and show the success screen. The order is saved under a ‘liveOrders’ collection, and users can view it in their order history as well.
+
+
+
+✴️ Cross Question 8: What is a ViewModel?
+Answer: 
+A ViewModel stores and manages UI data. It survives configuration changes like rotation and keeps the data safe. The UI observes ViewModel data so the screen updates automatically.
+
+
+✴️ Cross Question 9: What is RecyclerView?
+Answer: 
+RecyclerView is a flexible, efficient list used to display large data smoothly.
+It reuses views instead of creating new ones, which improves performance.
+
+
+✴️ Cross Question 10: What is LinearLayout?
+Answer: 
+LinearLayout arranges views in a single direction — either vertically or horizontally.
+
+
+✴️ Cross Question 11: What is RelativeLayout?
+Answer: 
+RelativeLayout allows you to position views relative to each other or relative to the parent layout.
+
+
+✴️ Cross Question 12: What is ScrollView?
+Answer: 
+ScrollView allows content to scroll vertically when it’s longer than the screen height.
+
+
+✴️ Cross Question 13: What is State Management / Managing State?
+Answer: 
+State means the current data shown on the screen.
+
+
+✴️ Cross Question 14: What are Coroutines?
+Answer: 
+Coroutines are a Kotlin feature used to run tasks in the background without blocking the main thread.
+
+
+
+✅Q7. If we assign you as a project manager how will you assign task to your teammates?
+
+Answer: If I am the project manager, my approach to assigning tasks would be simple and structured:
+
+1. First, I will thoroughly understand the project’s objectives, requirements, and expected outcomes. It will help me identify the specific tasks and roles required to achieve the project's goals.
+
+2. Then I will evaluate each team member’s strengths, skills, experience, and capabilities. Based on that, I will assign tasks to the people who can perform them most efficiently and confidently.
+
+3. I will provide clear instructions, timelines, and deliverables for each task. I will also maintain consistent communication with the team to track progress, clarify doubts, and ensure smooth execution.
+By this way i assign task to my teammates.
+
+
+
+✅Q8. How many users/orders have you served?
+Ans: Till date, I have successfully served 20+ orders.
+
+
+✅Q9. How long did it take to build the project?
+Ans: It took me around 2 to 2.5 months to build the project.
+This includes planning, designing the UI, implementing the main features, coding, testing, fixing bugs, and finally deploying the app.
+
+
+✅Q10. What features did you focus on in Version 1?
+Ans: Since this was the first release, I focused on delivering all the core and essential features, including:
+
+1. Product listing and detailed product viewing
+2. Add to Favourites
+3. Add to Cart
+4. Smooth checkout flow
+5. Order history
+6. Mark order as completed
+7. FAQ section
+8. Customer support/help section
+9. Feedback option
+10. Profile update section
+11. Notifications
+And many more small enhancements for a smooth user experience
+
+
+
+✅Q11. How you handle a project?
+Answer: To handle any project, I follow a clear and organized approach:
+
+First, I thoroughly understand the project requirements, scope, and expectations.
+
+Then I perform initial research to identify possible challenges, risks, and the best way to approach the solution.
+
+Then I manage the entire project using basic Software Development Lifecycle principles:
+Requirement gathering
+Analysis
+designing
+Coding and Testing 
+
+By following this structured process, I ensure the project is completed efficiently and within the given time frame.
+
+
+✴️ Cross Question 2: What do you do if project requirements change in the middle of development? Answer:
+If requirements change, I first try to understand why the change is needed.
+Then I analyze the impact on timeline, design, and coding.
+I communicate the changes clearly, adjust the plan, and continue development with updated requirements.
+
+
+✴️ Cross Question 3: How do you prioritize tasks?
+Sample Answer:
+I prioritize tasks based on importance and urgency.
+Core features, high-impact tasks, and blockers come first.
+After that, I work on enhancements and UI improvements.
+
+
+✴️ Cross Question 4: How do you handle project delays?
+Sample Answer:
+I identify the cause of the delay early, fix blockers quickly, adjust the plan if needed, and increase focus on critical tasks to bring the project back on track.
+
+
+✴️ Cross Question 5: How do you manage risks in a project?
+Sample Answer:
+I keep track of potential risks like feature complexity, time limitations, user experience issues, and unexpected bugs.
+I plan alternatives and stay in constant testing mode to catch them early.
+
+
+✴️ Cross Question 6: Do you follow any specific project management methodology? (Agile, Scrum, etc.)
+Sample Answer:
+I mainly follow an Agile-style approach—breaking the project into small milestones, completing features in iterations, testing continuously, and improving based on feedback.
+
+✴️ Cross Question 7:. How do you ensure code quality while handling a project?
+Sample Answer:
+I maintain clean architecture, follow best practices, test features frequently, and refactor code whenever needed to keep it readable and maintainable.
+
+✴️ Cross Question 8: How do you communicate progress during the project?
+Sample Answer:
+I regularly track progress using task lists or milestones and communicate updates clearly—what’s done, what’s pending, and if there are any risks or delays.
+
+✴️ Cross Question 9: How do you handle pressure when deadlines are close?
+Sample Answer:
+I stay calm, increase focus on critical tasks, avoid unnecessary features, and work systematically to complete the project on time.
+
+✴️ Cross Question 10: How did you solve bugs in your project?
+Answer: 
+To solve bugs in my project, I followed a systematic debugging approach:
+I reproduce the bug, check logs, and understand where and why it is happening.
+I use Logcat, breakpoints, and step-by-step debugging to find the exact line or logic causing the problem.
+After identifying the cause, I apply the fix, test the impacted feature. After that I refactor code if needed, avoid duplicate logic, and follow clean architecture practices so the same type of bug doesn’t occur again.
+
+
+
+✅Q12. Tell me about a time you solved a difficult or tricky technical problem.
+
+Ans: Yes, I remember a challenging situation while building my ChawalKart project.
+
+One major challenge was keeping the cart quantity updated when navigating between activities. For example, if a user changed the item quantity in the CartActivity, it wasn’t reflecting immediately when the user navigated back to the previous screen.
+
+Another challenge was data persistence. Suppose a user added items to the cart but didn’t place an order. After 1–2 days, when they reopened the app, the cart became empty because the data wasn't being saved permanently.
+
+To solve both issues, I implemented a single shared data source using SharedPreferences.
+This allowed me to Store the entire cart permanently, so even if the app was closed and reopened after several days, the cart data remained intact.
+
+I also updated the UI by reading the latest cart data from SharedPreferences in onResume() of each activity. This ensured that any update made to the cart was reflected across all screens instantly, without manually refreshing or reloading.
+
+So this was a challenging problem that initially felt difficult but after spending time on it, I was able to solved it completely.
+
+
+
+
+✅Q13. Why did you choose SharedPreferences instead of ViewModel?
+
+Ans: ViewModel is not designed for permanent data storage. It only holds data as long as the activity or process is alive. If the user closes the app, removes it from recent apps, or if the OS kills the process, all data inside the ViewModel is lost.
+But SharedPreferences gives me persistent storage, so the cart remains saved even if: App is closed or App is restarted or process gets killed.
+That’s why I used SharedPreferences inside CartManager for storing the cart permanently.
+
+
+
+✅Q14. Was there ever a moment you felt like giving up on the project? How did you push through?
+
+Ans: Yes, there were a few moments when I felt stuck — but I never thought of giving up on the project. Many times, when I solved one problem, a new problem appeared. Some issues took a lot of time to debug, even after reading documentation, taking help from communities, discussing with friends, and taking help from  ChatGPT. Even at one point, I genuinely felt I might not be able to complete the project.
+
+But I didn’t stop. I refactored parts of my code, motivated myself, and reminded myself why I started this project. I even took a short break to reset my mind.
+
+Then I approached the problems systematically, I broke the problem into smaller parts and solved one issue at a time. I rechecked the Firebase documentation, used logs to understand where the code was failing, and tested every step carefully. Each small success motivated me to continue.
+
+In the end, I managed to fix every problem and complete the project successfully. The challenges actually made me more confident and helped me grow as a developer.
+
+
+
+✅Q15. What Tech Stack Did You Use to build this project ?
+
+Ans: In this project, I used Android Studio as the primary IDE, with Kotlin as the programming language, and XML for the frontend UI design.
+
+On the backend side, I used Firebase including Firebase Authentication for secure login and Google Sign-In. I used Cloud Firestore as the real-time database for storing all product and order data, and Cloud Storage for managing product images.
+
+I also integrated Firebase Cloud Messaging for push notifications, used Glide for fast image loading, and SharedPreferences for storing small local data.
+
+Overall, this tech stack helped me build a fast, reliable, and real-time shopping app with a smooth user experience.
+
+
+Cross Questions:
+✴️ Cross Question 1: Why did you use Kotlin over Java?
+Ans: 
+Kotlin is officially recommended programming language for Android development. I chose Kotlin mainly because it makes Android development much simpler for me. The code is cleaner, there’s less boilerplate, and tasks like handling clicks, Firebase operations, or passing data become easier and faster.
+Also, most modern Android examples, documentation, and libraries are written in Kotlin now, so it felt more practical to use it for my project.
+
+
+✴️ Cross Question 2: Why did you choose Firestore instead of Realtime Database or SQL?
+Ans: 
+For my project needs, Firestore felt more comfortable and flexible to work with.
+I needed to store products, orders, and user details, and Firestore’s document structure matched perfectly with this kind of data.
+Also, Firestore gives real-time updates and offline support automatically, so I didn’t have to write extra code for syncing or caching.
+Overall, it made my development faster compared to Realtime Database or SQL.
+
+
+✴️ Cross Question 3: How do you handle online/offline mode?
+Ans: I didn’t build any complex offline system myself.
+Firestore already provides offline caching, so even if the internet disconnects, the user can still see old data. And as soon as the internet comes back, Firestore syncs the changes automatically.
+So I mostly relied on Firebase’s built-in features instead of building everything from scratch.
+
+
+✴️ Cross Question 4: Did you follow MVVM or any design pattern?
+Ans: To be honest, I did not follow a strict MVVM architecture in this project.
+Since this is my first complete end-to-end app, I focused more on building features and making everything work properly. I used a simple and straightforward architecture, where:
+
+XML layouts handled the UI
+Activity/Fragment + Adapter handled most of the logic, such as
+	fetching data from Firestore
+	updating UI
+	handling button clicks
+	loading images etc
+
+I kept the code organized, but not in a formal design pattern like MVVM. Now that I’ve completed this project, I am learning more about architectures such as MVVM so I can use them in my future apps.
+
+
+✴️ Cross Question 5: What was your Firestore schema?
+Ans: My Firestore schema was actually quite simple and easy to manage. I separated everything into clear collections so I could fetch data fast.
+
+For example, I had a Users collection where each userId stored the user details like name, email, phone, address, gender, etc.
+
+Then I had a Rice Categories collection — each document represented one rice category with fields like category name, category image, ratings, and so on.
+
+For the actual items, I used a Products collection where each productId had the product name, price, description, rating, discount, and image URL.
+
+For the ordering system, I kept two separate collections:
+
+Live Orders for current ongoing orders
+
+Complete Orders for finished order history
+
+Both stored fields like userId, orderId, items, quantity, total amount, order status, time etc.
+
+And finally, I added a Feedback/Complaints collection where each userId stored the name, email, phone, and the feedback message.
+
+
+✴️ Cross Question 6: How did you debug or test real-time features or How did you test the project?
+Ans: For testing real-time updates, I mainly used two simple methods.
+
+First, device testing:
+I opened the app on two different phones and performed actions like placing an order, updating data, or changing any UI-related state. If both screens updated instantly, I knew the real-time listeners were working correctly.
+
+Second, Firebase Console testing:
+Sometimes I directly changed values from the Firestore Console to see if the app picked up those updates in real time. This helped me quickly verify whether listeners, snapshots, and UI updates were functioning in real time.
+
+These two methods made it easy for me to confirm that the real-time updates, listeners, and UI refreshes were all working smoothly.
+
+
+✅Q16. How did you handle payment, cart, and order flow?
+Strong Answer:
+1. Cart Handling:
+I maintained a simple cart model that stores:
+	itemId
+	itemName
+	quantity
+	
+2. When the user proceeds to checkout:
+	a. I validate the cart items
+	b. Generate a unique orderId
+	c. Create an order document in Firestore that includes user info, delivery address, order details, total 	amount, timestamp, and order status
+	d. Show a confirmation page to the user
+
+3. Payment Handling:
+Currently the app supports Cash on Delivery (COD).
+
+My goal was to keep the flow simple, stable, and easy to extend later.
+
+
+
+✅Q17. Why not integrate UPI payment?
+
+Ans: Since this was the first release, my priority was to deliver all the core and essential features of the app such as product listing, cart management, order placement, and Firestore integration.
+Once the app and user base grow, I will integrate online payment options like UPI.
+
+
+
+✅Q18. How did you ensure good UI/UX?
+
+Ans: I ensured good UI/UX by following material design guidelines, maintaining consistency in components, spacing, and  keeping the flow simple. I Used proper spacing, consistent colors, and readable typography. I also tested the app on multiple devices to make sure the layouts were responsive and everything looked clean and easy to use.
+
+✅Q19. Can your app handle to 10,000 users at a time?
+
+Ans: To be honest, I did not test my app with 10,000 concurrent users because the project scope was small. But I do understand that load testing is required to verify this. Even though I’m a fresher, I’m very willing to learn and implement proper load testing methods in the future.
+
+
+✅Q20. If your app’s user base grows in the future, how will you scale the application? What step-by-step strategies would you follow?
+
+Ans: If the user base grows in the future, the first step is to monitor the app, find where it slows down, and then optimize those parts. After that, I would scale the backend using simple methods like caching frequently used data, optimizing database queries, and using a load balancer to distribute traffic. Since this is my personal project, I haven't scaled it yet, but I understand the basic approach and I’m willing to learn more.
+
+NOTE : Use DBMS answer 
+
+
+
+
+
+
+
+
