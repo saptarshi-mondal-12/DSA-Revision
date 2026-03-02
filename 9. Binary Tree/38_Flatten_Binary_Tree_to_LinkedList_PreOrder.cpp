@@ -5,9 +5,7 @@ using namespace std;
 /* Q.  Flatten Binary Tree to Linked List - Pre-order
 
 Given the root of a binary tree, flatten the tree into a "linked list":
-
 The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
-
 The "linked list" should be in the same order as a pre-order traversal of the binary tree.
 
 Input: root = [1,2,5,3,4,null,6]
@@ -16,6 +14,8 @@ Input: root = [1,2,5,3,4,null,6]
    2     5
   / \     \
  3   4     6
+
+Preorder = [1,2,3,4,5,6]
 
 Output: [1,null,2,null,3,null,4,null,5,null,6]
 
@@ -33,8 +33,7 @@ Output: [1,null,2,null,3,null,4,null,5,null,6]
 
 */
 
-class TreeNode
-{
+class TreeNode{
 public:
     int data;
     TreeNode *left;
@@ -102,35 +101,36 @@ void flatten(TreeNode *root){
     // preorder_traversal(root);
 }
 
-void preorder(TreeNode *curr, TreeNode *&prev){
+
+void flattenPreorder(TreeNode *curr, TreeNode *&prev, TreeNode* &head){
     if (curr == NULL)
         return;
 
-    // Save left and right child before modifying
-    TreeNode *left = curr->left;
-    TreeNode *right = curr->right;
+    // Process current
+    TreeNode* left = curr->left;
+    TreeNode* right = curr->right;
 
-    prev->left = NULL;
-    prev->right = curr;
+    curr->left = NULL;
+
+    if(prev == NULL){
+        head = curr;
+    }else{
+        prev->right = curr;
+    }
     prev = curr;
 
-    preorder(left, prev);
-    preorder(right, prev);
+    flattenPreorder(left, prev, head);
+    flattenPreorder(right, prev, head);
 }
 
-void optimal_flatten(TreeNode *root){
+TreeNode* optimal_flatten(TreeNode *root){
     // Time complexity: O(n)
     // Space complexity: O(H)
 
-    // Dummy node
-    TreeNode *dummy = new TreeNode(-1);
-    TreeNode *prev = dummy;
-
-    // Call modified traversal
-    preorder(root, prev);
-
-    // No need to reassign root — tree is modified in-place
-    delete dummy;
+    TreeNode* prev = NULL;
+    TreeNode* head = NULL;
+    flattenPreorder(root, prev, head);
+    return head;
 }
 
 int main(){
@@ -145,7 +145,6 @@ int main(){
     // flatten(root);
 
     // optimal
-    optimal_flatten(root);
-
-    preorder_traversal(root);
+    TreeNode* head = optimal_flatten(root);
+    preorder_traversal(head);
 }

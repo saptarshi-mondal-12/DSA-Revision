@@ -192,6 +192,7 @@ int minTime(TreeNode* root, int start) {
     // Space Complexity: O(N) (for storing parent-child mapping and BFS queue) 
     
     // Map to store parent pointers
+    // {child, parent}
     map<TreeNode*, TreeNode*>mpp;
 
     // Find target node and map parents

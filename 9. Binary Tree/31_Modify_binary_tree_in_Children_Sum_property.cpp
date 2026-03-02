@@ -50,7 +50,7 @@ For e.g.
    /  \    /  \
   3    5  1    30
 
-  root: 8+31=39 -> cannot change 50 to 39, we can only increment the value not decrement 50 to 39
+  root: 8+31=39 -> cannot change 50 to 39, we can only increment the value. Atleast 50 or something >= 50. Here 39 < 50. 
 
 
 A key insight here is that there's no restriction on how much we can increase the value of each node. Hence, we have the flexibility to adjust the values as needed to ensure that the Children Sum Property holds true at every node in the tree. 

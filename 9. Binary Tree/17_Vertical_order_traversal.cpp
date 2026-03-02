@@ -102,7 +102,7 @@ vector<vector<int>> findVertical(Node* root){
         }    
     }
 
-    // prepare final result - vertical,level,data - {-2:{2:{4}}, -1:{1:{2},3:{5}}, 0:{0:{1},2:{9},4:{6}}, 1:{1:{3},3:{10}}, 2:{2:{11}}}
+    // prepare final result - vertical,level,data - {-2:{2:{4}}, -1:{1:{2},3:{5}}, 0:{0:{1},2:{10,9},4:{6}}, 1:{1:{3},3:{10}}, 2:{2:{11}}}
     vector<vector<int>>ans;
 
     for(auto p : nodes){
@@ -136,7 +136,15 @@ void printResult(vector<vector<int>>&result){
     }
     cout<<endl;
 }
-
+//       1
+//     /    \
+//    2      3
+//   / \    / \
+//  4   10 9  11
+//   \
+//    5
+//     \
+//      6
 
 
 

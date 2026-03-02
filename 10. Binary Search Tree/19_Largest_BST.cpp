@@ -9,6 +9,8 @@ You're given a binary tree. Your task is to find the size of the largest subtree
 
 Note: A subtree of the binary tree is considered a BST if for every node in that subtree, the left child is less than the node, and the right child is greater than the node, without any duplicate values in the subtree.
 
+QUESTION KA matlab - Ek binary tree diya hai. Is binary tree me Largest BST ka size find krna hai.
+
 Input: root = [5, 2, 4, 1, 3]
         5
        /  \
@@ -138,6 +140,8 @@ void postorder(TreeNode* root, int &largestBSTCount){
         largestBSTCount = max(largestBSTCount, countTotalNodes);
     }
 }
+    
+
 
 int brute_largestBst(TreeNode* root){
     // Time complexity: O(n^2) - Since postorder is called once for each node, and within each call we do two O(n) operations (checking validity and counting nodes), the overall time complexity will be:  O(n^2)

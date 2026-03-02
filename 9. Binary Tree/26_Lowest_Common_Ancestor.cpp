@@ -45,7 +45,11 @@ class Node{
     }
 };
 
-/* 
+Node* LowestCommonAncestor(Node* root, Node* a, Node* b) {
+    // Time complexity: O(n)
+    // Space complexity: O(H) axulary stack space for recursive 
+
+    /* 
           1
         /   \
        2     3
@@ -54,12 +58,8 @@ class Node{
          / \
         6   7
 
-*/
-Node* LowestCommonAncestor(Node* root, Node* a, Node* b) {
-    // Time complexity: O(n)
-    // Space complexity: O(H) axulary stack space for recursive 
+    */
     
-
     // Base case: If the current node is one of the targets (a or b), return it upward. Because this node could be part of the LCA.
     if(root==NULL || root==a || root==b){
         return root;

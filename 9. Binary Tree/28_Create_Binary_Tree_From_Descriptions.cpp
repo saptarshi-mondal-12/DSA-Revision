@@ -2,7 +2,7 @@
 /* 
 Create Binary Tree From Descriptions
 
-You are given a 2D integer array descriptions where descriptions[i] = [parenti, childi, isLefti] indicates that parenti is the parent of childi in a binary tree of unique values. Furthermore,
+You are given a 2D integer array descriptions where descriptions[i] = [parenti, childi, isLefti] indicates that parent i is the parent of child i in a binary tree of unique values. Furthermore,
 
     If isLeft == 1, then childi is the left child of parent.
     If isLeft == 0, then childi is the right child of parent.

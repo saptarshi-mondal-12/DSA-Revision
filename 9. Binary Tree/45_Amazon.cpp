@@ -8,6 +8,7 @@ Q. Given a binary tree, you need to find a pair of two nodes such that their sum
 Constraints:
 1: distance between two nodes should be equal to d
 2: both nodes should not be at same level
+3. node1->val + node2->val == target
 
 return true if found any such pair of nodes
 Note: tree can contain duplicate values
@@ -29,204 +30,139 @@ class TreeNode{
     }
 };
 
-TreeNode* findLCA(TreeNode* root, int n1, int n2) {
+// Brute Force Approach --------------------------------------------------------------------------------------------------------
+
+TreeNode* findLCA(TreeNode* root, TreeNode* p, TreeNode* q) {
     if (root == NULL) return NULL;
 
-    if (root->val == n1 || root->val == n2) return root;
+    if (root == p || root == q) return root;
 
-    TreeNode* leftLCA = findLCA(root->left, n1, n2);
-    TreeNode* rightLCA = findLCA(root->right, n1, n2);
+    TreeNode* left = findLCA(root->left, p, q);
+    TreeNode* right = findLCA(root->right, p, q);
 
-    if (leftLCA && rightLCA) return root;  // If both left and right have values, root is LCA
-
-    return (leftLCA != NULL) ? leftLCA : rightLCA;
+    if (left && right) return root;
+    return left ? left : right;
 }
 
-int findDistanceFromLCA(TreeNode* root, int target, int count) {
-    if (root == NULL) return -1;
+int calculate_Distance_Between_Nodes(TreeNode* root, TreeNode* p, TreeNode* q,unordered_map<TreeNode*, int> &levelMap){
+    TreeNode* LCA = findLCA(root, p, q);
+    if (!LCA) return -1;
 
-    if (root->val == target) return count;
-
-    int left = findDistanceFromLCA(root->left, target, count + 1);
-    if (left != -1) return left;
-
-    return findDistanceFromLCA(root->right, target, count + 1);
-}
-
-int findDistanceBetweenNodes(TreeNode* root, int n1, int n2) {
-    TreeNode* lca = findLCA(root, n1, n2);
-    
-    if (lca == NULL) return -1; // If either node is missing
-
-    int d1 = findDistanceFromLCA(lca, n1, 0);
-    int d2 = findDistanceFromLCA(lca, n2, 0);
-
-    return d1 + d2; // Total distance between n1 and n2
-}
-
-bool findPair(TreeNode* root, int target, int d) {
-    // Time complexity : O(n^2) due to repeated LCA and distance calculation.
-    // space complexity : O(n) due to the map and queue
-
-    /* Intuition: 
-    To solve the problem, I use a level-order traversal (BFS) to visit each node in the binary tree. While traversing, I maintain a map that stores the value of each node along with the level at which it was encountered.
-
-    For every node during traversal, I calculate the value needed to form the target sum:
-        required = target - current_node->val
-
-    I then check if this required value already exists in the map. If it does, I perform additional checks:
-
-        Different Levels: Ensure that the two nodes are not on the same level.
-        Exact Distance: Use the findDistanceBetweenNodes() function to calculate the actual distance between these two nodes.
-        Distance Match: If the calculated distance is exactly equal to d, I have found a valid pair and return true.
-
-    Conclusion:
-    For a pair of nodes to be valid:
-        The sum of their values must equal the target.
-        The two nodes must be at different levels in the tree.
-        The distance between them must be exactly d.
-
-    If all three conditions are satisfied, I return true.
-    */
-
-    if(root==NULL){
-        return false;
-    }
-
-    // map to store node and their level;
-    unordered_map<int, int>mp;
-    
-    queue<TreeNode*>q;
-    q.push(root);
-    int level=0;
-
-    // performing level order traversal
-    while(!q.empty()){
-        int size=q.size();
-        for(int i=0;i<size;i++){
-            TreeNode* curr=q.front();
-            q.pop();
-            int required = target - curr->val;
-            mp[curr->val]=level;
-
-            if(mp.find(required) != mp.end()){
-                // check if both are in different level
-                if (mp[curr->val] != mp[required]){
-                    int distance = findDistanceBetweenNodes(root, curr->val, required);
-
-                    // check if distance between 2 nodes is equal to d
-                    if(distance==d){
-                        cout<<curr->val<<" "<<required<<endl;
-                        return true;
-                    }
-                }
-            }
-
-            if(curr->left){
-                q.push(curr->left);
-            }
-
-            if(curr->right){
-                q.push(curr->right);
-            }
-        }
-        level++;
-    }
-    return false;
-}
-
-
-
-
-
-
-
-
-
-// Optimal Soln ------------------------------------------------------------------------------------ 
-
-int calculate_Distance_Between_Nodes(TreeNode* root, int u, int v, unordered_map<int,int>mp){
-
-    // lowest common ancesstor of 2 node u and v
-    TreeNode* LCA = findLCA(root,u,v);
-
-    if(LCA == NULL){
-        return -1;
-    }
-
-    // Disatnce between 2 node
-    int distance = mp[u] + mp[v] - 2*mp[LCA->val];
+    int distance = levelMap[p] + levelMap[q] - 2 * levelMap[LCA];
     return distance;
 }
 
+bool brute_findPair(TreeNode* root, int target, int d){
+    /* Time complexity: O(n^3)
+            1️⃣ Level order traversal = O(n)
+            2️⃣ Outer Loop over Map Entries = O(n) In worst case, all node values are distinct. So number of keys in mp = n
+            3️⃣ Nested Loops Over Node Pairs = n × n = O(n²)
+            4️⃣ Distance Calculation per Pair = O(n)
+            Total Time Complexity = O(n) + O(n² × n)  // pair checks × LCA
+                                  = O(n³)
 
-bool optimal_findPair(TreeNode* root, int target, int d){
-    // Time complexity: O(n)
-    // Space complexity: O(n)
 
-    /* Intuition: 
+       Space complexity: O(n)
+            1️⃣ Queue for BFS = O(n)
+            2️⃣ Value → Nodes Map = O(n)
+            3️⃣ Level Map = O(n)
+            4️⃣ Recursion Stack for LCA = O(h) = O(n) in worst case (skewed tree)
+            Total Space Complexity = O(n) + O(n) + O(n) + O(n)
+                                   = O(n)
+    */
 
-    In the brute solution, the findDistanceBetweenNodes function is called for every valid pair, which involves finding the LCA and then calculating the distance. This makes the time complexity O(n^2) in the worst case.
+    /*Intuition : 
+    
+        The tree can contain duplicate values, so we cannot rely on values alone to identify nodes.
+        Instead, we treat each node as a unique object using its pointer (TreeNode*).
 
-    Optimization: 
+        The problem has three simultaneous constraints:
 
-         1
-        /  \
-       2    3
-      / \  / \
-     4   5 6  7
+            1. The sum of node values must be equal to target
+            2. The distance between the two nodes must be exactly d
+            3. The two nodes must be at different levels
 
-    formula for Disatnce between 2 node: 
+        To handle all three constraints safely and correctly:
 
-        distance = (level[u] + level[v] − 2×level[LCA(u,v)])
+            We first store every node with its level
+            We group nodes by their values to handle duplicates
+            We then try all valid (value, target − value) combinations
+            For each candidate pair, we verify:
+                they are different nodes
+                they are at different levels
+                their distance (using LCA) is exactly d
 
-        level[4] = 2, level[5] = 2, LCA(4, 5) = 2 → distance = 2 + 2 − 2×1 = 2
-        Path: 4 → 2 → 5 (2 edges) ✅
+        If any such pair satisfies all constraints, we return true.
 
-        So this formula gives the exact number of edges between two nodes using their levels and LCA — without needing to traverse the path between them every time.
+        Step 1: Level Order Traversal (Preprocessing)
+
+        Perform level order traversal (BFS) of the tree.
+        For each node:
+
+            Store it in a map as
+            value → { (level, node pointer) }
+
+            Store its level in levelMap using
+            TreeNode* → level
+
+        This preprocessing allows:
+            Handling duplicate values
+            Fast access to node levels
+            Safe distance calculation later
+
+        Step 2: Form Candidate Value Pairs
+
+            For each unique value val1 in the map:
+                Compute required = target - val1
+                If required does not exist in the map, skip
+
+        This ensures we only check value pairs that can sum to target.
+
+        Step 3: Validate Node Pairs
+
+        For each node pair (node1, node2) where:
+            node1->val + node2->val == target
+
+        Check constraints in order:
+
+            1. Nodes must be at different levels
+            if(p1.first == p2.first) continue;
+
+            2. Distance between nodes must be exactly d
+                Find LCA using pointer-based LCA
+                Use level formula:
+                    distance = level[node1] + level[node2] − 2 × level[LCA]
+
+        If all checks pass → pair found.
+
+        Step 4: Return Result
+            If any valid pair is found → return true
+            If all possibilities are exhausted → return false
+
     */
 
     if(root==NULL){
         return false;
     }
 
-    // map to store node and level;
-    unordered_map<int, int>mp;
-    
-    queue<TreeNode*>q;
+    // {4 → { level 1 : node(4), level 2 : node(4) }
+    unordered_map<int, vector<pair<int, TreeNode*>>> mp;
+    unordered_map<TreeNode*, int> levelMap;
+
+    queue<TreeNode*> q;
     q.push(root);
-    int level=0;
+    int level = 1;
 
     // performing level order traversal
     while(!q.empty()){
-        int size=q.size();
+        int size = q.size();
         for(int i=0;i<size;i++){
-            TreeNode* curr=q.front();
+            TreeNode* curr = q.front();
             q.pop();
 
-            // searching for required in map to form pair - (required, curr->val)
-            int required = target - curr->val;
-
-            // map the current node with its level in  
-            mp[curr->val]=level;
-
-            // check if required is present in map. 
-            // if it is present - then check for level, both level should be dfferent.
-            // If both level are different - then check if distance between these 2 node is equal to d
-            // if all true we find our pair
-            if(mp.find(required) != mp.end()){
-                // check if both are in different level
-                if (mp[curr->val] != mp[required]){
-                    int distance = calculate_Distance_Between_Nodes(root, curr->val, required, mp);
-
-                    // check if distance between 2 nodes is equal to d
-                    if(distance==d){
-                        // we find our pair
-                        cout<<curr->val<<" "<<required<<endl;
-                        return true;
-                    }
-                }
-            }
+            // map the current node with its level
+            mp[curr->val].push_back({level, curr});
+            levelMap[curr] = level;
 
             // insert left to queue
             if(curr->left){
@@ -238,53 +174,227 @@ bool optimal_findPair(TreeNode* root, int target, int d){
                 q.push(curr->right);
             }
         }
-
         // increment level
         level++;
     }
 
+    // searching for required in map to form pair - (required, curr->val)
+    for(auto &x : mp){
+        int val1 = x.first;
+        int required = target - val1;
+
+        if(mp.find(required) == mp.end()) continue;
+
+        for(auto &p1 : mp[val1]){
+            for(auto &p2 : mp[required]){
+                TreeNode* node1 = p1.second;
+                TreeNode* node2 = p2.second;
+
+
+                // both level should be different
+                if(p1.first == p2.first) continue;
+
+                // check if distance between these 2 node is equal to d
+                int distance = calculate_Distance_Between_Nodes(
+                    root, node1, node2, levelMap
+                );
+
+                if(distance == d){
+                    cout << node1->val << " " << node2->val << endl;
+                    return true;
+                }
+            }
+        }
+    }
+
     // no pair found
     return false;
-
 }
+
+
+
+// Optimal Approach --------------------------------------------------------------------------------------------------------
+
+void buildInfo(TreeNode* root, unordered_map<TreeNode*, TreeNode*> &parent, unordered_map<TreeNode*, int> &levelMap, unordered_map<int, vector<TreeNode*>> &mp){
+
+    /* Preprocessing:
+        - parent of each node
+        - level of each node
+        - value → list of nodes
+    */
+ 
+    queue<TreeNode*> q;
+    q.push(root);
+
+    parent[root] = NULL;
+    levelMap[root] = 0;
+
+    while(!q.empty()){
+        TreeNode* curr = q.front();
+        q.pop();
+
+        mp[curr->val].push_back(curr);
+
+        if(curr->left){
+            parent[curr->left] = curr;
+            levelMap[curr->left] = levelMap[curr] + 1;
+            q.push(curr->left);
+        }
+
+        if(curr->right){
+            parent[curr->right] = curr;
+            levelMap[curr->right] = levelMap[curr] + 1;
+            q.push(curr->right);
+        }
+    }
+}
+
+/* Distance using parent pointers (NO LCA recursion) */
+int calculate_Distance_Between_Nodes(TreeNode* p, TreeNode* q, unordered_map<TreeNode*, TreeNode*> &parent, unordered_map<TreeNode*, int> &levelMap){
+    int dist = 0;
+
+    // bring both nodes to same level
+    while(levelMap[p] > levelMap[q]){
+        p = parent[p];
+        dist++;
+    }
+    while(levelMap[q] > levelMap[p]){
+        q = parent[q];
+        dist++;
+    }
+
+    // move both up until they meet (LCA)
+    while(p != q){
+        p = parent[p];
+        q = parent[q];
+        dist += 2;
+    }
+
+    return dist;
+}
+
+bool optimal_findPair(TreeNode* root, int target, int d){
+    // Time complexity: O(n^2) average
+    // Space complexity: O(n)
+
+    /* ✅ Key Optimization Idea (Intuition)
+
+        Your bottleneck was this:
+            For every valid value pair → you were calling findLCA()
+            findLCA() is O(n)
+            Nested inside O(n²) pair checking
+                ➡️ Total = O(n³) ❌
+
+        💡 Optimization Strategy
+
+        We eliminate repeated LCA computation by:
+
+            1. Preprocessing once using BFS
+                store parent[node]
+                store level[node]
+                store value → list of nodes
+
+            2. Compute distance in O(height) using parent pointers
+                (no LCA recursion per pair)
+
+        So distance becomes:
+        O(h) instead of O(n)
+
+        🚀 Optimized Time Complexity
+
+        Preprocessing BFS	O(n)
+        Pair generation	O(n²)
+        Distance per pair	O(h)
+        Total = O(n) + O(n² x h) ==> O(n²) 
+    */
+
+    if(root == NULL) return false;
+
+    unordered_map<TreeNode*, TreeNode*> parent;
+    unordered_map<TreeNode*, int> levelMap;
+
+    // value → list of nodes
+    unordered_map<int, vector<TreeNode*>> mp;
+
+    // preprocessing
+    buildInfo(root, parent, levelMap, mp);
+
+    // searching for required in map to form pair - (required, curr->val)
+    for(auto &x : mp){
+        int val1 = x.first;
+        int required = target - val1;
+
+        if(mp.find(required) == mp.end()) continue;
+
+        for(TreeNode* n1 : mp[val1]){
+            for(TreeNode* n2 : mp[required]){
+                // both nodes should not be same
+                if(n1 == n2) continue;
+
+                // both nodes should not be at same level
+                if(levelMap[n1] == levelMap[n2]) continue;
+
+                // check if distance between 2 nodes is equal to d
+                int distance = calculate_Distance_Between_Nodes(
+                    n1, n2, parent, levelMap
+                );
+
+                if(distance == d){
+                    cout << n1->val << " " << n2->val << endl;
+                    return true;
+                }
+            }
+        }
+    }
+
+    // no pair found
+    return false;
+}
+
+
+
 
 
 int main(){
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
-    root->left->left = new TreeNode(6);
-    root->left->right = new TreeNode(6);
-    root->right->left = new TreeNode(6);
-    root->right->right = new TreeNode(7);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+    root->left->right->right = new TreeNode(4);
+    root->left->right->right->right = new TreeNode(6);
+    root->left->right->right->right->right = new TreeNode(6);
+    root->right->right = new TreeNode(70);
 
     /* 
-         1
+    check for below d=5 , target = 10 ans = true
+          1
         /  \
        2    3
-      / \  / \
-     6   6 6  7
-
+      / \    \
+     4   5    70
+          \
+           4
+            \ 
+             6
+              \ 
+               6
     */
-    
-    int target = 7;
-    int d = 2;
 
-    // 1. brute solution
-    bool brute_result=findPair(root, target, d);
-    if (brute_result){
-        cout<<"Pair found"<<endl;
-    }else {
-        cout<<"No pair found"<<endl;
-    }
+    int target = 10;
+    int d = 4;
 
-    // ------------------------------------------
+    // bool result = brute_findPair(root, target, d);
+    // if (result){
+    //     cout<<"Pair found"<<endl;
+    // }else{
+    //     cout<<"No pair found"<<endl;
+    // }
 
-    // 2. optimal solution
-    bool result=optimal_findPair(root, target, d);
+    bool result = optimal_findPair(root, target, d);
     if (result){
         cout<<"Pair found"<<endl;
-    }else {
+    }else{
         cout<<"No pair found"<<endl;
     }
 }

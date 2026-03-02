@@ -101,6 +101,9 @@ int widthOfBinaryTree(TreeNode* root) {
         // Process each node at curent level
         for(int i=0;i<size;i++){
             // Calculate current position relative to the minimum position in the level
+
+            // Q. Why min, why not -1?
+            // Ans: We use 'min' to normalize the indices at each level to prevent overflow and keep the indices manageable. By subtracting 'min', we effectively reset the starting index of each level to 0. This helps in avoiding large index values that could arise from the binary tree's structure, especially in deeper levels. Using -1 would not provide this normalization and could lead to incorrect width calculations.
             long long int cur_id=q.front().second - min;
 
             // Get current node

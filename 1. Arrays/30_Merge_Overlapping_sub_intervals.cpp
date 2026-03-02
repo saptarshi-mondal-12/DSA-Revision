@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Q. Merge Overlapping Sub-intervals 
+/* Q. Merge Intervals - AMAZON 2026 - MULTIPLE TIMES 
 
 Given an array of intervals, merge all the overlapping intervals and return an array of non-overlapping intervals.
 

@@ -143,7 +143,7 @@ pair<int, vector<int>> solve(TreeNode* root, int &maxSum, vector<int>&bestPath){
     } else {
         vector<int> branch = right.second;
         branch.push_back(root->data);
-        return {(root->data) + rightSum, branch};
+        return {(root->data + rightSum), branch};
     }
 }
 

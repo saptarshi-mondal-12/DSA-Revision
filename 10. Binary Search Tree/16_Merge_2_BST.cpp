@@ -60,25 +60,6 @@ void inorderTraversal(TreeNode* root ,vector<int>& inorderContainer){
     inorderTraversal(root->right, inorderContainer);
 }
 
-TreeNode* bulidTree(vector<int>& inorder, int start, int end){
-    // Time complexity: O(m + n)
-    
-    if(start>end){
-        return NULL;
-    }
-
-    // Find mid to create our new node
-    int mid=(start+end)/2;
-
-    // creating new node
-    TreeNode* root=new TreeNode(inorder[mid]);
-
-    root->left=bulidTree(inorder, start, mid-1);
-    root->right=bulidTree(inorder, mid+1, end);
-
-    return root;
-}
-
 vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
     // Time complexity: O(n+m)
     // space complexity: O(n+m)
@@ -109,6 +90,25 @@ vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
     return result;     
 }
 
+TreeNode* bulidTree(vector<int>& inorder, int start, int end){
+    // Time complexity: O(m + n)
+    
+    if(start>end){
+        return NULL;
+    }
+
+    // Find mid to create our new node
+    int mid=(start+end)/2;
+
+    // creating new node
+    TreeNode* root=new TreeNode(inorder[mid]);
+
+    root->left=bulidTree(inorder, start, mid-1);
+    root->right=bulidTree(inorder, mid+1, end);
+
+    return root;
+}
+
 TreeNode* brute_merge_2_BST(TreeNode *root1, TreeNode *root2) {
     // Time complexity: O(m+n)
     // Space complexity: O(m+n) 
@@ -137,9 +137,10 @@ TreeNode* brute_merge_2_BST(TreeNode *root1, TreeNode *root2) {
 
 
 
-// --------------------------------------------------------------------------------------------------------
-
-
+// -------------------------------------------------------------------------------------
+// Optimal soln is best in term of space complexity. 
+// In brute soln, we use O(n+m) space to store our sorted answer.
+// But in optimal we have'nt use any extra space. We just take recursion stack space i.e height of 1st tree and height of 2nd tree i.e O(h1+h2). Here we just flattern both tree instead of storing it in vector. 
 
 
 

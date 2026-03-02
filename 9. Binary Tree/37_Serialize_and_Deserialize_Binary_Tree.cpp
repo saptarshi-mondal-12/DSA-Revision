@@ -179,6 +179,8 @@ int main(){
     root->right->right = new TreeNode(5);
 
     string s = serialize(root);
+    for(int i=0;i<s.size();i++) cout<<s[i]<<" ";
+    cout<<endl;
     TreeNode* ans = deserialize(s);
     inorder(ans);
 

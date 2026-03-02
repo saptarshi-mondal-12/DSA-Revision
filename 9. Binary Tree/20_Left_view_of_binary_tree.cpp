@@ -46,6 +46,15 @@ void printResult(vector<int>&result){
     cout<<endl;
 }
 
+/*          1
+          /   \
+         2     3
+        / \     \
+       4   5     7
+          /
+         6
+*/
+
 
 int main(){
     Node* root=new Node(1);

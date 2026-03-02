@@ -84,18 +84,25 @@ int main(){
     root->right = new TreeNode(3);
     root->left->left = new TreeNode(4);
     root->left->right = new TreeNode(5);
-    root->right->left = new TreeNode(6);
+    root->left->right->right = new TreeNode(4);
+    root->left->right->right->right = new TreeNode(6);
     root->right->right = new TreeNode(7);
 
     /* 
          1
         /  \
        2    3
-      / \  / \
-      4 5  6  7
+      / \    \
+     4   5    7
+          \
+           4
+            \ 
+             6
+           
     */
+    
 
-    cout<<findDistanceBetweenNodes(root, 4, 7);
+    cout<<findDistanceBetweenNodes(root, 4, 6);
 
     /*optimize solution 
     map each node with its level - perform level order traversal

@@ -30,6 +30,12 @@ class Node{
     }
 };
 int minDiffInBST(Node* root){
+    // TC- O(N)
+    // SC- O(H) H- height of tree
+
+    // Intuition - Inorder traversal of BST gives sorted order of elements.
+    // So, we can find the minimum difference between the adjacent nodes in inorder traversal.
+    
     if(root==NULL){
         return 0;
     }
@@ -37,6 +43,11 @@ int minDiffInBST(Node* root){
     Node* current=root;
     Node* previous=NULL;
     int mini=INT_MAX;
+
+
+    // current != NULL: We are still going down the tree (left or right)
+    // !st.empty(): There are nodes waiting to be processed
+    // The traversal is not finished as long as either of these is true.
 
     while(!st.empty() || current!=NULL){
         while(current!=NULL){

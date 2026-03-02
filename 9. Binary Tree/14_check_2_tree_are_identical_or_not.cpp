@@ -30,7 +30,7 @@ bool isSameTree(Node* root1, Node* root2){
     if(root1==NULL && root2==NULL) return true;
 
     // If only one of the root is NULL, they are not identical
-    if( root1== NULL || root2==NULL) return false;
+    if( root1==NULL || root2==NULL) return false;
 
     // Check if the current nodes have the same data value and recursively check their left and right subtrees
     return ((root1->data == root2->data) && isSameTree(root1->left, root2->left) && isSameTree(root1->right, root2->right));

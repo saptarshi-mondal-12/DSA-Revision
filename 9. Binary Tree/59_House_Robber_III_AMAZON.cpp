@@ -55,6 +55,12 @@ You get:
     left.second: max money from left subtree when left is robbed
 
 Similarly for right
+  2
+1   3
+
+{0,1} 2 {0,3}
+
+
 
 */
 
@@ -75,6 +81,10 @@ pair<int, int> solve(TreeNode *root){
     if (root == NULL){
         return {0, 0};
     }
+    //   2
+    // 1   3
+
+    // {0,1} 2 {0,3}
 
     auto left = solve(root->left);
     auto right = solve(root->right);

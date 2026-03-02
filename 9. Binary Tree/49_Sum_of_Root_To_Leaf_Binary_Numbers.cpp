@@ -37,6 +37,12 @@ class Node{
     }
 };
 
+    //       1
+    //     /   \
+    //    0     1
+    //   / \   / \
+    //  0   1 0   1
+
 
 int solve(Node* root, int currentSum){
     if (!root) return 0;
@@ -54,6 +60,10 @@ int solve(Node* root, int currentSum){
 }
 
 int sumRootToLeaf(Node* root) {
+    // Time complexity: O(n)
+    // Space complexity: O(h)
+    
+    // Intuition: 
     return solve(root, 0);
 }
 

@@ -43,12 +43,16 @@ void postorder_iterative_traversal(Node* root){
 
     // think in term of skew tree: root->right-> right right right right
     /*
-    1
-      2
-        3
-          4
-            5
-              6
+    10
+    /
+  20
+    \
+      1
+        2
+          3
+            4
+              5
+                6
     */
 
     stack<Node*>st;
@@ -85,17 +89,25 @@ int main(){
     Node* root=new Node(1);
     
     // left
-    root->left=new Node(2);
-    root->left->left=new Node(4);
-    root->left->right=new Node(5);
+    // root->left=new Node(2);
+    // root->left->left=new Node(4);
+    // root->left->right=new Node(5);
 
-    root->left->right->right=new Node(6);
-    root->left->right->right->right=new Node(7);
+    // root->left->right->right=new Node(6);
+    // root->left->right->right->right=new Node(7);
 
-    // right
-    root->right=new Node(3);
+    // // right
+    // root->right=new Node(3);
     // root->right->left=new Node(6);
     // root->right->right=new Node(7);
+
+    root->right=new Node(2);
+    root->right->right=new Node(3);
+    root->right->right->right=new Node(4);
+    root->right->right->right->right=new Node(5);
+    root->right->right->right->right->right=new Node(6);
+
+
 
     postorder_iterative_traversal(root);
 

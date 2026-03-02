@@ -127,7 +127,7 @@ TreeNode* brute_bstFromPreorder(vector<int>& preorder){
     jisme mid find keke solve krte hai -----> int mid=(start+end)/2
     
     
-    yaha pe woh kaam nhi karega kyu ki ape ko preorder se BST banana hai. 
+    yaha pe woh kaam nhi karega kyu ki apne ko preorder se BST banana hai. 
     woh sirf inorder pe kaam karega 
     */
 

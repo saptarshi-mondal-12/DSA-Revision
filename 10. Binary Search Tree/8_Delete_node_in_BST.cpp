@@ -93,7 +93,7 @@ void inorder(TreeNode* root){
       3    10
      /  \    \
     2    6    14
-   / \   / \   /
+   / \   / \  /
   1   5 4   7 13  
   
 */

@@ -3,6 +3,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Try this - https://www.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1
+// Try to do using mergesort
+
 
 class node{
     public:
@@ -72,7 +75,7 @@ node* merge(node* &l1, vector<int>l2){
 }
 
 node* merge_K(vector<vector<int>>v){
-    // Time complexity - O(k*n)
+    // Time complexity - O(k*n) - fix time complexity
     // space complexity - O(1)
     
     node* result=new node(0);
