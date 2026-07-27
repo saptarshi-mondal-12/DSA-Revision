@@ -1,4 +1,5 @@
-// Distance between 2 node in a binary tree - root to target - AMAZON 2026
+// Q. Distance between 2 node in a binary tree - root to target - AMAZON 2026 
+// follow up question print path also Q25.
 
 #include <iostream>
 #include<bits/stdc++.h>
