@@ -2,7 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N. 
+/* Q. MISSING NUMBER  - AMAZON 2026
+Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N. 
 Find the number(between 1 to N), that is not present in the given array.
 Input: N = 5, array[] = {1,2,4,5}
 Result: 3
