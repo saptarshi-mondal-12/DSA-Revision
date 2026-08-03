@@ -70,8 +70,4 @@ int main(){
     // optimal
     cout<<optimal_diameterOfBinaryTree(root)<<endl;
 
-
-
-    
-
 }

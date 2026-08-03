@@ -68,8 +68,6 @@ vector<int> solve(Node* root, int x) {
     getPath(root,result,x);
 
     return result;
-
- 
 }
 
 
