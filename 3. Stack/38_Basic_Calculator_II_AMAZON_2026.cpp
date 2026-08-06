@@ -83,7 +83,7 @@ int calculate(string s) {
                 st.push(num);
             }
             else if(op == '-'){
-                t.push(-num);
+                st.push(-num);
             }
             else if(op == '*'){
                 int top = st.top();
