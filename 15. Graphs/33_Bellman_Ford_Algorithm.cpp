@@ -6,6 +6,7 @@ using namespace std;
 
 Bellman Ford definition: 
 Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted graph, even if the graph has negative weight edges (but no negative weight cycles).
+It relax all edges n-1 time sequentially.
 
 
 Intuition:
@@ -83,6 +84,8 @@ dist[3] + 1 < dist[4] | 3 4 1
 dist[2] + 1 < dist[3] | 2 3 1
 dist[1] + 1 < dist[2] | 1 2 1
 dist[0] + 1 < dist[1] | 0 1 1
+
+infinity + 1 = infinity
 
 
 In the above graph, the algorithm will minimize the distance of the ith node in the ith iteration like dist[1] will be updated in the 1st iteration, dist[2] will be updated in the 2nd iteration, and so on. So we will need a total of 4 iterations(i.e. N-1 iterations) to minimize all the distances as dist[0] is already set to 0.
