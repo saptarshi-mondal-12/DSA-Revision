@@ -37,6 +37,7 @@ We will calculate the shortest path in a directed acyclic graph by using topolog
 
 Q. Why we use topological sort?
 Ans: Something i know for sure is there is no one before 1st element (in linear ordereing of toposort).
+Before I calculate the shortest path to this node, make sure I've already processed every node that can come before it.
 
 Initial configuration:
     
