@@ -12,6 +12,15 @@ Explanation: Valid combinations are:
 2,3,4 (using the second 2)
 2,2,3
 
+Sum of any 2 sides must be greater than the 3rd side.
+For example, sides 2, 3, 4:
+
+2 + 3 > 4 ✅
+2 + 4 > 3 ✅
+3 + 4 > 2 ✅
+
+So 2, 3, 4 can form a triangle.
+
 Input: nums = [4,2,3,4]
 Output: 4
 */
