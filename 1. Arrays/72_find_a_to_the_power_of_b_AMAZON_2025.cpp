@@ -15,6 +15,8 @@ Start with the naive way
 If someone asks me to compute a to power b, the first idea is: multiply a with itself, b times.
 That’s O(b) time. Works for small b, but if is huge (say 10^9), it’s too slow.
 
+optimal soln - make exponent smaller. 
+
 
 Optimal Example: 
 
