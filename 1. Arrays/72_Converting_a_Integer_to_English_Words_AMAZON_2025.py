@@ -67,6 +67,9 @@ thousands = (num // 1000) % 1000
 remainder = num % 1000
 Each one is at most 3 digits because of the % 1000.”
 
+Q. Why do we use % 1000?
+Ans: Because we want to make sure we keep only the 3-digit group belonging to thousands.
+
 Show the interviewer with the given input:
 
 For 12340:
