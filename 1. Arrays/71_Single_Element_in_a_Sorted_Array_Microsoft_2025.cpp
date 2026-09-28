@@ -18,21 +18,51 @@ Output: 10
 */
 
 int singleNonDuplicate(vector<int> &nums){
+    // ACCPTED Soln---------------------------------------------
+    // Time comlexity: O(log n)
+    // Space complexity: O(1)
+    
+    // NUMS  = 1 1 2 2 3 3 4 5 5 6 6
+    // INDEX = 0 1 2 3 4 5 6 7 8 9 10
+
+    int n = nums.size();
+    int left = 0, right = n - 1;
+
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+
+        // Make mid even
+        if (mid % 2 != 0)
+            mid--;
+
+        if (nums[mid] == nums[mid + 1]) {
+            // Pair is correct, single is to the right
+            left = mid + 2;
+        } else {
+            // Pair is broken, single is at mid or to the left
+            right = mid;
+        }
+    }
+    Return nums[left];
+
+
+
+    
     // Optimal Soln---------------------------------------------
     // Time comlexity: O(n)
     // Space complexity: O(1)
-    int n = nums.size();
-    int result=-1;
-    if(n==1) return nums[0];
-    if(nums[0] != nums[1]) return nums[0];
-    if(nums[n-1] != nums[n-2]) return nums[n-1];
-    for(int i=1;i<n-1;i++){
-        if(nums[i-1] < nums[i] && nums[i] < nums[i+1]){
-            result = nums[i];
-            break;
-        }
-    }
-    return result;
+    // int n = nums.size();
+    // int result=-1;
+    // if(n==1) return nums[0];
+    // if(nums[0] != nums[1]) return nums[0];
+    // if(nums[n-1] != nums[n-2]) return nums[n-1];
+    // for(int i=1;i<n-1;i++){
+    //     if(nums[i-1] < nums[i] && nums[i] < nums[i+1]){
+    //         result = nums[i];
+    //         break;
+    //     }
+    // }
+    // return result;
 
 
 
