@@ -42,6 +42,25 @@ Algorithm:
     Else move i (policeman too far left).
 
 
+-----------if else condition explain -----------------------------------------------------------------
+The issue is: you cannot decide which pointer to move just by looking at abs(...) > k.
+Suppose:
+police = [3, 4, 6, 8]
+thieves = [0, 1, 2, 5, 7]
+k = 1
+At:
+police[i] = 3
+thieves[j] = 0
+distance = 3, so thief 0 is too far. Moving j++ is correct because this thief is too far to the left and can never be caught by this or any later policeman.
+
+But if:
+police[i] = 0
+thieves[j] = 3
+distance = 3, then moving j++ would be wrong. You should move i++, because this policeman is too far to the left and cannot catch this or any later thief.
+
+So you need to know which one is on the left.
+
+
 
 
 Follow up Question ---------------------------------------------------------------
@@ -117,12 +136,13 @@ int catchThieves(vector<char> &arr, int k){
             j++;
         }
         // move j if thief too far left
-        else if (thief[j] < police[i] - k){
-            j++;
-        }
-        // move i if policeman too far left
-        else{
+        else if (police[i] < thives[j]) {
+            // Police is too far to the left
             i++;
+        }
+        else {
+            // Thief is too far to the left
+            j++;
         }
     }
 
