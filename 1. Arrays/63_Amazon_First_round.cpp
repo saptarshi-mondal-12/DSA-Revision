@@ -19,22 +19,19 @@ Output: 3
 int numEquivDominoPairs(vector<vector<int>>& dominoes) {
     // Time complexity: O(n)
     // Space complexity: O(100)
-    int n=dominoes.size();
-    int nums[100]={0};
-    int countPairs=0;
-    int val=0;
-    for(int i=0;i<n;i++){
-        int a = dominoes[i][0];
-        int b = dominoes[i][1];
-        if(a<=b){
-            val=a*10+b;
-        }else{
-            val=b*10+a;
-        }
-        countPairs+=nums[val];
-        nums[val]++;
+    unordered_map<int, int> freq;
+    int ans = 0;
+
+    for (auto &d : dominoes) {
+        int a = min(d[0], d[1]);
+        int b = max(d[0], d[1]);
+
+        int key = a * 10 + b;
+
+        ans += freq[key];
+        freq[key]++;
     }
-    return countPairs;
+    return ans;
 
 
 
