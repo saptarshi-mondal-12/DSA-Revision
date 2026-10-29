@@ -1,0 +1,43 @@
+Q1. How does unordered_set work internally?
+
+Ans: unordered_set<int> s = {10, 20, 30, 40}
+Internally, it uses a hash table, which consists of an array of buckets. A hash function determines which bucket an element belongs to.
+
+hash(key) % bucket_count
+
+Step 1: Apply the hash function -> hash(key) % bucket_count
+Illustrative example: assume there are 7 buckets.
+
+10
+Bucket 3
+
+20
+Bucket 6
+
+30
+Bucket 2
+
+40
+Bucket 5
+
+Step 2: Store each element in its bucket
+Elements are distributed across buckets according to their hash values. The exact bucket assignments depend on the implementation and hash function.
+
+unordered_set is internally implemented using a hash table. It uses a hash function to map each element to a bucket. When searching for an element, it computes the hash, identifies the bucket, and compares elements in that bucket using the equality predicate. Collisions occur when multiple elements map to the same bucket, and the implementation handles them using its collision-resolution strategy. Since the number of elements examined is usually small, search, insertion, and deletion have average constant time complexity, O(1), but their worst-case complexity can be O(n). As the container grows, it can rehash and redistribute elements across more buckets.
+
+
+
+Q2. What happens when two elements have the same bucket?
+Ans: This is called a hash collision.
+For example, suppose both 10 and 17 map to bucket 3.
+Bucket 3
+10
+17
+
+Both elements occupy the same bucket. The implementation must distinguish them using equality comparison.
+C++ implementations commonly use linked nodes or node-based structures to manage collisions, though the exact internal representation is implementation-dependent.
+
+
+Q3. How does unordered_set prevent duplicates?
+Before inserting an element, the container checks whether an equivalent element already exists. Only one equivalent element is stored. The hash function helps locate the relevant bucket, and the equality comparison determines whether the element already exists.
+
