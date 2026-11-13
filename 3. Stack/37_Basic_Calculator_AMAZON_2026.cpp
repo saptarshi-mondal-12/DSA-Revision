@@ -100,54 +100,50 @@ Answer:
 */
 
 int calculate(string s) {
-    // Time Compleixty: O(n)
-    // Space complexity: O(n)
+        int n = s.size();
+        long long number = 0;
+        int result = 0;
+        int sign = 1;
+        stack<int>st;
+
+        for(int i=0;i<n;i++){
+            if(isdigit(s[i])){
+                number = number * 10 + (s[i] - '0'); // make number
+            }
+            else if(s[i] == '+'){
+                result += number*sign;
+                number = 0;
+                sign = 1; 
+            }
+            else if(s[i] == '-'){
+                result += number*sign;
+                number = 0;
+                sign = -1; 
+            }
+            else if(s[i] == '('){
+                st.push(result);
+                st.push(sign);
+                result = 0; // starting fresh for the bracket
+                number = 0;
+                sign = 1;
+            }
+            else if(s[i] == ')'){
+                result += number*sign;
+                number = 0;
+
+                int stack_sign = st.top();
+                st.pop();
+                int last_result = st.top();
+                st.pop();
+
+                result *= stack_sign;
+                result += last_result;
+            }
+        }
+        result += (number*sign);
+        return result;
         
-    stack<long long> st;
-    long long result = 0;
-    long long number = 0;
-    long long sign = 1;
-
-    for (char c : s) {
-        if (isdigit(c)) {
-            number = number * 10 + (c - '0');
-        }
-        else if (c == '+') {
-            result += sign * number;
-            number = 0;
-            sign = 1;
-        }
-        else if (c == '-') {
-            result += sign * number;
-            number = 0;
-            sign = -1;
-        }
-        else if (c == '(') {
-            // Push current result and sign
-            st.push(result);
-            st.push(sign);
-
-            // Reset for the expression inside parentheses
-            result = 0;
-            sign = 1;
-        }
-        else if (c == ')') {
-            result += sign * number;
-            number = 0;
-
-            // Apply the sign before '('
-            result *= st.top();
-            st.pop();
-
-            // Add the result before '('
-            result += st.top();
-            st.pop();
-        }
-        // Ignore spaces
     }
 
-    // Add the last number if any
-    result += sign * number;
 
-    return result;
-}
+// codewithMIK video soln 
