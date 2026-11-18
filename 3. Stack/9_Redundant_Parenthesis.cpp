@@ -5,6 +5,8 @@ using namespace std;
 
 
 // check if expression contain redundant parenthesis - bina matlab ka braces
+((a+b)) = true
+(a+b+(c+d)) = false
 
 // Time complexity - O(n)
 // space complexity - 

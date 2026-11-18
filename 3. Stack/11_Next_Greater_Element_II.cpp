@@ -22,26 +22,28 @@ Output: [2,3,4,-1,4]
 */
 
 
-void nextGreaterII(int arr[], int n){
+void nextGreaterII(int nums[], int n){
     // time complexity = O(n)  
     // space complexity = O(n)
 
-    stack<int>s;
-    vector<int>result(n,-1);
-
-    for(int i=2*n-1; i>=0;i--){
-        int curr=arr[i%n];
-
-        while(!s.empty() && s.top()<=curr){
-            s.pop();
-        }
-        
-        if(!s.empty() && i<n){
-            result[i]=s.top();
-        }
-        s.push(curr);
+    int n = nums.size();
+    vector<int>result(n, -1);
+    stack<int>st;
+    // push all element in stack in reverse order (right to left)
+    for(int i=n-1;i>=0;i--){
+        st.push(nums[i]);
     }
-
+    // find next greater element 
+    for(int i=n-1;i>=0;i--){
+        int curr = nums[i];
+        while(!st.empty() && st.top() <= curr ){
+            st.pop();
+        }
+        if(!st.empty()){
+            result[i] = st.top();
+        }
+        st.push(curr);
+    }
     
     for(int i=0;i<n;i++){
         cout<<result[i]<<" ";
